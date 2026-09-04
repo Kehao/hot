@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://aihot.bt199.com/sitemap.xml
+Sitemap: https://47.114.36.224/sitemap.xml
