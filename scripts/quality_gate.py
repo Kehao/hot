@@ -6,6 +6,11 @@ from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+try:
+    from site_config import host as site_host, favicon_fragments  # python scripts/xxx.py / aggregate
+except ImportError:
+    from scripts.site_config import host as site_host, favicon_fragments  # tests 包方式导入
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
 SITE_CONTENT = ROOT / 'site' / 'content'
@@ -111,7 +116,8 @@ def check_recent_english_translations(warnings, news, limit=40):
         warnings.append(f'Recent English-source articles missing complete Chinese body: {invalid[:10]}')
 
 BAD_ICON_SUBSTRINGS = (
-    'aihot.bt199.com/favicon',
+    # 站点自身 favicon(当前 CNAME host + 历史域名),随 CNAME 动态识别
+    *favicon_fragments(),
     'github.com/favicon',
     'www.github.com/favicon',
 )
@@ -225,7 +231,7 @@ def main():
         errors.append('models/tools/agents templates still derive generic favicons from item URL instead of using icon_url')
     if '.icon_url' not in list_tpl:
         errors.append('list template does not render icon_url')
-    if 'aihot.bt199.com/favicon' in list_tpl or 'github.com/favicon' in list_tpl:
+    if any(f in list_tpl for f in favicon_fragments()) or 'github.com/favicon' in list_tpl:
         errors.append('list template contains forbidden favicon fallback')
 
     hot=json.loads((DATA/'hot.json').read_text(encoding='utf-8'))

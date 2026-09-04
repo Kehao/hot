@@ -6,10 +6,15 @@ from pathlib import Path
 from datetime import datetime
 from zoneinfo import ZoneInfo
 
+try:
+    from site_config import url as SITE_URL        # python scripts/xxx.py / aggregate 同目录导入
+except ImportError:
+    from scripts.site_config import url as SITE_URL  # tests 从仓库根以 scripts.xxx 包方式导入
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA_DIR = ROOT / 'data'
 SITE_DIR = ROOT / 'site' / 'static'
-BASE_URL = 'https://aihot.bt199.com'
+BASE_URL = SITE_URL()  # 从仓库根 CNAME 读取,不再硬编码域名
 SH_TZ = ZoneInfo('Asia/Shanghai')
 
 

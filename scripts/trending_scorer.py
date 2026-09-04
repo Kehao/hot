@@ -7,6 +7,11 @@ import os
 import json
 from datetime import datetime
 
+try:
+    from site_config import url as SITE_URL        # python scripts/xxx.py / aggregate 同目录导入
+except ImportError:
+    from scripts.site_config import url as SITE_URL  # tests 从仓库根以 scripts.xxx 包方式导入
+
 DATA_DIR = os.path.join(os.path.dirname(__file__), "..", "data")
 
 CATEGORY_MAP = {
@@ -119,7 +124,7 @@ def compute_trending():
                 'ai_summary': desc[:120],
                 'category': '资讯',
                 'news_id': n.get('id'),
-                'internal_url': f"https://aihot.bt199.com/news/{n.get('id')}/" if n.get('id') else '',
+                'internal_url': f"{SITE_URL()}/news/{n.get('id')}/" if n.get('id') else '',
             })
 
     seen = {}

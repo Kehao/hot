@@ -3,6 +3,11 @@ import json
 import re
 from pathlib import Path
 
+try:
+    from site_config import url as SITE_URL        # python scripts/xxx.py / aggregate 同目录导入
+except ImportError:
+    from scripts.site_config import url as SITE_URL  # tests 从仓库根以 scripts.xxx 包方式导入
+
 ROOT = Path(__file__).resolve().parent.parent
 DATA_DIR = ROOT / 'data'
 HOT_PATH = DATA_DIR / 'hot.json'
@@ -76,7 +81,7 @@ def enrich_hot_data():
                 candidate = best
         if candidate:
             item['news_id'] = candidate.get('id')
-            item['internal_url'] = f"https://aihot.bt199.com/news/{candidate.get('id')}/"
+            item['internal_url'] = f"{SITE_URL()}/news/{candidate.get('id')}/"
             item['ai_summary'] = candidate.get('ai_summary') or candidate.get('summary_zh') or candidate.get('summary') or item.get('subtitle', '')
             item['title_zh'] = candidate.get('title_zh') or candidate.get('title') or item.get('title', '')
             matched += 1

@@ -216,3 +216,12 @@ sudo nginx -t && sudo systemctl reload nginx
 2. **CNAME 文件**:OSS/CDN 方案在 OSS 控制台配置域名即可,不需要仓库内 CNAME 文件;ECS 方案也不使用该文件(它只对 GitHub Pages 生效)。
 3. **两套定时不要并存**:迁移后若管道还在 GitHub Actions 里跑,OSS 会被持续覆盖——方案 A 是有意保留,方案 B 记得删除 `.github/workflows/aggregate.yml` 的 schedule(或整个工作流)。
 4. **密钥管理**:GitHub Actions 用 Secrets;ECS 上用 `.env` 且加入 `.gitignore`(已忽略),勿写死在代码里。
+5. **站点地址统一由 `CNAME` 管理**(2026-09-04 起):仓库根 `CNAME` 文件是站点地址唯一数据源,支持裸域名 `aihot.bt199.com`、裸 IP `47.114.36.224` 或带协议 `https://…`。脚本(脚本内 URL、sitemap、README 生成)、质量门禁(favicon 黑名单)已改为运行时读取;Hugo 模板用 `.Site.BaseURL`。因此**构建时需按 CNAME 传入 baseURL**:
+   ```bash
+   # 在仓库根计算并传给 hugo(方案 B 的 cron 请加上)
+   proto="https"; host=$(cat CNAME)
+   case "$host" in http://*|https://*) proto="${host%%://*}"; host="${host#*://}";; esac
+   host="${host%%/*}"; host="${host%/}"
+   hugo --minify -s site --baseURL "${proto}://${host}/"
+   ```
+   GitHub Actions 的 `deploy.yml` 已内置该逻辑(`Resolve site host & base URL from CNAME` 步骤)。

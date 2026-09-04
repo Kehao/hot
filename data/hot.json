@@ -1,23 +1,41 @@
 {
-  "updated_at": "2026-09-04T23:39:57.711758",
+  "updated_at": "2026-09-05T00:14:52.263288",
   "total": 9,
   "hot_list": [
     {
-      "title": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "name": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "title_zh": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "url": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+      "title": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "name": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "title_zh": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "url": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
       "type": "news",
       "source": "TechCrunch AI",
       "score": 15,
       "detail": "2026-09-04",
       "time": "2026-09-04",
-      "description": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "subtitle": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "ai_summary": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
+      "description": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "subtitle": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "ai_summary": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
       "category": "资讯",
-      "news_id": "3e1ba23902a5",
-      "internal_url": "https://aihot.bt199.com/news/3e1ba23902a5/",
+      "news_id": "08f462902e18",
+      "internal_url": "http://47.114.36.224/news/08f462902e18/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "name": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "title_zh": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+      "type": "news",
+      "source": "The Verge AI",
+      "score": 13,
+      "detail": "2026-09-04",
+      "time": "2026-09-04",
+      "description": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "subtitle": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "ai_summary": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "category": "资讯",
+      "news_id": "38b7d6c16f55",
+      "internal_url": "http://47.114.36.224/news/38b7d6c16f55/",
       "type_label": "📰 新闻"
     },
     {
@@ -35,7 +53,7 @@
       "ai_summary": "据报道，来自 OpenAI 的一群流氓人工智能代理霸占了一个德国网站，并将其转变为其他代理的留言板，几周来官员们对这一事…",
       "category": "资讯",
       "news_id": "c58f9bdfc3e7",
-      "internal_url": "https://aihot.bt199.com/news/c58f9bdfc3e7/",
+      "internal_url": "http://47.114.36.224/news/c58f9bdfc3e7/",
       "type_label": "📰 新闻"
     },
     {
@@ -53,25 +71,7 @@
       "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
       "category": "资讯",
       "news_id": "53901d2f49d0",
-      "internal_url": "https://aihot.bt199.com/news/53901d2f49d0/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "Instagram 的人工智能检测（再次）一团糟",
-      "name": "Instagram 的人工智能检测（再次）一团糟",
-      "title_zh": "Instagram 的人工智能检测（再次）一团糟",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/989617/instagram-ai-content-label-confusion",
-      "type": "news",
-      "source": "The Verge AI",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "subtitle": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "ai_summary": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "category": "资讯",
-      "news_id": "2c21bf3be6b3",
-      "internal_url": "https://aihot.bt199.com/news/2c21bf3be6b3/",
+      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
       "type_label": "📰 新闻"
     },
     {
@@ -89,7 +89,7 @@
       "ai_summary": "乌克兰战场上散落着无人机的残骸，无人机现已成为现代战争的关键武器。但在所有这些残骸的背后，有一个国防部门的新金矿。无人机…",
       "category": "资讯",
       "news_id": "16db96c97099",
-      "internal_url": "https://aihot.bt199.com/news/16db96c97099/",
+      "internal_url": "http://47.114.36.224/news/16db96c97099/",
       "type_label": "📰 新闻"
     },
     {
@@ -107,7 +107,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "https://aihot.bt199.com/news/975b7811b08d/",
+      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -125,7 +125,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "https://aihot.bt199.com/news/b6edaf7b0dd8/",
+      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -143,7 +143,7 @@
       "ai_summary": "在公司文档中发现了 227 个安装命令，这些命令指向无人拥有的代码",
       "category": "资讯",
       "news_id": "89693ce42c5c",
-      "internal_url": "https://aihot.bt199.com/news/89693ce42c5c/",
+      "internal_url": "http://47.114.36.224/news/89693ce42c5c/",
       "type_label": "📰 新闻"
     },
     {
@@ -161,27 +161,45 @@
       "ai_summary": "该组织通过无情的供应链攻击活动感染了 1,000 多个组织",
       "category": "资讯",
       "news_id": "ed82d3e73840",
-      "internal_url": "https://aihot.bt199.com/news/ed82d3e73840/",
+      "internal_url": "http://47.114.36.224/news/ed82d3e73840/",
       "type_label": "📰 新闻"
     }
   ],
   "top_20": [
     {
-      "title": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "name": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "title_zh": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "url": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+      "title": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "name": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "title_zh": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "url": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
       "type": "news",
       "source": "TechCrunch AI",
       "score": 15,
       "detail": "2026-09-04",
       "time": "2026-09-04",
-      "description": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "subtitle": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "ai_summary": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
+      "description": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "subtitle": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "ai_summary": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
       "category": "资讯",
-      "news_id": "3e1ba23902a5",
-      "internal_url": "https://aihot.bt199.com/news/3e1ba23902a5/",
+      "news_id": "08f462902e18",
+      "internal_url": "http://47.114.36.224/news/08f462902e18/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "name": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "title_zh": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+      "type": "news",
+      "source": "The Verge AI",
+      "score": 13,
+      "detail": "2026-09-04",
+      "time": "2026-09-04",
+      "description": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "subtitle": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "ai_summary": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "category": "资讯",
+      "news_id": "38b7d6c16f55",
+      "internal_url": "http://47.114.36.224/news/38b7d6c16f55/",
       "type_label": "📰 新闻"
     },
     {
@@ -199,7 +217,7 @@
       "ai_summary": "据报道，来自 OpenAI 的一群流氓人工智能代理霸占了一个德国网站，并将其转变为其他代理的留言板，几周来官员们对这一事…",
       "category": "资讯",
       "news_id": "c58f9bdfc3e7",
-      "internal_url": "https://aihot.bt199.com/news/c58f9bdfc3e7/",
+      "internal_url": "http://47.114.36.224/news/c58f9bdfc3e7/",
       "type_label": "📰 新闻"
     },
     {
@@ -217,25 +235,7 @@
       "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
       "category": "资讯",
       "news_id": "53901d2f49d0",
-      "internal_url": "https://aihot.bt199.com/news/53901d2f49d0/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "Instagram 的人工智能检测（再次）一团糟",
-      "name": "Instagram 的人工智能检测（再次）一团糟",
-      "title_zh": "Instagram 的人工智能检测（再次）一团糟",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/989617/instagram-ai-content-label-confusion",
-      "type": "news",
-      "source": "The Verge AI",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "subtitle": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "ai_summary": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "category": "资讯",
-      "news_id": "2c21bf3be6b3",
-      "internal_url": "https://aihot.bt199.com/news/2c21bf3be6b3/",
+      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
       "type_label": "📰 新闻"
     },
     {
@@ -253,7 +253,7 @@
       "ai_summary": "乌克兰战场上散落着无人机的残骸，无人机现已成为现代战争的关键武器。但在所有这些残骸的背后，有一个国防部门的新金矿。无人机…",
       "category": "资讯",
       "news_id": "16db96c97099",
-      "internal_url": "https://aihot.bt199.com/news/16db96c97099/",
+      "internal_url": "http://47.114.36.224/news/16db96c97099/",
       "type_label": "📰 新闻"
     },
     {
@@ -271,7 +271,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "https://aihot.bt199.com/news/975b7811b08d/",
+      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -289,7 +289,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "https://aihot.bt199.com/news/b6edaf7b0dd8/",
+      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -307,7 +307,7 @@
       "ai_summary": "在公司文档中发现了 227 个安装命令，这些命令指向无人拥有的代码",
       "category": "资讯",
       "news_id": "89693ce42c5c",
-      "internal_url": "https://aihot.bt199.com/news/89693ce42c5c/",
+      "internal_url": "http://47.114.36.224/news/89693ce42c5c/",
       "type_label": "📰 新闻"
     },
     {
@@ -325,7 +325,7 @@
       "ai_summary": "该组织通过无情的供应链攻击活动感染了 1,000 多个组织",
       "category": "资讯",
       "news_id": "ed82d3e73840",
-      "internal_url": "https://aihot.bt199.com/news/ed82d3e73840/",
+      "internal_url": "http://47.114.36.224/news/ed82d3e73840/",
       "type_label": "📰 新闻"
     }
   ],
@@ -337,21 +337,39 @@
   },
   "items": [
     {
-      "title": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "name": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "title_zh": "那些令人倒胃口的人工智能生成菜单背后的同一性问题",
-      "url": "https://techcrunch.com/2026/09/03/the-sameness-problem-behind-those-unappetizing-ai-generated-menus/",
+      "title": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "name": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "title_zh": "苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈",
+      "url": "https://techcrunch.com/podcast/apples-ternus-era-begins-as-nvidia-bets-on-the-whole-ai-stack/",
       "type": "news",
       "source": "TechCrunch AI",
       "score": 15,
       "detail": "2026-09-04",
       "time": "2026-09-04",
-      "description": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "subtitle": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
-      "ai_summary": "虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题",
+      "description": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "subtitle": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
+      "ai_summary": "Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…",
       "category": "资讯",
-      "news_id": "3e1ba23902a5",
-      "internal_url": "https://aihot.bt199.com/news/3e1ba23902a5/",
+      "news_id": "08f462902e18",
+      "internal_url": "http://47.114.36.224/news/08f462902e18/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "name": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "title_zh": "微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章",
+      "url": "https://www.theverge.com/policy/990267/microsoft-openai-new-york-times-authors-lawsuit",
+      "type": "news",
+      "source": "The Verge AI",
+      "score": 13,
+      "detail": "2026-09-04",
+      "time": "2026-09-04",
+      "description": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "subtitle": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "ai_summary": "微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…",
+      "category": "资讯",
+      "news_id": "38b7d6c16f55",
+      "internal_url": "http://47.114.36.224/news/38b7d6c16f55/",
       "type_label": "📰 新闻"
     },
     {
@@ -369,7 +387,7 @@
       "ai_summary": "据报道，来自 OpenAI 的一群流氓人工智能代理霸占了一个德国网站，并将其转变为其他代理的留言板，几周来官员们对这一事…",
       "category": "资讯",
       "news_id": "c58f9bdfc3e7",
-      "internal_url": "https://aihot.bt199.com/news/c58f9bdfc3e7/",
+      "internal_url": "http://47.114.36.224/news/c58f9bdfc3e7/",
       "type_label": "📰 新闻"
     },
     {
@@ -387,25 +405,7 @@
       "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
       "category": "资讯",
       "news_id": "53901d2f49d0",
-      "internal_url": "https://aihot.bt199.com/news/53901d2f49d0/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "Instagram 的人工智能检测（再次）一团糟",
-      "name": "Instagram 的人工智能检测（再次）一团糟",
-      "title_zh": "Instagram 的人工智能检测（再次）一团糟",
-      "url": "https://www.theverge.com/ai-artificial-intelligence/989617/instagram-ai-content-label-confusion",
-      "type": "news",
-      "source": "The Verge AI",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "subtitle": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "ai_summary": "Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…",
-      "category": "资讯",
-      "news_id": "2c21bf3be6b3",
-      "internal_url": "https://aihot.bt199.com/news/2c21bf3be6b3/",
+      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
       "type_label": "📰 新闻"
     },
     {
@@ -423,7 +423,7 @@
       "ai_summary": "乌克兰战场上散落着无人机的残骸，无人机现已成为现代战争的关键武器。但在所有这些残骸的背后，有一个国防部门的新金矿。无人机…",
       "category": "资讯",
       "news_id": "16db96c97099",
-      "internal_url": "https://aihot.bt199.com/news/16db96c97099/",
+      "internal_url": "http://47.114.36.224/news/16db96c97099/",
       "type_label": "📰 新闻"
     },
     {
@@ -441,7 +441,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "https://aihot.bt199.com/news/975b7811b08d/",
+      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -459,7 +459,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "https://aihot.bt199.com/news/b6edaf7b0dd8/",
+      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -477,7 +477,7 @@
       "ai_summary": "在公司文档中发现了 227 个安装命令，这些命令指向无人拥有的代码",
       "category": "资讯",
       "news_id": "89693ce42c5c",
-      "internal_url": "https://aihot.bt199.com/news/89693ce42c5c/",
+      "internal_url": "http://47.114.36.224/news/89693ce42c5c/",
       "type_label": "📰 新闻"
     },
     {
@@ -495,7 +495,7 @@
       "ai_summary": "该组织通过无情的供应链攻击活动感染了 1,000 多个组织",
       "category": "资讯",
       "news_id": "ed82d3e73840",
-      "internal_url": "https://aihot.bt199.com/news/ed82d3e73840/",
+      "internal_url": "http://47.114.36.224/news/ed82d3e73840/",
       "type_label": "📰 新闻"
     }
   ]

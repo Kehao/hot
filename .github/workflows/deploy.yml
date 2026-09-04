@@ -58,12 +58,26 @@ jobs:
       - name: Verify no secrets before build
         run: python scripts/sanitize_secrets.py --check
 
+      - name: Resolve site host & base URL from CNAME
+        id: site
+        run: |
+          # CNAME 支持裸域名 / 裸 IP / 带协议,统一解析出 host 与 baseURL
+          raw=$(tr -d '\r\n' < CNAME)
+          case "$raw" in
+            http://*|https://*) proto="${raw%%://*}"; host="${raw#*://}" ;;
+            *) proto="https"; host="$raw" ;;
+          esac
+          host="${host%%/*}"
+          host="${host%/}"
+          echo "host=${host}" >> "$GITHUB_OUTPUT"
+          echo "base=${proto}://${host}/" >> "$GITHUB_OUTPUT"
+
       - name: Build
         working-directory: site
-        run: hugo --minify
+        run: hugo --minify --baseURL "${{ steps.site.outputs.base }}"
 
       - name: Create CNAME
-        run: echo "aihot.bt199.com" > site/public/CNAME
+        run: echo "${{ steps.site.outputs.host }}" > site/public/CNAME
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4

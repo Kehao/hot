@@ -15,9 +15,17 @@ import re
 from pathlib import Path
 from urllib.parse import urlparse
 
+try:
+    import site_config                                    # python scripts/xxx.py / aggregate
+except ImportError:
+    from scripts import site_config                       # tests 包方式导入
+
 ROOT = Path(__file__).resolve().parents[1]
 DATA = ROOT / 'data'
 SITE_DATA = ROOT / 'site' / 'data'
+
+# 站点自身 favicon URL 片段(当前 CNAME host + 历史域名),随 CNAME 动态识别
+SITE_FAVICON_FRAGMENTS = site_config.favicon_fragments()
 
 PROVIDER_ICON_DOMAINS = {
     'openai': 'openai.com',
@@ -227,7 +235,9 @@ def resolve_icon(item: dict, kind: str) -> str:
 
 def is_bad_icon(icon: str) -> bool:
     low = (icon or '').lower()
-    return any(p in low for p in BAD_ICON_PATTERNS) or 'aihot.bt199.com/favicon' in low
+    if any(p in low for p in BAD_ICON_PATTERNS):
+        return True
+    return any(f in low for f in SITE_FAVICON_FRAGMENTS)
 
 
 def apply_to_file(path: Path, kind: str) -> int:

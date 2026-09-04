@@ -5,7 +5,10 @@ from pathlib import Path
 from unittest.mock import patch
 
 import scripts.generate_curated_models as gm
+from scripts import site_config
 from scripts.icon_resolver import resolve_icon
+
+SITE_FAVICON = f"{site_config.host()}/favicon"  # 站点自身 favicon 兜底标记,随 CNAME 变化
 
 
 class IconAndQualityGuardTests(unittest.TestCase):
@@ -27,11 +30,11 @@ class IconAndQualityGuardTests(unittest.TestCase):
         item = {'id': 'baidu', 'name': 'Baidu Qianfan', 'url': 'https://cloud.baidu.com/product/wenxinworkshop'}
         icon = resolve_icon(item, 'provider')
         self.assertIn('yiyan.baidu.com', icon)
-        self.assertNotIn('aihot.bt199.com/favicon', icon)
+        self.assertNotIn(SITE_FAVICON, icon)
 
     def test_unresolved_item_does_not_hide_regression_with_site_favicon(self):
         item = {'name': 'Unknown Internal', 'url': 'https://example.invalid/no-brand'}
-        self.assertNotIn('aihot.bt199.com/favicon', resolve_icon(item, 'model'))
+        self.assertNotIn(SITE_FAVICON, resolve_icon(item, 'model'))
 
     def test_generate_curated_models_has_ling_and_real_icons_from_fixture_without_mutating_repo_data(self):
         fixture = {

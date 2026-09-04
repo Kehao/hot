@@ -13,8 +13,8 @@
 
 {{ $canonical := .Permalink }}
 {{ with .Params.canonical }}{{ $canonical = . }}{{ end }}
-{{ $ogImage := "https://aihot.bt199.com/favicon.png" }}
-{{ with .Params.cover_image }}{{ $ogImage = printf "https://aihot.bt199.com%s" . }}{{ end }}
+{{ $ogImage := printf "%sfavicon.png" .Site.BaseURL }}
+{{ with .Params.cover_image }}{{ $ogImage = printf "%s%s" $.Site.BaseURL (strings.TrimPrefix "/" .) }}{{ end }}
 
 <title>{{ $fullTitle }}</title>
 <meta name="description" content="{{ $description }}">
@@ -43,10 +43,10 @@
   "description": {{ $description | jsonify | safeJS }},
   "url": {{ $canonical | jsonify | safeJS }},
   "inLanguage": "zh-CN",
-  "publisher": {
+    "publisher": {
     "@type": "Organization",
     "name": "AI热榜",
-    "url": "https://aihot.bt199.com/"
+    "url": {{ .Site.BaseURL | jsonify | safeJS }}
   }{{ with .Params.id }},
   "applicationCategory": {{ $.Params.category | default "AI工具" | jsonify | safeJS }},
   "operatingSystem": "Web",
@@ -68,13 +68,13 @@
       "@type": "ListItem",
       "position": 1,
       "name": "首页",
-      "item": "https://aihot.bt199.com/"
+      "item": {{ .Site.BaseURL | jsonify | safeJS }}
     }{{ if and (ne .RelPermalink "/") .Section }},
     {
       "@type": "ListItem",
       "position": 2,
       "name": {{ .Section | jsonify | safeJS }},
-      "item": {{ (printf "https://aihot.bt199.com/%s/" .Section) | jsonify | safeJS }}
+      "item": {{ (printf "%s%s/" .Site.BaseURL .Section) | jsonify | safeJS }}
     }{{ end }}{{ if and (ne .RelPermalink "/") (ne .Kind "section") }},
     {
       "@type": "ListItem",

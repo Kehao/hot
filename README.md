@@ -2,53 +2,53 @@
 
 > GitHub 只放首页摘要，**完整版请直接去网站看**：热点更全、搜索更强、导航更完整。
 
-[![网站](https://img.shields.io/badge/在线阅读-AI热榜-brightgreen)](https://aihot.bt199.com/) [![更新频率](https://img.shields.io/badge/更新频率-每6小时-blue)](https://aihot.bt199.com/) [![工具](https://img.shields.io/badge/工具-171-orange)](https://aihot.bt199.com/tools/) [![模型](https://img.shields.io/badge/模型-87-lightgrey)](https://aihot.bt199.com/models/) [![Agent](https://img.shields.io/badge/Agent-52-purple)](https://aihot.bt199.com/agents/) [![新闻](https://img.shields.io/badge/新闻-151-red)](https://aihot.bt199.com/news/)
+[![网站](https://img.shields.io/badge/在线阅读-AI热榜-brightgreen)](http://47.114.36.224/) [![更新频率](https://img.shields.io/badge/更新频率-每6小时-blue)](http://47.114.36.224/) [![工具](https://img.shields.io/badge/工具-171-orange)](http://47.114.36.224/tools/) [![模型](https://img.shields.io/badge/模型-87-lightgrey)](http://47.114.36.224/models/) [![Agent](https://img.shields.io/badge/Agent-52-purple)](http://47.114.36.224/agents/) [![新闻](https://img.shields.io/badge/新闻-151-red)](http://47.114.36.224/news/)
 
-🌐 **在线网站**：https://aihot.bt199.com/  
-🔍 **站内搜索**：https://aihot.bt199.com/search/  
-🕐 **最近更新**：2026-09-04 23:40:02
+🌐 **在线网站**：http://47.114.36.224/  
+🔍 **站内搜索**：http://47.114.36.224/search/  
+🕐 **最近更新**：2026-09-05 00:14:59
 
 **提供商直达：** [🟠 小米 MiMo](https://platform.xiaomimimo.com?ref=A3JKSD) · [⚡️ ZenMux｜免费调用 DeepSeek V4 API，上手零门槛](https://zenmux.ai/invite/16U6FF) · [硅基流动](https://cloud.siliconflow.cn/i/Ngl1oB14) · [火山引擎](https://volcengine.com/L/A3Cm9GB_3J4/)  
 
-**立即进入：** [首页完整版](https://aihot.bt199.com/) · [搜索 AI 工具 / 模型 / 新闻](https://aihot.bt199.com/search/) · [查看全部工具](https://aihot.bt199.com/tools/) · [查看模型榜](https://aihot.bt199.com/models/) · [查看 Agent 专区](https://aihot.bt199.com/agents/)
+**立即进入：** [首页完整版](http://47.114.36.224/) · [搜索 AI 工具 / 模型 / 新闻](http://47.114.36.224/search/) · [查看全部工具](http://47.114.36.224/tools/) · [查看模型榜](http://47.114.36.224/models/) · [查看 Agent 专区](http://47.114.36.224/agents/)
 
 ---
 
 ## 🔥 今日热点
 
-1. [那些令人倒胃口的人工智能生成菜单背后的同一性问题](https://aihot.bt199.com/news/3e1ba23902a5/)
-   - 虽然餐厅老板可能会将生成式人工智能视为美化菜单的捷径，但顾客可以本能地感觉到食物出了问题
+1. [苹果的 Ternus 时代开始，英伟达押注整个人工智能堆栈](http://47.114.36.224/news/08f462902e18/)
+   - Apple 正式进入 Ternus 时代。 蒂姆·库克 (Tim Cook) 本周辞去了首席执行官一职，将公司交给了前硬…
    - `TechCrunch AI · 2026-09-04`
 
-2. [流氓 OpenAI 代理似乎使用德国维基组织了另一次攻击](https://aihot.bt199.com/news/c58f9bdfc3e7/)
+2. [微软表示几乎没有人通过其聊天机器人抓取《纽约时报》的文章](http://47.114.36.224/news/38b7d6c16f55/)
+   - 微软在新的法律文件中表示，微软的 Copilot 很少复制新闻文章和书籍中的完整句子，更不用说可以替代原文的实质性内容了…
+   - `The Verge AI · 2026-09-04`
+
+3. [流氓 OpenAI 代理似乎使用德国维基组织了另一次攻击](http://47.114.36.224/news/c58f9bdfc3e7/)
    - 据报道，来自 OpenAI 的一群流氓人工智能代理霸占了一个德国网站，并将其转变为其他代理的留言板，几周来官员们对这一事…
    - `The Verge AI · 2026-09-04`
 
-3. [下载：出售战场无人机数据和AI重塑语言](https://aihot.bt199.com/news/53901d2f49d0/)
+4. [下载：出售战场无人机数据和AI重塑语言](http://47.114.36.224/news/53901d2f49d0/)
    - 这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…
    - `MIT Tech Review · 2026-09-04`
 
-4. [Instagram 的人工智能检测（再次）一团糟](https://aihot.bt199.com/news/2c21bf3be6b3/)
-   - Instagram 的可见人工智能标签应该可以帮助人们一目了然地快速发现合成生成的内容。然而，在过去的几周里，用户一直报…
-   - `The Verge AI · 2026-09-04`
-
-5. [来自乌克兰无人机的数据正在推动新的狂野西部市场](https://aihot.bt199.com/news/16db96c97099/)
+5. [来自乌克兰无人机的数据正在推动新的狂野西部市场](http://47.114.36.224/news/16db96c97099/)
    - 乌克兰战场上散落着无人机的残骸，无人机现已成为现代战争的关键武器。但在所有这些残骸的背后，有一个国防部门的新金矿。无人机…
    - `MIT Tech Review · 2026-09-04`
 
-6. [企业人工智能的真正风险不是自主代理。这就是他们之间的复杂性。](https://aihot.bt199.com/news/975b7811b08d/)
+6. [企业人工智能的真正风险不是自主代理。这就是他们之间的复杂性。](http://47.114.36.224/news/975b7811b08d/)
    - Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…
    - `VentureBeat AI · 2026-08-27`
 
-7. [当代理独立行动时，治理必须存在于数据层](https://aihot.bt199.com/news/b6edaf7b0dd8/)
+7. [当代理独立行动时，治理必须存在于数据层](http://47.114.36.224/news/b6edaf7b0dd8/)
    - 由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…
    - `VentureBeat AI · 2026-08-27`
 
-8. [Claude、Codex 和 Hermes 在公司网络内安装了无主代码](https://aihot.bt199.com/news/89693ce42c5c/)
+8. [Claude、Codex 和 Hermes 在公司网络内安装了无主代码](http://47.114.36.224/news/89693ce42c5c/)
    - 在公司文档中发现了 227 个安装命令，这些命令指向无人拥有的代码
    - `Ars Technica AI · 2026-08-27`
 
-9. [当局逮捕了 2 名多产黑客组织 TeamPCP 的涉嫌成员](https://aihot.bt199.com/news/ed82d3e73840/)
+9. [当局逮捕了 2 名多产黑客组织 TeamPCP 的涉嫌成员](http://47.114.36.224/news/ed82d3e73840/)
    - 该组织通过无情的供应链攻击活动感染了 1,000 多个组织
    - `Ars Technica AI · 2026-08-28`
 
@@ -59,58 +59,55 @@
 
 `基于 20 条新闻 · 2026-04-22`
 
-👉 [去网站看完整 AI 新闻与站内文章 →](https://aihot.bt199.com/news/)
+👉 [去网站看完整 AI 新闻与站内文章 →](http://47.114.36.224/news/)
 
 ## ⭐ 今日精选
 
-**[文心一言](https://aihot.bt199.com/tools/文心一言/)**
+**[文心一言](http://47.114.36.224/tools/文心一言/)**
 - 百度出品的 AI 助手
 - `免费 + API 按量`
 
-👉 [去网站直接体验更多精选工具 →](https://aihot.bt199.com/tools/)
+👉 [去网站直接体验更多精选工具 →](http://47.114.36.224/tools/)
 
 ## 📈 热度飙升
 
-- [mempalace](https://github.com/MemPalace/mempalace)：最近值得点开的开源 AI 项目
-- [GLM-5.1](https://huggingface.co/zai-org/GLM-5.1)：智谱新一代通用模型线，近期关注度明显抬头
+- [tensorflow](https://github.com/tensorflow/tensorflow)：最近值得点开的开源 AI 项目
 - [OpenClaw](https://github.com/openclaw/openclaw)：你的个人AI助手，跨平台、全功能。Any OS, Any Platform
-- [career-ops](https://github.com/santifer/career-ops)：基于 Claude Code 的求职自动化工作流系统
-- [awesome-opensource-ai](https://github.com/alvinreal/awesome-opensource-ai)：最近值得点开的开源 AI 项目
 
-👉 [去网站看完整热度飙升榜单 →](https://aihot.bt199.com/)
+👉 [去网站看完整热度飙升榜单 →](http://47.114.36.224/)
 
 ## 🛠️ 值得先看的工具
 
-- [Cursor](https://aihot.bt199.com/tools/cursor/)：AI-first 代码编辑器，基于 VS Code 深度集成 AI 能力 · `免费 + Pro $20/月`
-- [GitHub Copilot](https://aihot.bt199.com/tools/github-copilot/)：GitHub 官方 AI 编程助手，深度集成 VS Code/JetBrains · `$10/月 个人 / $19/月 企业`
-- [Claude Code](https://aihot.bt199.com/tools/claude-code/)：Anthropic 官方 CLI 编程助手，终端内直接 AI 编程 · `按 API 使用量计费`
-- [Codex CLI](https://aihot.bt199.com/tools/codex-cli/)：OpenAI 官方终端编程助手，轻量快速 · `按 API 使用量计费`
-- [Codeium](https://aihot.bt199.com/tools/codeium/)：免费 AI 代码补全和聊天，支持 70+ 编辑器 · `个人免费 + Teams $12/月`
-- [Continue](https://aihot.bt199.com/tools/continue/)：开源 AI 编程助手，可接入任意 LLM · `开源免费`
+- [Cursor](http://47.114.36.224/tools/cursor/)：AI-first 代码编辑器，基于 VS Code 深度集成 AI 能力 · `免费 + Pro $20/月`
+- [GitHub Copilot](http://47.114.36.224/tools/github-copilot/)：GitHub 官方 AI 编程助手，深度集成 VS Code/JetBrains · `$10/月 个人 / $19/月 企业`
+- [Claude Code](http://47.114.36.224/tools/claude-code/)：Anthropic 官方 CLI 编程助手，终端内直接 AI 编程 · `按 API 使用量计费`
+- [Codex CLI](http://47.114.36.224/tools/codex-cli/)：OpenAI 官方终端编程助手，轻量快速 · `按 API 使用量计费`
+- [Codeium](http://47.114.36.224/tools/codeium/)：免费 AI 代码补全和聊天，支持 70+ 编辑器 · `个人免费 + Teams $12/月`
+- [Continue](http://47.114.36.224/tools/continue/)：开源 AI 编程助手，可接入任意 LLM · `开源免费`
 
-👉 [去网站看更多工具详情、对比和相关推荐 →](https://aihot.bt199.com/tools/)
+👉 [去网站看更多工具详情、对比和相关推荐 →](http://47.114.36.224/tools/)
 
 ## 📂 分类入口
 
-- [🛠️ AI工具（171）](https://aihot.bt199.com/tools/)
-- [🧠 AI模型（87）](https://aihot.bt199.com/models/)
-- [🤖 AI Agent（52）](https://aihot.bt199.com/agents/)
-- [📰 AI新闻（151）](https://aihot.bt199.com/news/)
-- [🏢 AI提供商（22）](https://aihot.bt199.com/providers/)
-- [⚔️ 工具对比](https://aihot.bt199.com/compare/)
-- [🔍 全站搜索](https://aihot.bt199.com/search/)
+- [🛠️ AI工具（171）](http://47.114.36.224/tools/)
+- [🧠 AI模型（87）](http://47.114.36.224/models/)
+- [🤖 AI Agent（52）](http://47.114.36.224/agents/)
+- [📰 AI新闻（151）](http://47.114.36.224/news/)
+- [🏢 AI提供商（22）](http://47.114.36.224/providers/)
+- [⚔️ 工具对比](http://47.114.36.224/compare/)
+- [🔍 全站搜索](http://47.114.36.224/search/)
 
-👉 [去网站按分类深挖完整内容 →](https://aihot.bt199.com/)
+👉 [去网站按分类深挖完整内容 →](http://47.114.36.224/)
 
 ## 🔑 热搜关键词
 
-[ai绘画](https://aihot.bt199.com/search/?q=ai%E7%BB%98%E7%94%BB) · [豆包](https://aihot.bt199.com/search/?q=%E8%B1%86%E5%8C%85) · [ai工具软件排名前十](https://aihot.bt199.com/search/?q=ai%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E6%8E%92%E5%90%8D%E5%89%8D%E5%8D%81) · [ai网站](https://aihot.bt199.com/search/?q=ai%E7%BD%91%E7%AB%99) · [ai写作](https://aihot.bt199.com/search/?q=ai%E5%86%99%E4%BD%9C) · [ai绘画免费图生图](https://aihot.bt199.com/search/?q=ai%E7%BB%98%E7%94%BB%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%94%9F%E5%9B%BE) · [ai绘画软件](https://aihot.bt199.com/search/?q=ai%E7%BB%98%E7%94%BB%E8%BD%AF%E4%BB%B6) · [ai绘画网站](https://aihot.bt199.com/search/?q=ai%E7%BB%98%E7%94%BB%E7%BD%91%E7%AB%99)
+[ai绘画](http://47.114.36.224/search/?q=ai%E7%BB%98%E7%94%BB) · [豆包](http://47.114.36.224/search/?q=%E8%B1%86%E5%8C%85) · [ai工具软件排名前十](http://47.114.36.224/search/?q=ai%E5%B7%A5%E5%85%B7%E8%BD%AF%E4%BB%B6%E6%8E%92%E5%90%8D%E5%89%8D%E5%8D%81) · [ai网站](http://47.114.36.224/search/?q=ai%E7%BD%91%E7%AB%99) · [ai写作](http://47.114.36.224/search/?q=ai%E5%86%99%E4%BD%9C) · [ai绘画免费图生图](http://47.114.36.224/search/?q=ai%E7%BB%98%E7%94%BB%E5%85%8D%E8%B4%B9%E5%9B%BE%E7%94%9F%E5%9B%BE) · [ai绘画软件](http://47.114.36.224/search/?q=ai%E7%BB%98%E7%94%BB%E8%BD%AF%E4%BB%B6) · [ai绘画网站](http://47.114.36.224/search/?q=ai%E7%BB%98%E7%94%BB%E7%BD%91%E7%AB%99)
 
-👉 [去网站直接搜索这些关键词 →](https://aihot.bt199.com/search/)
+👉 [去网站直接搜索这些关键词 →](http://47.114.36.224/search/)
 
 ## 🌐 这个 README 是干嘛的
 
-它不是部署说明书，而是 **https://aihot.bt199.com/ 的 GitHub 简化版**：
+它不是部署说明书，而是 **http://47.114.36.224/ 的 GitHub 简化版**：
 
 - 在 GitHub 里先看重点内容
 - 想继续深挖，再点进网站完整浏览
@@ -119,846 +116,19 @@
 ## 🚀 继续浏览
 
 ### 第一次来，建议从这里开始
-- [打开首页完整版](https://aihot.bt199.com/)
-- [直接搜索你想要的 AI 工具 / 模型 / 新闻](https://aihot.bt199.com/search/)
-- [查看全部工具](https://aihot.bt199.com/tools/)
+- [打开首页完整版](http://47.114.36.224/)
+- [直接搜索你想要的 AI 工具 / 模型 / 新闻](http://47.114.36.224/search/)
+- [查看全部工具](http://47.114.36.224/tools/)
 
 ### 已经熟悉 AI 热榜，直接走深入口
-- [查看模型榜](https://aihot.bt199.com/models/)
-- [查看 Agent 专区](https://aihot.bt199.com/agents/)
-- [查看最新新闻](https://aihot.bt199.com/news/)
-- [查看提供商](https://aihot.bt199.com/providers/)
-- [工具对比](https://aihot.bt199.com/compare/)
+- [查看模型榜](http://47.114.36.224/models/)
+- [查看 Agent 专区](http://47.114.36.224/agents/)
+- [查看最新新闻](http://47.114.36.224/news/)
+- [查看提供商](http://47.114.36.224/providers/)
+- [工具对比](http://47.114.36.224/compare/)
 
 > **一句话：GitHub 看摘要，网站看完整版。**
 
 ---
 
 MIT License
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
