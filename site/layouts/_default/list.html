@@ -1,0 +1,389 @@
+{{ define "main" }}
+<div style="margin-bottom:20px">
+    <a href="{{ relURL "/" }}" style="color:var(--text2);font-size:13px">← 返回热榜</a>
+</div>
+
+{{ $slug := .RelPermalink }}
+
+<!-- 模型页 -->
+{{ if in $slug "/models/" }}
+{{ $curated := site.Data.models_curated }}
+<h1 style="font-size:1px;color:transparent;position:absolute;pointer-events:none">AI模型精选 - {{ $curated.total }}个最前沿、最热门、最实用模型</h1>
+
+<div class="card" style="margin-bottom:16px">
+    <div class="card-title">🧠 AI 模型精选 <span class="hot-badge">{{ $curated.total }} 个</span></div>
+    <div class="hot-meta">不是模型垃圾堆，而是按实用性、热度、用户采用度筛出来的前沿主力模型。</div>
+    <div style="display:flex;flex-wrap:wrap;gap:8px;margin-top:12px">
+        <span class="tool-tag hot">新手先看：🔥 顶级通用大模型</span>
+        <span class="tool-tag">开发者先看：💻 编程最强模型</span>
+        <span class="tool-tag">想看视觉能力：👁️ 多模态主力模型</span>
+    </div>
+</div>
+
+<div class="category-nav" style="position:sticky;top:100px;z-index:50;background:var(--bg);padding:12px 0;margin-bottom:16px;border-bottom:1px solid var(--border)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+        {{ range $curated.categories }}
+        <a href="#model-{{ .id }}" class="category-tag" style="padding:6px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;font-size:13px;color:var(--text2);text-decoration:none;transition:all 0.2s">
+            {{ .name }} {{ .count }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+{{ range $curated.categories }}
+{{ $catId := .id }}
+<div class="card" id="model-{{ .id }}">
+    <div class="card-title">{{ .name }} <span class="hot-badge">{{ .count }} 个</span></div>
+    <div class="hot-meta" style="margin-bottom:14px">{{ .subtitle }}</div>
+    <div class="tools-grid">
+        {{ range where $curated.items "category" $catId }}
+        <a href="{{ .url }}" target="_blank" class="tool-card" style="text-decoration:none;color:inherit">
+            <div class="tool-header">
+                {{ $modelIcon := or .icon_url .icon }}
+                {{ if $modelIcon }}
+                <img src="{{ $modelIcon }}" alt="" style="width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ else }}
+                <img src="" alt="" style="display:none;width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ end }}
+                <div class="tool-icon" style="display:none">{{ if eq .source "OpenRouter" }}⚡{{ else }}🌍{{ end }}</div>
+                <div>
+                    <div class="tool-name">{{ .name }}</div>
+                    <div class="hot-meta" style="font-size:12px;margin-top:2px">{{ .provider }}{{ if .freshness }} · {{ .freshness }}{{ end }}</div>
+                </div>
+            </div>
+            <div class="tool-desc">{{ .why }}</div>
+            <div class="tool-tags" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px">
+                <span class="tool-tag hot">{{ .badge }}</span>
+                <span class="tool-tag">{{ .source }}</span>
+                {{ range .tags }}<span class="tool-tag">{{ . }}</span>{{ end }}
+            </div>
+            <div class="tool-footer" style="margin-top:12px">
+                <div class="tool-tags"></div>
+                <div class="tool-price">{{ .meta }}</div>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+<!-- 工具页 -->
+{{ else if in $slug "/tools/" }}
+{{/* 按分类分组 */}}
+{{ $categories := dict "编程" "🛠️" "绘画" "🎨" "视频" "🎬" "对话" "💬" "搜索" "🔍" "写作" "✍️" "办公" "📊" "Agent" "🤖" "本地模型" "💻" "推理引擎" "⚡" "语音" "🎤" "音乐" "🎵" }}
+
+<div class="card" style="margin-bottom:12px;padding:14px 16px">
+    <div class="card-title" style="margin-bottom:6px">🛠️ AI 工具导航 <span class="hot-badge">{{ len site.Data.tools }} 个</span></div>
+    <div class="hot-meta" style="margin-bottom:8px">不是所有工具都值得先点，先按你的目标切入会更快。</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;line-height:1.45">
+        <span class="tool-tag hot">新手先看：💬 对话 / 🛠️ 编程</span>
+        <span class="tool-tag">想白嫖先看：带免费额度的工具</span>
+        <span class="tool-tag">想出内容先看：🎨 绘画 / 🎬 视频 / ✍️ 写作</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;line-height:1.45">
+        <span class="tool-tag">按热度看：优先看带 ⭐ 的 GitHub 项目</span>
+    </div>
+</div>
+
+{{ $githubTools := where site.Data.tools "stars" "ne" nil }}
+{{ $hotGithubTools := first 5 (sort $githubTools "stars" "desc") }}
+{{ if gt (len $hotGithubTools) 0 }}
+<div class="card" style="margin-bottom:12px;border-left:3px solid var(--accent);padding:12px 16px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+        <div class="card-title" style="margin:0">🔥 GitHub 热门项目</div>
+        <div class="hot-meta" style="margin:0">如果你想先看社区最认可的一批开源项目，先从这里点。</div>
+        {{ range $hotGithubTools }}
+        <a href="{{ .url }}" target="_blank" class="tag" style="text-decoration:none">
+            {{ .name }} · ⭐ {{ if ge .stars 100000 }}{{ printf "%.0fK" (div (float .stars) 1000.0) }}{{ else if ge .stars 1000 }}{{ printf "%.1fK" (div (float .stars) 1000.0) }}{{ else }}{{ .stars }}{{ end }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+
+<!-- 分类快速导航 -->
+<div class="category-nav" style="position:sticky;top:100px;z-index:50;background:var(--bg);padding:12px 0;margin-bottom:16px;border-bottom:1px solid var(--border)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+        {{ range $cat, $emoji := $categories }}
+        <a href="#cat-{{ $cat }}" class="category-tag" style="padding:6px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;font-size:13px;color:var(--text2);text-decoration:none;transition:all 0.2s">
+            {{ $emoji }} {{ $cat }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+{{ range $cat, $emoji := $categories }}
+{{ $tools := where site.Data.tools "category" $cat }}
+{{ if gt (len $tools) 0 }}
+<div class="card" id="cat-{{ $cat }}">
+    <div class="card-title">{{ $emoji }} {{ $cat }} <span class="hot-badge">{{ len $tools }} 个</span></div>
+    <div class="tools-grid">
+        {{ range $tools }}
+        <a href="{{ .url }}" target="_blank" class="tool-card" style="text-decoration:none;color:inherit">
+            <div class="tool-header">
+                {{ $toolIconUrl := .icon_url }}
+                {{ $toolIcon := or .icon .emoji $emoji "🤖" }}
+                {{ if $toolIconUrl }}
+                <img src="{{ $toolIconUrl }}" alt="" style="width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ else }}
+                <img src="" alt="" style="display:none;width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ end }}
+                <div class="tool-icon" style="display:none">{{ $toolIcon }}</div>
+                <div class="tool-name">{{ .name }}</div>
+            </div>
+            <div class="tool-desc">{{ .description }}</div>
+            <div class="tool-footer">
+                <div class="tool-tags">
+                    {{ if .trending }}<span class="tool-tag hot">🔥 热门</span>{{ end }}
+                    {{ if .stars }}<span class="tool-tag">⭐ {{ if ge .stars 100000 }}{{ printf "%.0fK" (div (float .stars) 1000.0) }}{{ else if ge .stars 1000 }}{{ printf "%.1fK" (div (float .stars) 1000.0) }}{{ else }}{{ .stars }}{{ end }}</span>{{ end }}
+                    {{ if .free_quota }}<span class="tool-tag free">{{ .free_quota }}</span>{{ end }}
+                </div>
+                <div class="tool-price">💰 {{ .pricing }}</div>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+
+<!-- Agent 页 -->
+{{ else if in $slug "/agents/" }}
+{{ $types := dict "编程 Agent" "🛠️" "研究 Agent" "📚" "自动化 Agent" "⚡" "多 Agent" "👥" "效率 Agent" "🚀" "助手 Agent" "🤖" "浏览器 Agent" "🌐" "平台 Agent" "🏗️" "通用 Agent" "⭐" "创作 Agent" "✍️" "安全 Agent" "🔒" }}
+{{ $sortedTypeItems := site.Data.agent_type_order }}
+
+<div class="card" style="margin-bottom:12px;padding:14px 16px">
+    <div class="card-title" style="margin-bottom:6px">🤖 AI Agent 导航 <span class="hot-badge">{{ len site.Data.agents }} 个</span></div>
+    <div class="hot-meta" style="margin-bottom:8px">如果你不是做研究，先别被数量吓到，按任务类型挑会更高效。</div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;line-height:1.45">
+        <span class="tool-tag hot">开发者先看：🛠️ 编程 Agent</span>
+        <span class="tool-tag">想自动化工作流：⚡ 自动化 Agent</span>
+        <span class="tool-tag">想让 AI 上网页：🌐 浏览器 Agent</span>
+    </div>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;margin-top:6px;line-height:1.45">
+        <span class="tool-tag">按热度看：页面已按 GitHub ⭐ 自动从高到低排序</span>
+    </div>
+</div>
+
+{{ $hotGithubAgents := first 5 (sort (where site.Data.agents "stars" "ne" nil) "stars" "desc") }}
+{{ if gt (len $hotGithubAgents) 0 }}
+<div class="card" style="margin-bottom:12px;border-left:3px solid var(--accent);padding:12px 16px">
+    <div style="display:flex;flex-wrap:wrap;align-items:center;gap:8px">
+        <div class="card-title" style="margin:0">🔥 GitHub 热门项目</div>
+        <div class="hot-meta" style="margin:0">如果你想直接看现在最热门的一批 Agent 项目，就先从这里点。</div>
+        {{ range $hotGithubAgents }}
+        <a href="{{ .url }}" target="_blank" class="tag" style="text-decoration:none">
+            {{ .name }} · ⭐ {{ if ge .stars 100000 }}{{ printf "%.0fK" (div (float .stars) 1000.0) }}{{ else if ge .stars 1000 }}{{ printf "%.1fK" (div (float .stars) 1000.0) }}{{ else }}{{ .stars }}{{ end }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+
+<!-- 分类快速导航 -->
+<div class="category-nav" style="position:sticky;top:100px;z-index:50;background:var(--bg);padding:12px 0;margin-bottom:16px;border-bottom:1px solid var(--border)">
+    <div style="display:flex;flex-wrap:wrap;gap:8px">
+        {{ range $sortedTypeItems }}
+        {{ $type := .type }}
+        {{ $emoji := index $types $type }}
+        <a href="#agent-{{ $type }}" class="category-tag" style="padding:6px 12px;background:var(--bg2);border:1px solid var(--border);border-radius:16px;font-size:13px;color:var(--text2);text-decoration:none;transition:all 0.2s">
+            {{ $emoji }} {{ $type }}
+        </a>
+        {{ end }}
+    </div>
+</div>
+
+{{ range $sortedTypeItems }}
+{{ $type := .type }}
+{{ $emoji := index $types $type }}
+{{ $agents := where site.Data.agents "type" $type }}
+{{ if gt (len $agents) 0 }}
+{{ $sortedAgents := sort $agents "stars" "desc" }}
+<div class="card" id="agent-{{ $type }}">
+    <div class="card-title">{{ $emoji }} {{ $type }} <span class="hot-badge">{{ len $agents }} 个</span></div>
+    <div class="tools-grid">
+        {{ range $sortedAgents }}
+        <a href="{{ .url }}" target="_blank" class="tool-card" style="text-decoration:none;color:inherit">
+            <div class="tool-header">
+                {{ $toolIconUrl := .icon_url }}
+                {{ $toolIcon := or .icon .emoji $emoji "🤖" }}
+                {{ if $toolIconUrl }}
+                <img src="{{ $toolIconUrl }}" alt="" style="width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ else }}
+                <img src="" alt="" style="display:none;width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                {{ end }}
+                <div class="tool-icon" style="display:none">{{ $toolIcon }}</div>
+                <div class="tool-name">{{ .name }}</div>
+            </div>
+            <div class="tool-desc">{{ .description }}</div>
+            <div class="tool-footer">
+                <div class="tool-tags">
+                    {{ if .trending }}<span class="tool-tag hot">🔥 热门</span>{{ end }}
+                    {{ if .stars }}<span class="tool-tag">⭐ {{ if ge .stars 100000 }}{{ printf "%.0fK" (div (float .stars) 1000.0) }}{{ else if ge .stars 1000 }}{{ printf "%.1fK" (div (float .stars) 1000.0) }}{{ else }}{{ .stars }}{{ end }}</span>{{ end }}
+                    {{ if .free_quota }}<span class="tool-tag free">{{ .free_quota }}</span>{{ end }}
+                </div>
+                <div class="tool-price">💰 {{ .pricing }}</div>
+            </div>
+        </a>
+        {{ end }}
+    </div>
+</div>
+{{ end }}
+{{ end }}
+
+<!-- 新闻页 -->
+{{ else if in $slug "/news/" }}
+<div class="card">
+    <div class="card-title">📰 AI 新闻 <span class="hot-badge">{{ len site.Data.news }} 条</span></div>
+    <div id="newsList">
+    {{ range $index, $item := site.Data.news }}
+    <div class="hot-item news-item" data-page="{{ div $index 10 }}">
+        <div class="hot-content">
+            <div class="hot-title">
+                <a href="{{ relURL "/news/" }}{{ $item.id }}/?p={{ add (div $index 10) 1 }}">{{ with $item.title_zh }}{{ . }}{{ else }}{{ $item.title }}{{ end }}</a>
+                <span class="hot-badge">{{ $item.source }}</span>
+            </div>
+            {{ with $item.published }}<div class="hot-meta">{{ replace . "T" " " | truncate 16 "" }}</div>{{ end }}
+            {{ if $item.ai_summary }}<div class="hot-meta" style="color:var(--accent)">🤖 {{ $item.ai_summary }}</div>
+            {{ else if $item.summary }}<div class="hot-meta" style="color:var(--text3)">{{ $item.summary }}</div>{{ end }}
+        </div>
+    </div>
+    {{ end }}
+    </div>
+    <div id="newsPagination" style="display:flex;align-items:center;justify-content:center;gap:12px;margin-top:20px;padding-top:16px;border-top:1px solid var(--border)">
+        <button id="prevPage" onclick="newsPage(-1)" style="padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text2);cursor:pointer;font-size:13px">← 上一页</button>
+        <span id="pageInfo" style="font-size:13px;color:var(--text2)"></span>
+        <button id="nextPage" onclick="newsPage(1)" style="padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text2);cursor:pointer;font-size:13px">下一页 →</button>
+    </div>
+</div>
+<script>
+(function(){
+    const items = document.querySelectorAll('.news-item');
+    const perPage = 10;
+    const totalPages = Math.ceil(items.length / perPage);
+    let current = 0;
+
+    function show(p) {
+        items.forEach(el => {
+            el.style.display = parseInt(el.dataset.page) === p ? '' : 'none';
+        });
+        document.getElementById('pageInfo').textContent = (p+1) + ' / ' + totalPages;
+        document.getElementById('prevPage').disabled = p === 0;
+        document.getElementById('prevPage').style.opacity = p === 0 ? '0.4' : '1';
+        document.getElementById('nextPage').disabled = p === totalPages - 1;
+        document.getElementById('nextPage').style.opacity = p === totalPages - 1 ? '0.4' : '1';
+        const params = new URLSearchParams(location.search);
+        params.set('p', String(p + 1));
+        history.replaceState(null, '', `${location.pathname}?${params.toString()}`);
+        current = p;
+    }
+
+    window.newsPage = function(dir) {
+        const next = current + dir;
+        if (next >= 0 && next < totalPages) {
+            show(next);
+            document.querySelector('.card').scrollIntoView({behavior:'smooth', block:'start'});
+        }
+    };
+
+    // 解析URL参数 ?p=2
+    const params = new URLSearchParams(location.search);
+    const startPage = Math.min(Math.max(0, parseInt(params.get('p')||'1')-1), totalPages-1);
+    show(startPage);
+})();
+</script>
+
+<!-- 提供商页 -->
+{{ else if in $slug "/providers/" }}
+<div class="card">
+    <div class="card-title">🏢 AI 提供商 <span class="hot-badge">{{ len site.Data.providers }} 家</span></div>
+    <div class="hot-meta" style="margin-bottom:16px">按国内用户视角拆成两类：看作者页时关注“最近发了什么模型”，看平台页时关注“能接什么、覆盖什么场景”。</div>
+
+    <div class="card" style="padding:16px;margin-bottom:16px;background:var(--bg3)">
+        <div class="card-title">🧠 模型作者型提供商</div>
+        <div class="hot-meta" style="margin-bottom:12px">重点看这家最近上新了什么模型、是否还在一线、覆盖哪些模态。</div>
+        <div class="tools-grid">
+            {{ range where site.Data.providers "provider_kind" "model_author" }}
+            <a href="{{ .url }}" target="_blank" class="tool-card" style="text-decoration:none;color:inherit">
+                <div class="tool-header">
+                    {{ $providerIcon := or .icon_url .logo_url .logo }}
+                    {{ if $providerIcon }}
+                    <img src="{{ $providerIcon }}" alt="" style="width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    {{ end }}
+                    <div class="tool-icon" {{ if $providerIcon }}style="display:none"{{ end }}>🏢</div>
+                    <div>
+                        <div class="tool-name">{{ .name }}</div>
+                        <div class="hot-meta" style="font-size:12px;margin-top:2px">{{ .type }}{{ if .last_updated }} · 最近上新 {{ .last_updated }}{{ end }}</div>
+                    </div>
+                </div>
+                <div class="tool-desc">{{ with .live_summary }}{{ . }}{{ else }}{{ .pricing }}{{ end }}</div>
+                {{ if .latest_models }}
+                <div class="tool-tags" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px">
+                    {{ range first 3 .latest_models }}
+                    <span class="tool-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+                <div class="tool-footer" style="margin-top:12px;align-items:flex-start;gap:8px;flex-direction:column">
+                    <div class="tool-tags">
+                        <span class="tool-tag free">{{ if .model_count }}{{ .model_count }} 个模型{{ else }}手工维护{{ end }}</span>
+                        <span class="tool-tag">模型作者</span>
+                        {{ if .source }}<span class="tool-tag">{{ if eq .source "openrouter" }}OpenRouter{{ else }}站内数据{{ end }}</span>{{ end }}
+                        {{ range first 3 .modalities }}<span class="tool-tag">{{ . }}</span>{{ end }}
+                    </div>
+                    <div class="tool-price">💰 {{ .pricing }}</div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+
+    <div class="card" style="padding:16px;margin-bottom:0;background:var(--bg3)">
+        <div class="card-title">🏗️ 平台 / 聚合型提供商</div>
+        <div class="hot-meta" style="margin-bottom:12px">重点看可调用能力、接入生态和适合什么场景，不把它误当成单一模型作者。</div>
+        <div class="tools-grid">
+            {{ range where site.Data.providers "provider_kind" "platform" }}
+            <a href="{{ .url }}" target="_blank" class="tool-card" style="text-decoration:none;color:inherit">
+                <div class="tool-header">
+                    {{ $providerIcon := or .icon_url .logo_url .logo }}
+                    {{ if $providerIcon }}
+                    <img src="{{ $providerIcon }}" alt="" style="width:32px;height:32px;border-radius:6px;background:var(--bg3)" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'">
+                    {{ end }}
+                    <div class="tool-icon" {{ if $providerIcon }}style="display:none"{{ end }}>🏢</div>
+                    <div>
+                        <div class="tool-name">{{ .name }}</div>
+                        <div class="hot-meta" style="font-size:12px;margin-top:2px">{{ .type }} · 平台能力视角</div>
+                    </div>
+                </div>
+                <div class="tool-desc">{{ with .live_summary }}{{ . }}{{ else }}{{ .pricing }}{{ end }}</div>
+                {{ if .latest_models }}
+                <div class="tool-tags" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px">
+                    {{ range first 3 .latest_models }}
+                    <span class="tool-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ else if .models }}
+                <div class="tool-tags" style="margin-top:10px;display:flex;flex-wrap:wrap;gap:6px">
+                    {{ range first 3 .models }}
+                    <span class="tool-tag">{{ . }}</span>
+                    {{ end }}
+                </div>
+                {{ end }}
+                <div class="tool-footer" style="margin-top:12px;align-items:flex-start;gap:8px;flex-direction:column">
+                    <div class="tool-tags">
+                        <span class="tool-tag free">平台 / 聚合</span>
+                        <span class="tool-tag">接入能力视角</span>
+                        {{ if .api }}<span class="tool-tag">API</span>{{ end }}
+                        {{ if .free_tier }}<span class="tool-tag">免费层</span>{{ end }}
+                    </div>
+                    <div class="tool-price">💰 {{ .pricing }}</div>
+                </div>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</div>
+{{ end }}
+
+{{ end }}

@@ -1,0 +1,1372 @@
+[
+  {
+    "id": "xiaomi",
+    "name": "小米 MiMo",
+    "url": "https://platform.xiaomimimo.com?ref=A3JKSD",
+    "logo": "🟠",
+    "models": [
+      "MiMo-V2.5-Pro",
+      "MiMo-V2.5",
+      "MiMo-V2-Omni"
+    ],
+    "type": "国产",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "model_author",
+    "source": "openrouter",
+    "latest_models": [
+      "MiMo-V2.5-Pro",
+      "MiMo-V2.5"
+    ],
+    "model_count": 2,
+    "last_updated": "2026-04-22",
+    "modalities": [
+      "文本",
+      "视频"
+    ],
+    "live_summary": "OpenRouter 已收录 2 个该作者/厂商相关模型，最近更新为 MiMo-V2.5-Pro",
+    "icon_url": "https://www.google.com/s2/favicons?domain=xiaomimimo.com&sz=64"
+  },
+  {
+    "id": "openai",
+    "name": "OpenAI",
+    "url": "https://openai.com",
+    "logo": "🟢",
+    "models": [
+      "GPT-4o",
+      "GPT-4.1",
+      "o3",
+      "o4-mini"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "GPT-5.6 Luna Pro",
+      "GPT-5.6 Luna Pro (batch)",
+      "GPT-5.6 Luna"
+    ],
+    "model_count": 89,
+    "last_updated": "2026-07-09",
+    "modalities": [
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 89 个该作者/厂商相关模型，最近更新为 GPT-5.6 Luna Pro",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=openai.com&sz=64"
+  },
+  {
+    "id": "anthropic",
+    "name": "Anthropic",
+    "url": "https://anthropic.com",
+    "logo": "🟠",
+    "models": [
+      "Claude Opus 4",
+      "Claude Sonnet 4",
+      "Claude Haiku"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Claude Fable 5.1",
+      "Claude Fable 5.1 (batch)",
+      "Claude Opus 5"
+    ],
+    "model_count": 27,
+    "last_updated": "2026-09-01",
+    "modalities": [
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 27 个该作者/厂商相关模型，最近更新为 Claude Fable 5.1",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=64"
+  },
+  {
+    "id": "google",
+    "name": "Google AI",
+    "url": "https://ai.google.dev",
+    "logo": "🔵",
+    "models": [
+      "Gemini 2.5 Pro",
+      "Gemini 2.5 Flash"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Gemini 3.8 Flash",
+      "Gemini 3.8 Flash (batch)",
+      "Gemini 3.7 Flash"
+    ],
+    "model_count": 43,
+    "last_updated": "2026-09-02",
+    "modalities": [
+      "视频"
+    ],
+    "live_summary": "OpenRouter 已收录 43 个该作者/厂商相关模型，最近更新为 Gemini 3.8 Flash",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=google.com&sz=64"
+  },
+  {
+    "id": "deepseek",
+    "name": "DeepSeek",
+    "url": "https://deepseek.com",
+    "logo": "🟣",
+    "models": [
+      "DeepSeek-V3",
+      "DeepSeek-R1"
+    ],
+    "type": "国产",
+    "pricing": "超低价",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "DeepSeek V4 Flash Vision Exp",
+      "DeepSeek V4 Pro 0813",
+      "DeepSeek V4 Pro 0813 (batch)"
+    ],
+    "model_count": 16,
+    "last_updated": "2026-08-21",
+    "modalities": [
+      "多模态",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 16 个该作者/厂商相关模型，最近更新为 DeepSeek V4 Flash Vision Exp",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=deepseek.com&sz=64"
+  },
+  {
+    "id": "alibaba",
+    "name": "阿里云 通义",
+    "url": "https://tongyi.aliyun.com",
+    "logo": "🟤",
+    "models": [
+      "Qwen3",
+      "QwQ-32B"
+    ],
+    "type": "国产",
+    "pricing": "免费额度+按量",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Qwen3.8 Flash",
+      "Qwen3.8 27B",
+      "Qwen3.8 2.4T A95B"
+    ],
+    "model_count": 53,
+    "last_updated": "2026-08-26",
+    "modalities": [
+      "视频",
+      "文本",
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 53 个该作者/厂商相关模型，最近更新为 Qwen3.8 Flash",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=alibabacloud.com&sz=64"
+  },
+  {
+    "id": "baidu",
+    "name": "百度 文心",
+    "url": "https://yiyan.baidu.com",
+    "logo": "🔴",
+    "models": [
+      "ERNIE 4.5"
+    ],
+    "type": "国产",
+    "pricing": "免费额度+按量",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "ERNIE 4.5 VL 424B A47B"
+    ],
+    "model_count": 1,
+    "last_updated": "2025-06-30",
+    "modalities": [
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 1 个该作者/厂商相关模型，最近更新为 ERNIE 4.5 VL 424B A47B",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=yiyan.baidu.com&sz=64"
+  },
+  {
+    "id": "bytedance",
+    "name": "字节 豆包",
+    "url": "https://www.doubao.com",
+    "logo": "🟢",
+    "models": [
+      "Doubao-Pro"
+    ],
+    "type": "国产",
+    "pricing": "免费额度",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Seed 2.1 Turbo",
+      "Seed-2.0-Code",
+      "Seed-2.0-Lite"
+    ],
+    "model_count": 7,
+    "last_updated": "2026-08-12",
+    "modalities": [
+      "视频",
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 7 个该作者/厂商相关模型，最近更新为 Seed 2.1 Turbo",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=seed.bytedance.com&sz=64"
+  },
+  {
+    "id": "tencent",
+    "name": "腾讯 混元",
+    "url": "https://hunyuan.tencent.com",
+    "logo": "🔵",
+    "models": [
+      "Hunyuan-T1"
+    ],
+    "type": "国产",
+    "pricing": "免费额度+按量",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Hy4 preview",
+      "Hy-MT2-1.8B",
+      "Hy-MT2-30B-A3B"
+    ],
+    "model_count": 7,
+    "last_updated": "2026-08-28",
+    "modalities": [
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 7 个该作者/厂商相关模型，最近更新为 Hy4 preview",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=cloud.tencent.com&sz=64"
+  },
+  {
+    "id": "moonshot",
+    "name": "月之暗面 Kimi",
+    "url": "https://kimi.moonshot.cn",
+    "logo": "🌙",
+    "models": [
+      "Kimi K2"
+    ],
+    "type": "国产",
+    "pricing": "免费额度",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Kimi K3",
+      "Kimi K3 (batch)",
+      "Kimi K2.7 Code"
+    ],
+    "model_count": 8,
+    "last_updated": "2026-07-16",
+    "modalities": [
+      "视频",
+      "多模态",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 8 个该作者/厂商相关模型，最近更新为 Kimi K3",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=moonshot.cn&sz=64"
+  },
+  {
+    "id": "zhipu",
+    "name": "智谱 GLM",
+    "url": "https://open.bigmodel.cn",
+    "logo": "💚",
+    "models": [
+      "GLM-4-Plus",
+      "GLM-Z1"
+    ],
+    "type": "国产",
+    "pricing": "免费额度+按量",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "GLM 5.3 Flash",
+      "GLM 5.3 Flash (batch)",
+      "GLM 5.3"
+    ],
+    "model_count": 16,
+    "last_updated": "2026-08-26",
+    "modalities": [
+      "视频",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 16 个该作者/厂商相关模型，最近更新为 GLM 5.3 Flash",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=z.ai&sz=64"
+  },
+  {
+    "id": "minimax",
+    "name": "MiniMax",
+    "url": "https://minimaxi.com",
+    "logo": "💜",
+    "models": [
+      "MiniMax-Text-01"
+    ],
+    "type": "国产",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "MiniMax M3",
+      "MiniMax M3 (batch)",
+      "MiniMax M3 (free)"
+    ],
+    "model_count": 11,
+    "last_updated": "2026-05-31",
+    "modalities": [
+      "视频",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 11 个该作者/厂商相关模型，最近更新为 MiniMax M3",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=minimax.io&sz=64"
+  },
+  {
+    "id": "mistral",
+    "name": "Mistral AI",
+    "url": "https://mistral.ai",
+    "logo": "🟠",
+    "models": [
+      "Mistral Large",
+      "Codestral"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Mistral Medium 3.5",
+      "Mistral Medium 3.5 (batch)",
+      "Mistral Small 4"
+    ],
+    "model_count": 20,
+    "last_updated": "2026-04-30",
+    "modalities": [
+      "多模态",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 20 个该作者/厂商相关模型，最近更新为 Mistral Medium 3.5",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=mistral.ai&sz=64"
+  },
+  {
+    "id": "meta",
+    "name": "Meta Llama",
+    "url": "https://llama.meta.com",
+    "logo": "🔵",
+    "models": [
+      "Llama 4 Scout",
+      "Llama 4 Maverick"
+    ],
+    "type": "国际",
+    "pricing": "开源免费",
+    "api": false,
+    "source": "openrouter",
+    "latest_models": [
+      "Llama Guard 4 12B",
+      "Llama 4 Maverick",
+      "Llama 4 Scout"
+    ],
+    "model_count": 8,
+    "last_updated": "2025-04-30",
+    "modalities": [
+      "多模态",
+      "文本"
+    ],
+    "live_summary": "OpenRouter 已收录 8 个该作者/厂商相关模型，最近更新为 Llama Guard 4 12B",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=ai.meta.com&sz=64"
+  },
+  {
+    "id": "xai",
+    "name": "xAI Grok",
+    "url": "https://x.ai",
+    "logo": "⬛",
+    "models": [
+      "Grok 3"
+    ],
+    "type": "国际",
+    "pricing": "X Premium+",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "SpaceXAI: Grok 4.6",
+      "SpaceXAI: Grok 4.5",
+      "SpaceXAI: Grok Build 0.1"
+    ],
+    "model_count": 6,
+    "last_updated": "2026-08-12",
+    "modalities": [
+      "多模态"
+    ],
+    "live_summary": "OpenRouter 已收录 6 个该作者/厂商相关模型，最近更新为 SpaceXAI: Grok 4.6",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=x.ai&sz=64"
+  },
+  {
+    "id": "nvidia",
+    "name": "NVIDIA NIM",
+    "url": "https://build.nvidia.com/explore/reasoning",
+    "logo": "🟢",
+    "models": [
+      "Llama 3.1 NIM",
+      "Mistral NIM"
+    ],
+    "type": "国际",
+    "pricing": "免费额度",
+    "api": true,
+    "source": "openrouter",
+    "latest_models": [
+      "Nemotron 3.5 Lightning",
+      "Nemotron 3.5 Lightning (free)",
+      "Nemotron 3.5 Content Safety (free)"
+    ],
+    "model_count": 9,
+    "last_updated": "2026-08-11",
+    "modalities": [
+      "文本",
+      "多模态",
+      "视频"
+    ],
+    "live_summary": "OpenRouter 已收录 9 个该作者/厂商相关模型，最近更新为 Nemotron 3.5 Lightning",
+    "provider_kind": "model_author",
+    "icon_url": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=64"
+  },
+  {
+    "id": "arcee-ai",
+    "name": "Arcee AI",
+    "url": "https://openrouter.ai/arcee-ai",
+    "logo": "🆕",
+    "models": [
+      "Arcee AI: Trinity Large Thinking",
+      "Arcee AI: Trinity Large Preview",
+      "Arcee AI: Trinity Mini"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Arcee AI: Trinity Large Thinking",
+      "Arcee AI: Trinity Large Preview",
+      "Arcee AI: Trinity Mini"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=arcee.ai&sz=64"
+  },
+  {
+    "id": "rekaai",
+    "name": "Reka Edge",
+    "url": "https://openrouter.ai/rekaai",
+    "logo": "🆕",
+    "models": [
+      "Reka Edge",
+      "Reka Flash 3"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Reka Edge",
+      "Reka Flash 3"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=reka.ai&sz=64"
+  },
+  {
+    "id": "liquid",
+    "name": "LiquidAI",
+    "url": "https://openrouter.ai/liquid",
+    "logo": "🆕",
+    "models": [
+      "LiquidAI: LFM2-24B-A2B",
+      "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "LiquidAI: LFM2.5-1.2B-Instruct (free)"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "LiquidAI: LFM2-24B-A2B",
+      "LiquidAI: LFM2.5-1.2B-Thinking (free)",
+      "LiquidAI: LFM2.5-1.2B-Instruct (free)"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=liquid.ai&sz=64"
+  },
+  {
+    "id": "aion-labs",
+    "name": "AionLabs",
+    "url": "https://openrouter.ai/aion-labs",
+    "logo": "🆕",
+    "models": [
+      "AionLabs: Aion-2.0",
+      "AionLabs: Aion-1.0",
+      "AionLabs: Aion-1.0-Mini"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "AionLabs: Aion-2.0",
+      "AionLabs: Aion-1.0",
+      "AionLabs: Aion-1.0-Mini"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=aionlabs.ai&sz=64"
+  },
+  {
+    "id": "allenai",
+    "name": "AllenAI",
+    "url": "https://openrouter.ai/allenai",
+    "logo": "🆕",
+    "models": [
+      "AllenAI: Olmo 3.1 32B Instruct",
+      "AllenAI: Olmo 3 32B Think"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "AllenAI: Olmo 3.1 32B Instruct",
+      "AllenAI: Olmo 3 32B Think"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=allenai.org&sz=64"
+  },
+  {
+    "id": "relace",
+    "name": "Relace",
+    "url": "https://openrouter.ai/relace",
+    "logo": "🆕",
+    "models": [
+      "Relace: Relace Search",
+      "Relace: Relace Apply 3"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Relace: Relace Search",
+      "Relace: Relace Apply 3"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=relace.ai&sz=64"
+  },
+  {
+    "id": "amazon",
+    "name": "Amazon",
+    "url": "https://openrouter.ai/amazon",
+    "logo": "🆕",
+    "models": [
+      "Nova 2 Lite",
+      "Nova Premier 1.0",
+      "Nova Lite 1.0"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Nova 2 Lite",
+      "Nova Premier 1.0",
+      "Nova Lite 1.0"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=64"
+  },
+  {
+    "id": "perplexity",
+    "name": "Perplexity",
+    "url": "https://openrouter.ai/perplexity",
+    "logo": "🆕",
+    "models": [
+      "Perplexity: Sonar Pro Search",
+      "Perplexity: Sonar Reasoning Pro",
+      "Perplexity: Sonar Pro"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Perplexity: Sonar Pro Search",
+      "Perplexity: Sonar Reasoning Pro",
+      "Perplexity: Sonar Pro"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=perplexity.ai&sz=64"
+  },
+  {
+    "id": "thedrummer",
+    "name": "TheDrummer",
+    "url": "https://openrouter.ai/thedrummer",
+    "logo": "🆕",
+    "models": [
+      "TheDrummer: Cydonia 24B V4.1",
+      "TheDrummer: Skyfall 36B V2",
+      "TheDrummer: UnslopNemo 12B"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "TheDrummer: Cydonia 24B V4.1",
+      "TheDrummer: Skyfall 36B V2",
+      "TheDrummer: UnslopNemo 12B"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=thedrummer.cc&sz=64"
+  },
+  {
+    "id": "nousresearch",
+    "name": "Nous",
+    "url": "https://openrouter.ai/nousresearch",
+    "logo": "🆕",
+    "models": [
+      "Nous: Hermes 4 70B",
+      "Nous: Hermes 4 405B",
+      "Nous: Hermes 3 70B Instruct"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Nous: Hermes 4 70B",
+      "Nous: Hermes 4 405B",
+      "Nous: Hermes 3 70B Instruct"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=nousresearch.com&sz=64"
+  },
+  {
+    "id": "morph",
+    "name": "Morph",
+    "url": "https://openrouter.ai/morph",
+    "logo": "🆕",
+    "models": [
+      "Morph: Morph V3 Large",
+      "Morph: Morph V3 Fast"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Morph: Morph V3 Large",
+      "Morph: Morph V3 Fast"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=morphllm.com&sz=64"
+  },
+  {
+    "id": "cohere",
+    "name": "Cohere",
+    "url": "https://openrouter.ai/cohere",
+    "logo": "🆕",
+    "models": [
+      "Cohere: Command A",
+      "Cohere: Command R7B (12-2024)",
+      "Cohere: Command R+ (08-2024)"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Cohere: Command A",
+      "Cohere: Command R7B (12-2024)",
+      "Cohere: Command R+ (08-2024)"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=cohere.com&sz=64"
+  },
+  {
+    "id": "microsoft",
+    "name": "Microsoft",
+    "url": "https://openrouter.ai/microsoft",
+    "logo": "🆕",
+    "models": [
+      "Microsoft: Phi 4",
+      "WizardLM-2 8x22B"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Microsoft: Phi 4",
+      "WizardLM-2 8x22B"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=64"
+  },
+  {
+    "id": "sao10k",
+    "name": "Sao10K",
+    "url": "https://openrouter.ai/sao10k",
+    "logo": "🆕",
+    "models": [
+      "Sao10K: Llama 3.1 70B Hanami x1",
+      "Sao10K: Llama 3.3 Euryale 70B",
+      "Sao10K: Llama 3.1 Euryale 70B v2.2"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Sao10K: Llama 3.1 70B Hanami x1",
+      "Sao10K: Llama 3.3 Euryale 70B",
+      "Sao10K: Llama 3.1 Euryale 70B v2.2"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=huggingface.co/Sao10K&sz=64"
+  },
+  {
+    "id": "inflection",
+    "name": "Inflection",
+    "url": "https://openrouter.ai/inflection",
+    "logo": "🆕",
+    "models": [
+      "Inflection: Inflection 3 Productivity",
+      "Inflection: Inflection 3 Pi"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Inflection: Inflection 3 Productivity",
+      "Inflection: Inflection 3 Pi"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=inflection.ai&sz=64"
+  },
+  {
+    "id": "inclusionai",
+    "name": "inclusionAI",
+    "url": "https://openrouter.ai/inclusionai",
+    "logo": "🆕",
+    "models": [
+      "inclusionAI: Ling-2.6-1T (free)",
+      "inclusionAI: Ling-2.6-flash (free)"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "inclusionAI: Ling-2.6-1T (free)",
+      "inclusionAI: Ling-2.6-flash (free)"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=inclusionai.com&sz=64"
+  },
+  {
+    "id": "zenmux",
+    "name": "ZenMux",
+    "url": "https://zenmux.ai/invite/16U6FF",
+    "logo": "⚡",
+    "models": [
+      "DeepSeek V4"
+    ],
+    "type": "聚合",
+    "pricing": "免费使用 DeepSeek V4",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "DeepSeek V4"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "provider_kind": "manual",
+    "icon_url": "https://www.google.com/s2/favicons?domain=zenmux.ai&sz=64"
+  },
+  {
+    "id": "siliconflow",
+    "name": "硅基流动",
+    "url": "https://cloud.siliconflow.cn/i/Ngl1oB14",
+    "logo": "💎",
+    "models": [
+      "开源模型集群"
+    ],
+    "type": "国产聚合",
+    "pricing": "超低价/免费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "开源模型集群"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=siliconflow.cn&sz=64"
+  },
+  {
+    "id": "volcengine",
+    "name": "火山引擎",
+    "url": "https://volcengine.com/L/A3Cm9GB_3J4/",
+    "logo": "🌋",
+    "models": [
+      "Doubao",
+      "自定义模型"
+    ],
+    "type": "云平台",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "Doubao",
+      "自定义模型"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=volcengine.com&sz=64"
+  },
+  {
+    "id": "aws-bedrock",
+    "name": "AWS Bedrock",
+    "url": "https://aws.amazon.com/bedrock",
+    "logo": "🟠",
+    "models": [
+      "Claude",
+      "Llama",
+      "Titan"
+    ],
+    "type": "云平台",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "Claude",
+      "Llama",
+      "Titan"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=aws.amazon.com&sz=64"
+  },
+  {
+    "id": "azure-openai",
+    "name": "Azure OpenAI",
+    "url": "https://azure.microsoft.com/en-us/products/ai-services/openai-service",
+    "logo": "🔵",
+    "models": [
+      "GPT-4o",
+      "GPT-4.1"
+    ],
+    "type": "云平台",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "GPT-4o",
+      "GPT-4.1"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=azure.microsoft.com&sz=64"
+  },
+  {
+    "id": "openrouter",
+    "name": "OpenRouter",
+    "url": "https://openrouter.ai",
+    "logo": "🔀",
+    "models": [
+      "200+ 模型"
+    ],
+    "type": "聚合",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "200+ 模型"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=64"
+  },
+  {
+    "id": "together",
+    "name": "Together AI",
+    "url": "https://together.ai",
+    "logo": "🤝",
+    "models": [
+      "开源模型集群"
+    ],
+    "type": "聚合",
+    "pricing": "按量计费",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "开源模型集群"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=together.ai&sz=64"
+  },
+  {
+    "id": "groq",
+    "name": "Groq",
+    "url": "https://groq.com",
+    "logo": "⚡",
+    "models": [
+      "Llama",
+      "Mixtral",
+      "Gemma"
+    ],
+    "type": "国际",
+    "pricing": "免费额度",
+    "api": true,
+    "source": "manual",
+    "latest_models": [
+      "Llama",
+      "Mixtral",
+      "Gemma"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "平台型提供商，展示的是接入能力与生态，不直接等同于某个模型作者",
+    "provider_kind": "platform",
+    "icon_url": "https://www.google.com/s2/favicons?domain=groq.com&sz=64"
+  },
+  {
+    "id": "~anthropic",
+    "name": "Anthropic Claude Haiku Latest",
+    "url": "https://openrouter.ai/~anthropic",
+    "logo": "🆕",
+    "models": [
+      "Anthropic Claude Haiku Latest",
+      "Anthropic Claude Sonnet Latest",
+      "Claude Opus Latest"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Anthropic Claude Haiku Latest",
+      "Anthropic Claude Sonnet Latest",
+      "Claude Opus Latest"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=anthropic.com&sz=64"
+  },
+  {
+    "id": "~openai",
+    "name": "OpenAI GPT Mini Latest",
+    "url": "https://openrouter.ai/~openai",
+    "logo": "🆕",
+    "models": [
+      "OpenAI GPT Mini Latest",
+      "OpenAI GPT Latest"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "OpenAI GPT Mini Latest",
+      "OpenAI GPT Latest"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=openai.com&sz=64"
+  },
+  {
+    "id": "~google",
+    "name": "Google Gemini Pro Latest",
+    "url": "https://openrouter.ai/~google",
+    "logo": "🆕",
+    "models": [
+      "Google Gemini Pro Latest",
+      "Google Gemini Flash Latest"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Google Gemini Pro Latest",
+      "Google Gemini Flash Latest"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=gemini.google.com&sz=64"
+  },
+  {
+    "id": "poolside",
+    "name": "Poolside",
+    "url": "https://openrouter.ai/poolside",
+    "logo": "🆕",
+    "models": [
+      "Poolside: Laguna XS.2 (free)",
+      "Poolside: Laguna M.1 (free)"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Poolside: Laguna XS.2 (free)",
+      "Poolside: Laguna M.1 (free)"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=poolside.ai&sz=64"
+  },
+  {
+    "id": "ibm-granite",
+    "name": "IBM",
+    "url": "https://openrouter.ai/ibm-granite",
+    "logo": "🆕",
+    "models": [
+      "IBM: Granite 4.1 8B",
+      "IBM: Granite 4.0 Micro"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "IBM: Granite 4.1 8B",
+      "IBM: Granite 4.0 Micro"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引",
+    "icon_url": "https://www.google.com/s2/favicons?domain=openrouter.ai&sz=64"
+  },
+  {
+    "id": "stepfun",
+    "name": "StepFun",
+    "url": "https://openrouter.ai/stepfun",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=stepfun.com&sz=64",
+    "models": [
+      "StepFun: Step 3.7 Flash",
+      "StepFun: Step 3.5 Flash"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "StepFun: Step 3.7 Flash",
+      "StepFun: Step 3.5 Flash"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "nex-agi",
+    "name": "Nex AGI",
+    "url": "https://openrouter.ai/nex-agi",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=nex-agi.com&sz=64",
+    "models": [
+      "Nex AGI: Nex-N2-Pro (free)",
+      "Nex AGI: Nex-N2-Pro"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Nex AGI: Nex-N2-Pro (free)",
+      "Nex AGI: Nex-N2-Pro"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "cognitivecomputations",
+    "name": "Venice",
+    "url": "https://openrouter.ai/cognitivecomputations",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=cognitivecomputations.com&sz=64",
+    "models": [
+      "Venice: Uncensored (free)",
+      "Venice: Uncensored"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Venice: Uncensored (free)",
+      "Venice: Uncensored"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "kwaipilot",
+    "name": "Kwaipilot",
+    "url": "https://openrouter.ai/kwaipilot",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=kwaipilot.com&sz=64",
+    "models": [
+      "Kwaipilot: KAT-Coder-Air V2.5",
+      "Kwaipilot: KAT-Coder-Pro V2.5",
+      "Kwaipilot: KAT-Coder-Pro V2"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Kwaipilot: KAT-Coder-Air V2.5",
+      "Kwaipilot: KAT-Coder-Pro V2.5",
+      "Kwaipilot: KAT-Coder-Pro V2"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "thinkingmachines",
+    "name": "Thinking Machines",
+    "url": "https://openrouter.ai/thinkingmachines",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=thinkingmachines.com&sz=64",
+    "models": [
+      "Thinking Machines: Inkling Small",
+      "Thinking Machines: Inkling"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Thinking Machines: Inkling Small",
+      "Thinking Machines: Inkling"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "upstage",
+    "name": "Upstage",
+    "url": "https://openrouter.ai/upstage",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=upstage.com&sz=64",
+    "models": [
+      "Upstage: Solar Pro 4",
+      "Upstage: Solar Pro 3"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Upstage: Solar Pro 4",
+      "Upstage: Solar Pro 3"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "sakana",
+    "name": "Sakana",
+    "url": "https://openrouter.ai/sakana",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=sakana.com&sz=64",
+    "models": [
+      "Sakana: Sakana Namazu",
+      "Sakana: Fugu Ultra"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Sakana: Sakana Namazu",
+      "Sakana: Fugu Ultra"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "inception",
+    "name": "Inception",
+    "url": "https://openrouter.ai/inception",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=inception.com&sz=64",
+    "models": [
+      "Inception: Mercury 2.5 Preview",
+      "Inception: Mercury 2"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "Inception: Mercury 2.5 Preview",
+      "Inception: Mercury 2"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  },
+  {
+    "id": "~z-ai",
+    "name": "Z.ai",
+    "url": "https://openrouter.ai/~z-ai",
+    "logo": "🆕",
+    "icon_url": "https://www.google.com/s2/favicons?domain=~z-ai.com&sz=64",
+    "models": [
+      "GLM Flash Latest",
+      "GLM Latest"
+    ],
+    "type": "国际",
+    "pricing": "按量计费",
+    "api": true,
+    "provider_kind": "manual",
+    "source": "manual",
+    "latest_models": [
+      "GLM Flash Latest",
+      "GLM Latest"
+    ],
+    "model_count": 0,
+    "last_updated": "",
+    "modalities": [],
+    "live_summary": "站内手工维护，待补充实时模型索引"
+  }
+]

@@ -1,0 +1,29 @@
+{
+  "updated_at": "2026-09-03T21:29:28.071349+08:00",
+  "window_days": 7,
+  "candidate_count": 0,
+  "items": [
+    {
+      "id": "github-45717250",
+      "name": "tensorflow",
+      "url": "https://github.com/tensorflow/tensorflow",
+      "description": "An Open Source Machine Learning Framework for Everyone",
+      "type": "project",
+      "stars": 194786,
+      "score": 194786,
+      "window_days": 7,
+      "reason": "最近值得点开的开源 AI 项目"
+    },
+    {
+      "id": "openclaw",
+      "name": "OpenClaw",
+      "url": "https://github.com/openclaw/openclaw",
+      "description": "🦞 你的个人AI助手，跨平台、全功能。Any OS, Any Platform",
+      "type": "agent",
+      "stars": 362093,
+      "score": 362093,
+      "window_days": 7,
+      "reason": "你的个人AI助手，跨平台、全功能。Any OS, Any Platform"
+    }
+  ]
+}

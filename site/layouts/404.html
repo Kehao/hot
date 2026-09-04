@@ -1,0 +1,19 @@
+{{ define "main" }}
+<div style="max-width:700px;margin:60px auto;text-align:center">
+    <h1 style="font-size:72px;margin-bottom:16px">🔍</h1>
+    <h2 style="font-size:28px;margin-bottom:24px">页面未找到</h2>
+    <p style="color:var(--text2);font-size:16px;line-height:1.8;margin-bottom:32px">
+        很抱歉，您访问的页面不存在。<br>
+        可能是新闻内容已更新，旧链接已失效。
+    </p>
+    <div style="display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:40px">
+        <a href="{{ relURL "/" }}" style="padding:12px 24px;background:var(--accent);color:white;border-radius:8px;text-decoration:none;font-weight:600">🔥 返回首页</a>
+        <a href="{{ relURL "/news/" }}" style="padding:12px 24px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text1)">📰 AI 新闻</a>
+        <a href="{{ relURL "/tools/" }}" style="padding:12px 24px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text1)">🛠️ AI 工具</a>
+        <a href="{{ relURL "/search/" }}" style="padding:12px 24px;background:var(--bg3);border:1px solid var(--border);border-radius:8px;text-decoration:none;color:var(--text1)">🔍 搜索</a>
+    </div>
+    <p style="color:var(--text3);font-size:13px">
+        AI热榜每6小时自动更新，内容持续变化。
+    </p>
+</div>
+{{ end }}

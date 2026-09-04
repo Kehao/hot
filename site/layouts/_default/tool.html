@@ -1,0 +1,23 @@
+{{ define "main" }}
+<div style="margin-bottom:20px">
+    <a href="{{ relURL "/tools/" }}" style="color:var(--text2);font-size:13px">← 返回工具列表</a>
+</div>
+
+<div class="card" style="text-align:center;padding:40px">
+    <div style="font-size:48px;margin-bottom:12px">🔁</div>
+    <div style="color:var(--text2)">工具详情已升级为静态页面，正在为你跳转...</div>
+    <div style="margin-top:12px;font-size:13px;color:var(--text3)">如果没有自动跳转，请稍候或返回工具列表。</div>
+</div>
+
+<script>
+const allTools = {{ site.Data.tools | jsonify | safeJS }} || [];
+const params = new URLSearchParams(location.search);
+const id = params.get('id');
+if (id) {
+    const tool = allTools.find(t => t.id === id || t.name.toLowerCase().replace(/[^a-z0-9]/g, '-') === id);
+    if (tool && tool.id) {
+        window.location.replace('{{ relURL "/tools/" }}' + encodeURIComponent(tool.id) + '/');
+    }
+}
+</script>
+{{ end }}

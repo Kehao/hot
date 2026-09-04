@@ -1,0 +1,613 @@
+{{ define "main" }}
+
+<h1 style="font-size:1px;color:transparent;position:absolute;pointer-events:none">AI热榜 - 每6小时更新的中文AI工具导航站</h1>
+
+<div class="grid">
+<div>
+    <!-- 搜索框 -->
+    <div style="margin-bottom:20px">
+        <input type="text" class="search-box" placeholder="🔍 搜索 AI 工具、模型、新闻... (Ctrl+K)" id="searchInput">
+        <div id="searchResults"></div>
+    </div>
+
+    <!-- 新用户路径引导 -->
+    <div class="card" style="margin-bottom:24px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(99,102,241,0.06));border-color:rgba(255,107,53,0.25)">
+        <div class="card-title">🧭 先从哪看？</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
+            <a href="{{ relURL "/tools/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我是新手，先找能直接用的工具</div>
+                <div style="font-size:13px;color:var(--text2)">从工具库开始，看热门、免费、国内可直接用的 AI 工具</div>
+            </a>
+            <a href="{{ relURL "/models/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我想看现在最强的大模型</div>
+                <div style="font-size:13px;color:var(--text2)">直接看模型精选榜，优先看顶级通用、编程最强、多模态主力</div>
+            </a>
+            <a href="{{ relURL "/agents/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我想找 Agent / 自动化能力</div>
+                <div style="font-size:13px;color:var(--text2)">去 Agent 区看编程 Agent、浏览器 Agent、多 Agent 框架</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- 今日热点 -->
+    <div class="card" style="border-color:var(--accent)">
+        <div class="card-title">🔥 今日热点 <span class="hot-badge fire">每6h更新</span></div>
+        {{ $hot := site.Data.hot }}
+        {{ if $hot }}
+            {{ $items := $hot.items }}
+            {{ if not $items }}{{ $items = $hot.top_20 }}{{ end }}
+            {{ if not $items }}{{ $items = $hot.hot_list }}{{ end }}
+            {{ $newsData := site.Data.news }}
+            {{ range $index, $item := $items }}
+            {{ $itemUrl := $item.url | default "" }}
+            {{ $itemUrlNorm := replaceRE "/$" "" $itemUrl }}
+            {{ $itemTitleNorm := lower ($item.title | default "") }}
+            {{ $matchedNews := dict }}
+            {{ if and (eq $item.type "news") (not $item.news_id) }}
+                {{ if $itemUrl }}
+                    {{ $byUrl := where $newsData "url" $itemUrl }}
+                    {{ if gt (len $byUrl) 0 }}
+                        {{ $matchedNews = index $byUrl 0 }}
+                    {{ else }}
+                        {{ range $newsData }}
+                            {{ if and (not ($matchedNews.id)) (eq (replaceRE "/$" "" (.url | default "")) $itemUrlNorm) }}
+                                {{ $matchedNews = . }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+                {{ if and (not ($matchedNews.id)) $itemTitleNorm }}
+                    {{ range $newsData }}
+                        {{ $newsTitleZhNorm := lower (.title_zh | default "") }}
+                        {{ $newsTitleNorm := lower (.title | default "") }}
+                        {{ if and (not ($matchedNews.id)) (or (and $newsTitleZhNorm (or (in $itemTitleNorm $newsTitleZhNorm) (in $newsTitleZhNorm $itemTitleNorm))) (and $newsTitleNorm (or (in $itemTitleNorm $newsTitleNorm) (in $newsTitleNorm $itemTitleNorm)))) }}
+                            {{ $matchedNews = . }}
+                        {{ end }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+            {{ $hotHref := $item.url }}
+            {{ $hotTarget := "_blank" }}
+            {{ $hotRel := "noopener" }}
+            {{ if $item.news_id }}
+                {{ $hotHref = printf "/news/%s/" $item.news_id | relURL }}
+                {{ $hotTarget = "_self" }}
+                {{ $hotRel = "" }}
+            {{ else if $matchedNews.id }}
+                {{ $hotHref = printf "/news/%s/" $matchedNews.id | relURL }}
+                {{ $hotTarget = "_self" }}
+                {{ $hotRel = "" }}
+            {{ end }}
+            <a href="{{ $hotHref }}"{{ if $hotTarget }} target="{{ $hotTarget }}"{{ end }}{{ if $hotRel }} rel="{{ $hotRel }}"{{ end }} class="hot-item" style="text-decoration:none;color:inherit">
+                <div class="hot-rank {{ if lt $index 3 }}top3{{ else }}normal{{ end }}">{{ add $index 1 }}</div>
+                <div class="hot-content">
+                    <div class="hot-title">{{ with $item.title_zh }}{{ . }}{{ else }}{{ $item.title }}{{ end }}</div>
+                    {{ if or $item.ai_summary (and $matchedNews.id (or $matchedNews.ai_summary $matchedNews.summary_zh $matchedNews.summary)) }}
+                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.6">⚡ {{ or $item.ai_summary $matchedNews.ai_summary $matchedNews.summary_zh $matchedNews.summary }}</div>
+                    {{ else if $item.subtitle }}
+                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.5">{{ $item.subtitle }}</div>
+                    {{ end }}
+                    <div class="hot-meta" style="margin-top:6px">
+                        {{ with $item.source }}<span class="hot-badge">{{ . }}</span>{{ end }}
+                        {{ with $item.time }}<span style="color:var(--text3);margin-left:4px">{{ . }}</span>{{ end }}
+                        {{ if or $item.news_id $matchedNews.id }}<span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent);margin-left:4px">站内文章</span>{{ end }}
+                        {{ range $item.tags }}<span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent);margin-left:4px">{{ . }}</span>{{ end }}
+                    </div>
+                </div>
+            </a>
+            {{ end }}
+        {{ else }}
+            <div class="hot-item"><div class="hot-content"><div class="hot-title" style="color:var(--text3)">数据采集中...</div></div></div>
+        {{ end }}
+    </div>
+
+    <!-- 最新新闻 (穿插显示，不按来源堆积) -->
+    <div class="card">
+        <div class="card-title">📰 AI 新闻</div>
+        {{ $news := site.Data.news }}
+        {{ if $news }}
+            {{ $count := 0 }}
+            {{ range $news }}
+                {{ $title := lower .title }}
+                {{ $summary := lower .summary }}
+                {{ $mustReadSource := or (eq .source "机器之心") (eq .source "量子位") (eq .source "新智元") (eq .source "TechCrunch AI") (eq .source "The Verge AI") (eq .source "MIT Tech Review") (eq .source "VentureBeat AI") (eq .source "InfoQ AI") }}
+                {{ $noise := or (in $title "大会") (in $title "开幕") (in $title "峰会") (in $title "论坛") (in $title "学者") (in $title "实习生") (in $title "招聘") (in $title "品牌") (in $title "发布会") (in $summary "大会") (in $summary "峰会") (in $summary "论坛") (in $summary "学者") (in $summary "实习生") (in $summary "招聘") }}
+                {{ if and (lt $count 8) $mustReadSource (not $noise) }}
+                <div class="hot-item">
+                    <div class="hot-content">
+                        <div class="hot-title">
+                            <a href="{{ relURL "/news/" }}{{ .id }}/">{{ with .title_zh }}{{ . }}{{ else }}{{ .title }}{{ end }}</a>
+                        </div>
+                        <div class="hot-meta">
+                            {{ .source }}
+                            {{ with .published }} · {{ replace . "T" " " | truncate 16 "" }}{{ end }}
+                        </div>
+                        {{ if .ai_summary }}
+                            {{ if gt (len .ai_summary) 50 }}
+                            <div class="hot-meta" style="color:var(--accent);margin-top:2px">🤖 {{ .ai_summary }}</div>
+                            {{ else if .summary }}
+                            <div class="hot-meta" style="color:var(--text3)">{{ .summary | truncate 100 "..." }}</div>
+                            {{ end }}
+                        {{ else if .summary }}
+                        <div class="hot-meta" style="color:var(--text3)">{{ .summary | truncate 100 "..." }}</div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ $count = add $count 1 }}
+                {{ end }}
+            {{ end }}
+        {{ end }}
+        <div style="margin-top:12px"><a href="{{ relURL "/news/" }}" class="tag" style="text-decoration:none">查看更多 AI 新闻 →</a></div>
+    </div>
+</div>
+
+<!-- 侧边栏 -->
+<div>
+    <!-- 每日 AI 快报 -->
+    {{ $briefing := site.Data.briefing }}
+    {{ if $briefing }}
+    <div class="card" style="border-left:3px solid var(--accent);background:linear-gradient(180deg,rgba(255,107,53,.06),rgba(255,255,255,0))">
+        <div class="card-title">🤖 每日 AI 快报 <span class="hot-badge fire">AI 生成</span></div>
+        <div style="font-size:16px;line-height:1.95;color:var(--text1);font-weight:700;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03)">
+            {{ with $briefing.emoji }}{{ . }} {{ end }}{{ $briefing.content }}
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:11px;color:var(--text3)">
+            <span>基于 {{ $briefing.news_count }} 条新闻 · {{ with $briefing.date }}{{ . }}{{ else }}{{ substr site.Data.meta.last_update 0 10 }}{{ end }}</span>
+            <a href="{{ relURL "/news/" }}" style="color:var(--accent);text-decoration:none">查看新闻 →</a>
+        </div>
+    </div>
+    {{ end }}
+
+    <!-- 每日精选 -->
+    {{ $daily := site.Data.daily }}
+    {{ if $daily }}
+    <div class="spotlight">
+        <div style="font-size:13px;color:var(--text2);margin-bottom:8px">⭐ 今日精选 - {{ $daily.date }}</div>
+        <div class="spotlight-name">{{ $daily.spotlight.name }}</div>
+        <div class="spotlight-desc">{{ $daily.spotlight.description }}</div>
+        {{ if $daily.spotlight.pricing }}<div class="hot-meta" style="margin-top:6px">💰 {{ $daily.spotlight.pricing }}</div>{{ end }}
+        {{ if $daily.spotlight.id }}
+        <a href="{{ relURL "/tools/" }}{{ $daily.spotlight.id }}/" class="spotlight-btn">立即体验 →</a>
+        {{ else }}
+        <a href="{{ $daily.spotlight.url }}" class="spotlight-btn" target="_blank">立即体验 →</a>
+        {{ end }}
+    </div>
+    {{ end }}
+
+    <!-- 热度飙升 -->
+    <div class="card">
+        {{ $rising := site.Data.rising }}
+        <div class="card-title">📈 热度飙升{{ with $rising.window_days }} <span class="hot-badge">近{{ . }}天</span>{{ end }}</div>
+        {{ if and $rising $rising.items }}
+            {{ range $rising.items }}
+            {{ $href := .url }}
+            {{ if and (eq .type "tool") .id }}{{ $href = printf "/tools/%s/" .id | relURL }}{{ end }}
+            {{ if and (eq .type "agent") .id }}{{ $href = printf "/agents/%s/" .id | relURL }}{{ end }}
+            <div class="trend-item" style="align-items:flex-start">
+                <div style="min-width:0;flex:1">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
+                        <a href="{{ $href }}"{{ if not (or (eq .type "tool") (eq .type "agent")) }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a>
+                        <span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent)">{{ if eq .type "project" }}项目{{ else if eq .type "tool" }}工具{{ else if eq .type "agent" }}Agent{{ else }}模型{{ end }}</span>
+                    </div>
+                    <div style="color:var(--text2);font-size:11px;margin-top:4px;line-height:1.6">{{ .reason }}</div>
+                </div>
+                <div class="trend-up">🔥</div>
+            </div>
+            {{ end }}
+        {{ else }}
+            <div class="trend-item">
+                <div style="color:var(--text3);font-size:13px">暂无热度飙升数据</div>
+            </div>
+        {{ end }}
+    </div>
+
+    <!-- 分类入口（暂时隐藏，保留代码方便后续恢复） -->
+    <div class="card home-hidden-block" style="display:none">
+        <div class="card-title">📂 分类导航</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px">
+            <a href="{{ relURL "/tools/" }}" class="tag">🛠️ AI工具 ({{ len site.Data.tools }})</a>
+            <a href="{{ relURL "/models/" }}" class="tag">🧠 AI模型 ({{ len site.Data.models }})</a>
+            <a href="{{ relURL "/agents/" }}" class="tag">🤖 AI Agent ({{ len site.Data.agents }})</a>
+            <a href="{{ relURL "/news/" }}" class="tag">📰 AI新闻 ({{ len site.Data.news }})</a>
+            <a href="{{ relURL "/providers/" }}" class="tag">🏢 提供商 ({{ len site.Data.providers }})</a>
+        </div>
+    </div>
+
+    <!-- 随机发现（暂时隐藏，保留代码方便后续恢复） -->
+    <div class="card home-hidden-block" style="display:none">
+        <div class="card-title">🎲 随机发现</div>
+        <button class="random-btn" onclick="randomTool()">🎲 点我换个工具</button>
+        <div id="randomResult" style="margin-top:12px"></div>
+    </div>
+
+    <!-- 每日签到（暂时隐藏，保留代码方便后续恢复） -->
+    <div class="card home-hidden-block" style="display:none;border-left:3px solid var(--green)">
+        <div class="card-title">📅 每日签到</div>
+        <div id="checkinStatus" style="margin-bottom:12px">
+            <button id="checkinBtn" onclick="dailyCheckin()" style="width:100%;padding:12px;background:var(--accent);border:none;border-radius:8px;color:white;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s">
+                ✅ 点击签到
+            </button>
+        </div>
+        <div style="display:flex;gap:12px;font-size:12px;color:var(--text3)">
+            <div>🔥 连续签到: <span id="checkinStreak" style="color:var(--accent);font-weight:600">0</span> 天</div>
+            <div>📊 总签到: <span id="totalCheckins" style="color:var(--green);font-weight:600">0</span> 天</div>
+        </div>
+        <div id="checkinReward" style="margin-top:8px;font-size:12px;color:var(--green);display:none"></div>
+    </div>
+
+    <!-- 分享功能 -->
+    <div class="card">
+        <div class="card-title">📢 分享给朋友</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+            <button onclick="shareToWeixin()" style="padding:8px 16px;background:#07C160;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">微信</button>
+            <button onclick="shareToWeibo()" style="padding:8px 16px;background:#E6162D;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">微博</button>
+            <button onclick="shareToTwitter()" style="padding:8px 16px;background:#1DA1F2;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">Twitter</button>
+            <button onclick="copyLink()" style="padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text2);font-size:12px;cursor:pointer">📋 复制链接</button>
+        </div>
+    </div>
+
+    <!-- 新收录 -->
+    <div class="card">
+        <div class="card-title">🆕 新收录</div>
+        {{ $tools := site.Data.tools }}
+        {{ if $tools }}
+            {{ $totalTools := len $tools }}
+            {{ range seq 1 5 }}
+            {{ if le . $totalTools }}
+            {{ $tool := index $tools (sub $totalTools .) }}
+            <div class="trend-item">
+                <div style="min-width:0;flex:1">
+                    <a href="{{ relURL "/tools/" }}{{ $tool.id }}/">{{ $tool.name }}</a>
+                    <div style="color:var(--text3);font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ $tool.description }}</div>
+                </div>
+                <span class="hot-badge" style="background:rgba(63,185,80,0.15);color:var(--green)">NEW</span>
+            </div>
+            {{ end }}
+            {{ end }}
+        {{ else }}
+            <div style="color:var(--text3);font-size:13px;padding:12px 0">暂无新收录工具</div>
+        {{ end }}
+    </div>
+
+    <!-- 本周变化 -->
+    <div class="card" id="weeklyDigest" style="display:none;border-left:3px solid var(--green)">
+        <div class="card-title">📊 本周摘要</div>
+        <div id="weeklyContent" style="font-size:13px;color:var(--text2);line-height:1.8"></div>
+    </div>
+
+    <!-- 实时关键词 -->
+    <div class="card">
+        <div class="card-title">🔑 热搜关键词</div>
+        {{ $seo := site.Data.seo }}
+        {{ if $seo }}
+            <div style="display:flex;flex-wrap:wrap;gap:6px">
+                {{ range first 5 $seo.hot_keywords }}
+                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag" style="background:rgba(255,107,53,0.15);color:var(--accent)">{{ . }}</a>
+                {{ end }}
+                {{ range first 4 $seo.homepage_keywords }}
+                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag">{{ . }}</a>
+                {{ end }}
+            </div>
+            <div style="font-size:12px;color:var(--text3);margin-top:10px">点击关键词可直达站内搜索结果</div>
+        {{ end }}
+    </div>
+
+    <!-- 更新日志 -->
+    <div class="card">
+        <div class="card-title">🕐 更新状态</div>
+        {{ $meta := site.Data.meta }}
+        {{ if $meta }}
+        <div style="font-size:13px;color:var(--text2)">
+            <p>🕐 最后更新：{{ $meta.last_update }}</p>
+        </div>
+        {{ end }}
+        <div style="font-size:12px;color:var(--text3);margin-top:8px">
+            <p>每6小时自动更新</p>
+            <p>08:00 / 14:00 / 20:00 / 02:00</p>
+        </div>
+    </div>
+</div>
+</div>
+
+<script>
+function randomTool() {
+    const tools = {{ site.Data.tools | jsonify | safeJS }} || [];
+    const models = {{ site.Data.models | jsonify | safeJS }} || [];
+    const agents = {{ site.Data.agents | jsonify | safeJS }} || [];
+    const all = [...tools, ...models, ...agents];
+    if(all.length === 0) return;
+    const item = all[Math.floor(Math.random() * all.length)];
+    const name = item.display_name || item.name;
+    const desc = item.description || '';
+    const price = item.pricing || '';
+    document.getElementById('randomResult').innerHTML =
+        '<div style="padding:12px;background:var(--bg);border-radius:6px">' +
+        '<a href="' + (item.url||'#') + '" target="_blank" style="font-weight:600">' + name + '</a>' +
+        (desc ? '<div style="font-size:12px;color:var(--text2);margin-top:4px">' + desc + '</div>' : '') +
+        (price ? '<div style="font-size:11px;color:var(--accent);margin-top:2px">💰 ' + price + '</div>' : '') +
+        '</div>';
+}
+
+// 搜索功能
+const searchData = {
+    tools: {{ site.Data.tools | jsonify | safeJS }} || [],
+    models: {{ site.Data.models | jsonify | safeJS }} || [],
+    agents: {{ site.Data.agents | jsonify | safeJS }} || [],
+    news: {{ site.Data.news | jsonify | safeJS }} || []
+};
+
+function searchAll(query) {
+    if (!query || query.trim().length === 0) return [];
+    const q = query.toLowerCase().trim();
+    const results = [];
+
+    // 搜索工具
+    searchData.tools.forEach(item => {
+        const text = [item.name, item.description, item.category, item.pricing, ...(item.tags || [])].join(' ').toLowerCase();
+        if (text.includes(q)) {
+            results.push({ type: 'tool', emoji: '🛠️', name: item.name, desc: item.description, url: '{{ relURL "/tools/" }}' + encodeURIComponent(item.id) + '/', price: item.pricing });
+        }
+    });
+
+    // 搜索模型
+    searchData.models.forEach(item => {
+        const text = [item.name, item.display_name, item.author, item.pipeline_tag].join(' ').toLowerCase();
+        if (text.includes(q)) {
+            results.push({ type: 'model', emoji: '🧠', name: item.display_name || item.name, desc: item.author + ' · ' + (item.pipeline_tag || ''), url: item.url });
+        }
+    });
+
+    // 搜索Agent
+    searchData.agents.forEach(item => {
+        const text = [item.name, item.description, item.type, item.pricing].join(' ').toLowerCase();
+        if (text.includes(q)) {
+            results.push({ type: 'agent', emoji: '🤖', name: item.name, desc: item.description, url: 'https://' + item.url, price: item.pricing });
+        }
+    });
+
+    // 搜索新闻（限制前5条）
+    let newsCount = 0;
+    searchData.news.forEach(item => {
+        if (newsCount >= 5) return;
+        const text = [item.title, item.summary, item.source].join(' ').toLowerCase();
+        if (text.includes(q)) {
+            results.push({ type: 'news', emoji: '📰', name: item.title, desc: item.source + ' · ' + (item.published || '').slice(0, 10), url: item.url });
+            newsCount++;
+        }
+    });
+
+    return results.slice(0, 20); // 最多显示20条
+}
+
+function renderSearchResults(results) {
+    const container = document.getElementById('searchResults');
+    if (!results || results.length === 0) {
+        container.innerHTML = '';
+        container.style.display = 'none';
+        return;
+    }
+
+    let html = '<div style="background:var(--bg2);border:1px solid var(--border);border-radius:8px;margin-top:8px;max-height:400px;overflow-y:auto">';
+    html += '<div style="padding:8px 12px;font-size:12px;color:var(--text3);border-bottom:1px solid var(--border)">找到 ' + results.length + ' 个结果</div>';
+
+    results.forEach(item => {
+        html += '<a href="' + item.url + '" target="_blank" style="display:block;padding:10px 12px;border-bottom:1px solid var(--border);text-decoration:none;color:inherit">';
+        html += '<div style="display:flex;align-items:center;gap:8px">';
+        html += '<span>' + item.emoji + '</span>';
+        html += '<div style="flex:1;min-width:0">';
+        html += '<div style="font-size:14px;font-weight:500;color:var(--blue)">' + item.name + '</div>';
+        if (item.desc) html += '<div style="font-size:12px;color:var(--text2);white-space:nowrap;overflow:hidden;text-overflow:ellipsis">' + item.desc + '</div>';
+        html += '</div>';
+        if (item.price) html += '<span style="font-size:11px;color:var(--accent)">' + item.price + '</span>';
+        html += '</div></a>';
+    });
+
+    html += '</div>';
+    container.innerHTML = html;
+    container.style.display = 'block';
+}
+
+// 搜索输入事件
+let searchTimeout;
+document.getElementById('searchInput').addEventListener('input', function(e) {
+    clearTimeout(searchTimeout);
+    const query = e.target.value;
+    searchTimeout = setTimeout(() => {
+        const results = searchAll(query);
+        renderSearchResults(results);
+    }, 200); // 200ms 防抖
+});
+
+// 点击其他地方关闭搜索结果
+document.addEventListener('click', function(e) {
+    if (!e.target.closest('#searchInput') && !e.target.closest('#searchResults')) {
+        document.getElementById('searchResults').style.display = 'none';
+    }
+});
+
+// Ctrl+K 聚焦搜索框
+document.addEventListener('keydown', function(e) {
+    if((e.ctrlKey || e.metaKey) && e.key === 'k') {
+        e.preventDefault();
+        document.getElementById('searchInput').focus();
+    }
+    if(e.key === 'Escape') {
+        document.getElementById('searchResults').style.display = 'none';
+        document.getElementById('searchInput').blur();
+    }
+});
+
+// 回车跳转搜索页
+document.getElementById('searchInput').addEventListener('keydown', function(e) {
+    if (e.key === 'Enter') {
+        const q = e.target.value.trim();
+        if (q) window.location.href = '{{ relURL "/search/" }}?q=' + encodeURIComponent(q);
+    }
+});
+
+// 连续访问里程碑
+(function(){
+    const key = 'aihot_streak';
+    const today = new Date().toISOString().slice(0,10);
+    let data = JSON.parse(localStorage.getItem(key) || '{"streak":0,"last":"","milestones":[]}');
+    let milestone = '';
+
+    if(data.last !== today) {
+        const yesterday = new Date(Date.now()-86400000).toISOString().slice(0,10);
+        if(data.last === yesterday) { data.streak++; }
+        else { data.streak = 1; }
+        data.last = today;
+        localStorage.setItem(key, JSON.stringify(data));
+    }
+
+    // 里程碑
+    const ms = [3, 7, 14, 30, 60, 100];
+    for (const m of ms) {
+        if (data.streak === m && !(data.milestones||[]).includes(m)) {
+            milestone = '🎉 恭喜！连续访问 ' + m + ' 天！';
+            if (!data.milestones) data.milestones = [];
+            data.milestones.push(m);
+            localStorage.setItem(key, JSON.stringify(data));
+            break;
+        }
+    }
+
+    const el = document.getElementById('streak');
+    if(data.streak > 0) {
+        let text = '🔥 连续访问 ' + data.streak + ' 天';
+        if (data.streak >= 100) text = '👑 ' + text + ' 传奇用户';
+        else if (data.streak >= 30) text = '💎 ' + text + ' 核心用户';
+        else if (data.streak >= 7) text = '⭐ ' + text;
+        el.textContent = text;
+    }
+
+    if (milestone) {
+        const div = document.createElement('div');
+        div.style.cssText = 'position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);background:var(--bg2);border:2px solid var(--accent);border-radius:12px;padding:32px 48px;z-index:9999;text-align:center;box-shadow:0 8px 32px rgba(0,0,0,0.5)';
+        div.innerHTML = '<div style="font-size:48px;margin-bottom:12px">🎉</div><div style="font-size:20px;font-weight:700;color:var(--accent);margin-bottom:8px">' + milestone + '</div><div style="font-size:13px;color:var(--text2);margin-bottom:16px">感谢你的持续关注！</div><button onclick="this.parentElement.remove()" style="padding:8px 24px;background:var(--accent);border:none;border-radius:6px;color:#fff;cursor:pointer;font-size:14px">继续探索 →</button>';
+        document.body.appendChild(div);
+        setTimeout(() => div.remove(), 5000);
+    }
+})();
+
+// 本周摘要
+(function(){
+    const tools = {{ site.Data.tools | jsonify | safeJS }} || [];
+    const models = {{ site.Data.models | jsonify | safeJS }} || [];
+    const news = {{ site.Data.news | jsonify | safeJS }} || [];
+
+    const trending = tools.filter(t => t.trending).length;
+    const freeTools = tools.filter(t => t.free_quota && t.free_quota.includes('免费')).length;
+    const el = document.getElementById('weeklyDigest');
+    const content = document.getElementById('weeklyContent');
+
+    if (tools.length > 0) {
+        el.style.display = '';
+        content.innerHTML = '📊 收录 <strong style="color:var(--accent)">' + tools.length + '</strong> 个 AI 工具 · '
+            + '<strong style="color:var(--accent)">' + models.length + '</strong> 个模型 · '
+            + '<strong style="color:var(--accent)">' + news.length + '</strong> 条新闻<br>'
+            + '🔥 其中 <strong>' + trending + '</strong> 个热门工具 · '
+            + '🎁 <strong>' + freeTools + '</strong> 个有免费额度<br>'
+            + '📰 每6小时自动更新，数据开源透明';
+    }
+})();
+
+// 每日签到系统
+function dailyCheckin() {
+    const key = 'aihot_checkin';
+    const today = new Date().toISOString().slice(0, 10);
+    let data = JSON.parse(localStorage.getItem(key) || '{"streak":0,"last":"","total":0,"history":[]}');
+    
+    if (data.last === today) {
+        document.getElementById('checkinReward').textContent = '⏰ 今天已经签到过了';
+        document.getElementById('checkinReward').style.display = 'block';
+        document.getElementById('checkinReward').style.color = 'var(--text3)';
+        return;
+    }
+    
+    // 计算连续签到
+    const yesterday = new Date(Date.now() - 86400000).toISOString().slice(0, 10);
+    if (data.last === yesterday) {
+        data.streak++;
+    } else {
+        data.streak = 1;
+    }
+    
+    data.last = today;
+    data.total++;
+    if (!data.history) data.history = [];
+    data.history.push(today);
+    
+    localStorage.setItem(key, JSON.stringify(data));
+    updateCheckinUI();
+    
+    // 显示奖励
+    let reward = '';
+    if (data.streak === 7) reward = '🎉 连续签到7天！解锁「坚持达人」称号';
+    else if (data.streak === 30) reward = '🏆 连续签到30天！解锁「AI探索者」称号';
+    else if (data.streak === 100) reward = '👑 连续签到100天！解锁「传奇用户」称号';
+    else if (data.streak % 10 === 0) reward = '🔥 连续签到' + data.streak + '天！继续加油！';
+    else reward = '✅ 签到成功！连续签到 ' + data.streak + ' 天';
+    
+    document.getElementById('checkinReward').textContent = reward;
+    document.getElementById('checkinReward').style.display = 'block';
+    document.getElementById('checkinReward').style.color = 'var(--green)';
+    
+    // 按钮反馈
+    const btn = document.getElementById('checkinBtn');
+    btn.textContent = '✅ 已签到';
+    btn.style.background = 'var(--green)';
+    btn.disabled = true;
+}
+
+function updateCheckinUI() {
+    const key = 'aihot_checkin';
+    const today = new Date().toISOString().slice(0, 10);
+    let data = JSON.parse(localStorage.getItem(key) || '{"streak":0,"last":"","total":0}');
+    
+    document.getElementById('checkinStreak').textContent = data.streak || 0;
+    document.getElementById('totalCheckins').textContent = data.total || 0;
+    
+    if (data.last === today) {
+        const btn = document.getElementById('checkinBtn');
+        btn.textContent = '✅ 已签到';
+        btn.style.background = 'var(--green)';
+        btn.disabled = true;
+    }
+}
+
+// 初始化签到状态
+updateCheckinUI();
+
+// 分享功能
+function shareToWeixin() {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent('AI热榜 - 每6小时更新的中文AI工具导航站');
+    // 微信分享需要使用微信JS-SDK，这里提供复制链接的方式
+    copyLink();
+    alert('链接已复制，请在微信中粘贴分享给朋友！');
+}
+
+function shareToWeibo() {
+    const url = encodeURIComponent(window.location.href);
+    const title = encodeURIComponent('发现一个超棒的AI工具导航站 - AI热榜！每6小时更新，涵盖AI模型、工具、Agent、新闻。');
+    window.open('https://service.weibo.com/share/share.php?url=' + url + '&title=' + title, '_blank');
+}
+
+function shareToTwitter() {
+    const url = encodeURIComponent(window.location.href);
+    const text = encodeURIComponent('发现一个超棒的AI工具导航站 - AI热榜！每6小时自动更新，涵盖AI模型、工具、Agent、新闻。#AI #人工智能');
+    window.open('https://twitter.com/intent/tweet?url=' + url + '&text=' + text, '_blank');
+}
+
+function copyLink() {
+    navigator.clipboard.writeText(window.location.href).then(() => {
+        const btn = event.target;
+        const originalText = btn.textContent;
+        btn.textContent = '✅ 已复制';
+        setTimeout(() => btn.textContent = originalText, 2000);
+    });
+}
+</script>
+
+{{ end }}
