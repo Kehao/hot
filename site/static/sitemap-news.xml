@@ -1,13 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://47.114.36.224/news/b53a6cba2209/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://47.114.36.224/news/09e30c16e0fd/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/v2ex-1239673/</loc>
+    <loc>http://47.114.36.224/news/c8deeb70bc1a/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://47.114.36.224/news/v2ex-1239687/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -19,7 +31,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/v2ex-1239655/</loc>
+    <loc>http://47.114.36.224/news/v2ex-1239673/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -31,7 +43,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/v2ex-1239617/</loc>
+    <loc>http://47.114.36.224/news/v2ex-1239655/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -43,7 +55,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/v2ex-1239616/</loc>
+    <loc>http://47.114.36.224/news/v2ex-1239651/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -55,19 +67,31 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>http://47.114.36.224/news/v2ex-1239617/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>http://47.114.36.224/news/f48898262d8e/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/e899b24dd592/</loc>
+    <loc>http://47.114.36.224/news/v2ex-1239616/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://47.114.36.224/news/2180a1fa6f13/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://47.114.36.224/news/e899b24dd592/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -205,7 +229,7 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/v2ex-1239387/</loc>
+    <loc>http://47.114.36.224/news/c372c8e22aea/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -217,13 +241,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/16db96c97099/</loc>
+    <loc>http://47.114.36.224/news/v2ex-1239387/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://47.114.36.224/news/1fe61b659584/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://47.114.36.224/news/16db96c97099/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
@@ -751,13 +781,19 @@
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>http://47.114.36.224/news/efa072877e6b/</loc>
+    <loc>http://47.114.36.224/news/01d1b754142f/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://47.114.36.224/news/62b6270ed2a9/</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>http://47.114.36.224/news/efa072877e6b/</loc>
     <lastmod>2026-09-05</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.7</priority>
