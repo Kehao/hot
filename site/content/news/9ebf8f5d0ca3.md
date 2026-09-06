@@ -20,7 +20,7 @@ ai_summary = "WeatherNext 3 是深度学习技术带来的气象学巨变的最�
 summary = "WeatherNext 3 is the latest wave of a sea change in meteorology brought out by deep learning techniques."
 summary_zh = "WeatherNext 3 是深度学习技术带来的气象学巨变的最新浪潮。谷歌表示，它将开始向用户在搜索、谷歌地图和 Gemini 中看到的天气信息提供信息"
 tags = []
-list_page = 8
+list_page = 9
 +++
 
 <!-- AUTO-GENERATED: news page -->
