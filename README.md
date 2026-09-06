@@ -6,7 +6,7 @@
 
 🌐 **在线网站**：http://47.114.36.224/  
 🔍 **站内搜索**：http://47.114.36.224/search/  
-🕐 **最近更新**：2026-09-06 22:37:57
+🕐 **最近更新**：2026-09-07 03:47:45
 
 **提供商直达：** [🟠 小米 MiMo](https://platform.xiaomimimo.com?ref=A3JKSD) · [⚡️ ZenMux｜免费调用 DeepSeek V4 API，上手零门槛](https://zenmux.ai/invite/16U6FF) · [硅基流动](https://cloud.siliconflow.cn/i/Ngl1oB14) · [火山引擎](https://volcengine.com/L/A3Cm9GB_3J4/)  
 
@@ -16,12 +16,12 @@
 
 ## 🔥 今日热点
 
-1. [《西雅图时报》和《新闻日报》是最新起诉 OpenAI 和微软的出版物](http://47.114.36.224/news/8a7e0f31a983/)
-   - 另外两家新闻机构正在起诉 OpenAI 和微软，指控其利用新闻报道来训练人工智能
-   - `TechCrunch AI · 2026-09-05`
+1. [Travis Kalanick 的 Atoms 可能会进军机器人出租车业务](http://47.114.36.224/news/f33b1fcaa623/)
+   - 这位 Uber 创始人曾表示，Atoms 将让他完成“未竟的事业”
+   - `TechCrunch AI · 2026-09-06`
 
-2. [使用 Google Gemini 进行规划后徒步旅行者获救](http://47.114.36.224/news/f774e48a95a8/)
-   - 治安官办公室表示，“双子座建议徒步旅行者携带的食物和水远少于团队所需的食物和水。”
+2. [《西雅图时报》和《新闻日报》是最新起诉 OpenAI 和微软的出版物](http://47.114.36.224/news/8a7e0f31a983/)
+   - 另外两家新闻机构正在起诉 OpenAI 和微软，指控其利用新闻报道来训练人工智能
    - `TechCrunch AI · 2026-09-05`
 
 3. [OpenAI 承认德国维基“事件”](http://47.114.36.224/news/b53a6cba2209/)
