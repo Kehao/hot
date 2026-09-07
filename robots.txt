@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://47.114.36.224/sitemap.xml
+Sitemap: https://hot.kehao.info/sitemap.xml
