@@ -8651,6 +8651,36 @@
     "collected_at": "2026-09-04T23:37:29.205767"
   },
   {
+    "id": "github-1359059989",
+    "name": "Delinor-Hens/Vortex",
+    "display_name": "Vortex",
+    "url": "https://github.com/Delinor-Hens/Vortex",
+    "description": "ИИ под названием Vortex для любых задач. Сейчас уже доступна рабочая версия проекта, которая ежедневно улучшается",
+    "stars": 10,
+    "forks": 2,
+    "language": "C++",
+    "topics": [
+      "ai",
+      "artificial-intelligence",
+      "core",
+      "cpp",
+      "cpp11",
+      "cpython",
+      "desktop-app",
+      "gui",
+      "llm",
+      "local-ai",
+      "local-first",
+      "localization",
+      "python"
+    ],
+    "created_at": "2026-09-06T11:05:41Z",
+    "updated_at": "2026-09-06T22:01:24Z",
+    "license": "GPL-3.0",
+    "source": "github-search",
+    "collected_at": "2026-09-07T01:46:14.275999"
+  },
+  {
     "id": "github-1205101736",
     "name": "antarr/mysql_genius",
     "display_name": "mysql_genius",
