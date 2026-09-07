@@ -1,7 +1,7 @@
 # hot 项目阿里云部署方案
 
 > 项目本质:**Hugo 静态站点**(构建产物 `site/public`)+ **Python 数据管道**(`scripts/aggregate.py` 每 6 小时抓取 AI 热点 → 生成 `data/*.json`)。
-> 当前链路:GitHub Actions 定时聚合 → Hugo 构建 → gh-pages,域名 `aihot.bt199.com`。
+> 当前链路:GitHub Actions 定时聚合 → Hugo 构建 → gh-pages,域名 `hot.kehao.info`。
 >
 > 部署到阿里云的核心问题有二:
 > 1. **静态产物放哪**(替代 gh-pages);
@@ -15,7 +15,7 @@
 
 阿里云国内资源(OSS 自定义域名、CDN、ECS 公网 IP)绑定域名 **必须 ICP 备案**,且域名需完成**阿里云实名认证**。
 
-- 若 `bt199.com` 已在阿里云备案 → 只需在备案系统添加子域名 `aihot`(极快)。
+- 若 `kehao.info` 已在阿里云备案 → 只需在备案系统添加子域名 `hot`(极快)。
 - 若未备案 → 先去 [阿里云 ICP 备案控制台](https://beian.aliyun.com/) 办理,通常 1~2 周。
 - 若不想等备案,OSS/ECS 只能用分配的临时域名访问(不适合对外正式服务)。
 
@@ -28,7 +28,7 @@
 ### A1. 开通 OSS 并创建 Bucket
 
 1. 控制台 → 对象存储 OSS → 创建 Bucket:
-   - 名称:`aihot`(需全局唯一,可加后缀如 `aihot-bucket`)
+   - 名称:`hot`(需全局唯一,可加后缀如 `hot-bucket`)
    - 地域:选**华东/华北**等离用户近的地域
    - 读写权限:**公共读**(网站是公开的)
 2. Bucket 内开启 **静态网站托管**:默认首页 `index.html`,默认 404 页留空。
@@ -50,7 +50,7 @@ ossutil config        # 填入 AccessKey ID / Secret(建议用 RAM 子账号,仅
 ```bash
 cd /Users/qiukehao/ai/hot
 hugo --minify -s site                    # 构建 site/public
-ossutil cp -r -f site/public/ oss://aihot/
+ossutil cp -r -f site/public/ oss://hot/
 ```
 
 ### A4. 改造 GitHub Actions:构建后自动同步 OSS(替代 gh-pages 步骤)
@@ -86,7 +86,7 @@ jobs:
         with:
           accessKeyId: ${{ secrets.ALIYUN_AK_ID }}
           accessKeySecret: ${{ secrets.ALIYUN_AK_SECRET }}
-          bucket: aihot          # 你的 Bucket 名
+          bucket: hot          # 你的 Bucket 名
           endpoint: oss-cn-hangzhou.aliyuncs.com
           localPath: site/public
 ```
@@ -95,9 +95,9 @@ jobs:
 
 ### A5. 绑定域名 + CDN(可选但推荐)
 
-1. **CDN 加速**:OSS 控制台 → 传输管理 → 域名管理 → 添加自定义域名 `aihot.bt199.com`,开通 CDN(国内访问快、有缓存)。
+1. **CDN 加速**:OSS 控制台 → 传输管理 → 域名管理 → 添加自定义域名 `hot.kehao.info`,开通 CDN(国内访问快、有缓存)。
 2. 去域名解析(DNS 服务商处,若域名在阿里云则直接在云解析 DNS 控制台):
-   - 记录类型 `CNAME`,主机记录 `aihot`,指向 CDN/OSS 提供的 CNAME 地址。
+   - 记录类型 `CNAME`,主机记录 `hot`,指向 CDN/OSS 提供的 CNAME 地址。
 3. CDN 配置:缓存规则建议 `text/html` 不缓存或 60s(新闻站要实时),`js/css/img` 缓存 1 天。
 
 ### 成本
@@ -165,7 +165,7 @@ crontab -e
 ```nginx
 server {
     listen 80;
-    server_name aihot.bt199.com;
+    server_name hot.kehao.info;
 
     root /var/www/hot-www;
     index index.html;
@@ -188,7 +188,7 @@ sudo nginx -t && sudo systemctl reload nginx
 
 ### B5. 域名解析 + HTTPS(可选)
 
-- 云解析 DNS 添加 A 记录:`aihot` → ECS 公网 IP。
+- 云解析 DNS 添加 A 记录:`hot` → ECS 公网 IP。
 - HTTPS:阿里云免费证书(SSL 证书控制台)或用 certbot,拿到证书后 Nginx 加 443 server 块。
 
 ### 成本
@@ -216,7 +216,7 @@ sudo nginx -t && sudo systemctl reload nginx
 2. **CNAME 文件**:OSS/CDN 方案在 OSS 控制台配置域名即可,不需要仓库内 CNAME 文件;ECS 方案也不使用该文件(它只对 GitHub Pages 生效)。
 3. **两套定时不要并存**:迁移后若管道还在 GitHub Actions 里跑,OSS 会被持续覆盖——方案 A 是有意保留,方案 B 记得删除 `.github/workflows/aggregate.yml` 的 schedule(或整个工作流)。
 4. **密钥管理**:GitHub Actions 用 Secrets;ECS 上用 `.env` 且加入 `.gitignore`(已忽略),勿写死在代码里。
-5. **站点地址统一由 `CNAME` 管理**(2026-09-04 起):仓库根 `CNAME` 文件是站点地址唯一数据源,支持裸域名 `aihot.bt199.com`、裸 IP `47.114.36.224` 或带协议 `https://…`。脚本(脚本内 URL、sitemap、README 生成)、质量门禁(favicon 黑名单)已改为运行时读取;Hugo 模板用 `.Site.BaseURL`。因此**构建时需按 CNAME 传入 baseURL**:
+5. **站点地址统一由 `CNAME` 管理**(2026-09-04 起):仓库根 `CNAME` 文件是站点地址唯一数据源,支持裸域名 `hot.kehao.info`、裸 IP `47.114.36.224` 或带协议 `https://…`。脚本(脚本内 URL、sitemap、README 生成)、质量门禁(favicon 黑名单)已改为运行时读取;Hugo 模板用 `.Site.BaseURL`。因此**构建时需按 CNAME 传入 baseURL**:
    ```bash
    # 在仓库根计算并传给 hugo(方案 B 的 cron 请加上)
    proto="https"; host=$(cat CNAME)

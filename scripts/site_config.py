@@ -2,9 +2,9 @@
 """站点对外地址唯一数据源。
 
 仓库根目录 `CNAME` 文件统一存放站点地址,支持三种写法:
-- 裸域名:     aihot.bt199.com        → https://aihot.bt199.com
+- 裸域名:     hot.kehao.info        → https://hot.kehao.info
 - 裸 IPv4:    47.114.36.224          → http://47.114.36.224   (IP 默认无 TLS,故用 http)
-- 带协议:     https://aihot.bt199.com 或 http://47.114.36.224 (按实际部署自行指定)
+- 带协议:     https://hot.kehao.info 或 http://47.114.36.224 (按实际部署自行指定)
 
 所有脚本/质量门禁/构建从这里读取 host 与 url,避免域名散落硬编码。
 改站点地址时只需改 CNAME 一个文件。
@@ -54,7 +54,7 @@ def scheme() -> str:
 
 
 def url() -> str:
-    """返回带协议、无尾斜杠的完整站点地址,如 https://aihot.bt199.com。"""
+    """返回带协议、无尾斜杠的完整站点地址,如 https://hot.kehao.info。"""
     return f'{scheme()}://{host()}'
 
 
