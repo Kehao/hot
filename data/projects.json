@@ -6099,6 +6099,35 @@
     "collected_at": "2026-05-25T19:19:15.147093"
   },
   {
+    "id": "github-1358679908",
+    "name": "Jaasssoooonnnnn/FirstLight_CR",
+    "display_name": "FirstLight_CR",
+    "url": "https://github.com/Jaasssoooonnnnn/FirstLight_CR",
+    "description": "Offline Clash Royale AI research: native simulation, imitation learning, PPO, and interactive evaluation. 离线对局模拟、模仿学习、强化学习与交互评测。",
+    "stars": 26,
+    "forks": 8,
+    "language": "Python",
+    "topics": [
+      "artificial-intelligence",
+      "clash-royale",
+      "deep-learning",
+      "deep-reinforcement-learning",
+      "distributed-training",
+      "game-ai",
+      "imitation-learning",
+      "multi-agent",
+      "ppo",
+      "pytorch",
+      "reinforcement-learning",
+      "self-play"
+    ],
+    "created_at": "2026-09-06T01:07:06Z",
+    "updated_at": "2026-09-07T10:45:15Z",
+    "license": "Apache-2.0",
+    "source": "github-search",
+    "collected_at": "2026-09-07T11:00:51.103385"
+  },
+  {
     "id": "github-1191733857",
     "name": "lucidrains/RIM-pytorch",
     "display_name": "RIM-pytorch",
@@ -8194,6 +8223,26 @@
     "license": "",
     "source": "github-search",
     "collected_at": "2026-09-01T10:53:11.896846"
+  },
+  {
+    "id": "github-1359187566",
+    "name": "lucidrains/system2-attention",
+    "display_name": "system2-attention",
+    "url": "https://github.com/lucidrains/system2-attention",
+    "description": "Implementation of the procedure in Language Models Can Control Their Own Attention, from Namgyu Ho et al. of KAIST AI",
+    "stars": 11,
+    "forks": 0,
+    "language": null,
+    "topics": [
+      "artificial-intelligence",
+      "attention-mechanism",
+      "deep-learning"
+    ],
+    "created_at": "2026-09-06T13:52:58Z",
+    "updated_at": "2026-09-07T09:46:15Z",
+    "license": "MIT",
+    "source": "github-search",
+    "collected_at": "2026-09-07T11:00:51.103404"
   },
   {
     "id": "github-1201371509",
