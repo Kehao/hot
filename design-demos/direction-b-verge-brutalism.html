@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<title>方向 B · The Verge 式撞色信息流 — AI热榜设计方向板</title>
+<style>
+/* ===== 新粗野主义撞色信息流 Neo-Brutalism ===== */
+/* 现实参照：The Verge 2022 redesign（in-house team, PolySans + Mānuka） */
+/* 高饱和撞色 + 粗黑描边卡片 + 模块化堆叠 */
+:root{
+  --bg:#FFFFFF;
+  --ink:#08080D;
+  --violet:#5200FF;       /* 主撞色 · 电光紫 */
+  --magenta:#E1306C;      /* 次撞色 · 品红 */
+  --yellow:#F8E000;       /* 强调 · 亮黄 */
+  --lime:#58CC02;         /* 工具/免费标签 */
+  --rule:#08080D;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html,body{background:var(--bg);color:var(--ink);font-family:-apple-system,"PingFang SC","Noto Sans CJK SC","Helvetica Neue",sans-serif;-webkit-font-smoothing:antialiased}
+body{padding:0 0 56px}
+a{color:inherit;text-decoration:none}
+img{display:block}
+
+/;nav.topnav{position:sticky;top:0;z-index:10;background:var(--bg);border-bottom:3px solid var(--ink)}
+.topnav-inner{display:flex;align-items:center;gap:24px;padding:14px 28px;justify-content:space-between}
+.brand{display:flex;align-items:center;gap:10px}
+.brand img{height:42px;width:auto;mix-blend-mode:multiply}
+.brand-name{font-weight:800;font-size:22px;letter-spacing:-.02em}
+.brand-tag{font-size:11px;background:var(--violet);color:#fff;padding:3px 8px;font-weight:700;letter-spacing:.08em}
+.nav-links{display:flex;gap:4px;flex:1;justify-content:center}
+.nav-links a{padding:8px 14px;font-weight:600;font-size:14px;border:2px solid transparent}
+.nav-links a.active{background:var(--ink);color:#fff}
+.nav-links a:hover:not(.active){background:var(--yellow)}
+.nav-cta{font-weight:700;font-size:13px;background:var(--magenta);color:#fff;padding:10px 16px;border:2px solid var(--ink)}
+
+/* hero 模块 */
+.hero{padding:36px 28px 12px;display:grid;grid-template-columns:1.4fr 1fr;gap:20px}
+.lead-card{background:var(--violet);color:#fff;border:3px solid var(--ink);padding:24px;position:relative;box-shadow:6px 6px 0 var(--ink)}
+.lead-card .kicker{font-size:12px;font-weight:800;letter-spacing:.16em;text-transform:uppercase;background:var(--yellow);color:var(--ink);display:inline-block;padding:3px 8px;margin-bottom:14px;border:2px solid var(--ink)}
+.lead-card h1{font-size:46px;font-weight:800;line-height:1.04;letter-spacing:-.02em}
+.lead-card h1 em{font-style:italic;color:var(--yellow)}
+.lead-card .meta{margin-top:14px;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase}
+.spot-card{background:var(--magenta);color:#fff;border:3px solid var(--ink);padding:22px;box-shadow:6px 6px 0 var(--ink);display:flex;flex-direction:column}
+.spot-card .kicker{font-size:11px;font-weight:800;letter-spacing:.18em;background:#fff;color:var(--ink);padding:3px 8px;display:inline-block;margin-bottom:12px;border:2px solid var(--ink)}
+.spot-card h2{font-size:32px;font-weight:800;line-height:1.1;letter-spacing:-.02em}
+.spot-card p{margin-top:10px;font-size:14px;line-height:1.5}
+.spot-card .ctas{margin-top:auto;padding-top:18px;display:flex;gap:10px;flex-wrap:wrap}
+.spot-card .ctas a{font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:6px 12px;border:2px solid var(--ink);background:#fff;color:var(--ink)}
+.spot-card .ctas a:nth-child(2){background:var(--yellow)}
+
+/* hot band 横向红条 */
+.hot-band{background:var(--ink);color:#fff;margin:0 28px 24px;padding:14px 18px;border:3px solid var(--ink);display:flex;gap:18px;align-items:center;overflow:hidden}
+.hot-band .lbl{font-weight:800;font-size:12px;letter-spacing:.18em;background:var(--yellow);color:var(--ink);padding:4px 10px;flex-shrink:0}
+.hot-band .scroll{display:flex;gap:18px;flex:1;font-size:14px;font-weight:600;white-space:nowrap}
+.hot-band .scroll span{display:inline-flex;align-items:center;gap:8px}
+.hot-band .scroll b{color:var(--yellow);font-family:"SF Mono",Menlo,monospace}
+
+/* 双栏主区 */
+.main{padding:0 28px 24px;display:grid;grid-template-columns:1.5fr 1fr;gap:20px}
+.card-stack{display:grid;gap:20px}
+.news-card{background:var(--bg);border:3px solid var(--ink);padding:20px;box-shadow:5px 5px 0 var(--ink);display:flex;flex-direction:column;gap:10px}
+.news-card .row{display:flex;gap:10px;align-items:center;font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.news-card .row .src{background:var(--yellow);color:var(--ink);padding:3px 8px;border:2px solid var(--ink)}
+.news-card .row .heat{background:var(--ink);color:#fff;padding:3px 8px;border:2px solid var(--ink)}
+.news-card h3{font-size:24px;font-weight:800;line-height:1.2;letter-spacing:-.01em}
+.news-card .sum{font-size:14px;color:var(--ink);opacity:.78;line-height:1.5}
+.news-card .foot{font-size:11px;font-weight:700;color:var(--ink);opacity:.7;border-top:2px solid var(--ink);padding-top:8px;margin-top:4px}
+.news-card.violet{background:var(--violet);color:#fff}
+.news-card.violet .sum{opacity:.95}
+.news-card.violet .row .heat{background:var(--yellow);color:var(--ink)}
+.news-card.mag{background:var(--magenta);color:#fff}
+.news-card.mag .sum{opacity:.95}
+
+/* 侧栏 widgets */
+.side{display:grid;gap:20px;align-content:start}
+.widget{border:3px solid var(--ink);background:var(--bg);box-shadow:5px 5px 0 var(--ink);padding:18px}
+.widget h4{font-size:13px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:12px;background:var(--ink);color:#fff;padding:4px 8px;display:inline-block}
+.widget ol{list-style:none}
+.widget li{padding:8px 0;border-bottom:1.5px dashed var(--ink);display:flex;gap:10px;align-items:flex-start;font-size:14px;font-weight:600}
+.widget li:last-child{border-bottom:none}
+.widget li .n{font-family:"SF Mono",Menlo,monospace;font-size:12px;color:var(--violet);min-width:26px;font-weight:800;padding-top:2px}
+.widget.tools li .tag{font-size:10px;font-weight:800;background:var(--lime);color:var(--ink);padding:2px 6px;margin-left:auto;border:1.5px solid var(--ink);letter-spacing:.06em}
+
+/* 工具 grid */
+.tools{padding:0 28px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.t-card{border:3px solid var(--ink);padding:18px;background:var(--bg);box-shadow:5px 5px 0 var(--ink);transition:transform .12s}
+.t-card:nth-child(4n+2){background:var(--yellow)}
+.t-card:nth-child(4n+3){background:var(--violet);color:#fff}
+.t-card:nth-child(4n+4){background:var(--lime)}
+.t-card .lab{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;margin-bottom:6px}
+.t-card h5{font-size:18px;font-weight:800;line-height:1.15;margin-bottom:6px}
+.t-card p{font-size:13px;opacity:.85;line-height:1.5}
+.t-card .price{margin-top:10px;font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;border-top:2px solid currentColor;padding-top:8px}
+
+/* 模型条 */
+.models{padding:0 28px}
+.models h4{font-size:14px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;background:var(--magenta);color:#fff;padding:6px 10px;display:inline-block;border:3px solid var(--ink);box-shadow:4px 4px 0 var(--ink);margin-bottom:14px}
+.models-list{border:3px solid var(--ink);background:var(--bg);box-shadow:5px 5px 0 var(--ink)}
+.models-list .row{display:grid;grid-template-columns:70px 1fr 180px;gap:14px;padding:14px 18px;border-bottom:2px solid var(--ink);align-items:center}
+.models-list .row:last-child{border-bottom:none}
+.models-list .row:nth-child(even){background:var(--yellow)}
+.models-list .rank{font-family:"SF Mono",Menlo,monospace;font-size:22px;font-weight:800;letter-spacing:.02em}
+.models-list .nm{font-weight:800;font-size:16px}
+.models-list .cat{font-size:11px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;text-align:right}
+
+/* 页脚 */
+.foot{padding:36px 28px 16px;border-top:3px solid var(--ink);margin-top:36px;display:flex;justify-content:space-between;align-items:center;font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+
+@media(max-width:900px){
+  .topnav-inner{flex-wrap:wrap;gap:10px;padding:10px 16px}
+  .nav-links{order:3;width:100%;justify-content:flex-start;flex-wrap:wrap}
+  .hero,.main,.tools,.models{padding-left:16px;padding-right:16px}
+  .hero{grid-template-columns:1fr}
+  .main{grid-template-columns:1fr}
+  .tools{grid-template-columns:repeat(2,1fr)}
+  .lead-card h1{font-size:32px}
+  .models-list .row{grid-template-columns:50px 1fr;gap:8px}
+  .models-list .cat{display:none}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <div class="topnav-inner">
+    <a class="brand" href="#">
+      <img src="logo.png" alt="AI 热榜">
+      <span class="brand-name">AI热榜</span>
+      <span class="brand-tag">LIVE</span>
+    </a>
+    <div class="nav-links">
+      <a href="#" class="active">今日头版</a>
+      <a href="#">AI 工具</a>
+      <a href="#">模型</a>
+      <a href="#">Agent</a>
+      <a href="#">新闻</a>
+      <a href="#">提供商</a>
+      <a href="#">搜索</a>
+      <a href="#">对比</a>
+    </div>
+    <a class="nav-cta" href="#">订阅 RSS →</a>
+  </div>
+</nav>
+
+<section class="hero">
+  <article class="lead-card">
+    <span class="kicker">TODAY · TOP STORY</span>
+    <h1>Travis Kalanick 的 Atoms，可能正<em>悄悄</em>进军机器人出租车。</h1>
+    <div class="meta">TechCrunch AI · 2026.09.07 · 热度 15</div>
+  </article>
+  <aside class="spot-card">
+    <span class="kicker">SPOTLIGHT</span>
+    <h2>ChatGPT</h2>
+    <p>最流行的 AI 对话工具，OpenAI 出品。多模态、插件、长记忆——三年来仍是普通用户进入 AI 世界的默认入口。</p>
+    <div class="ctas">
+      <a href="#">查看 →</a>
+      <a href="#">对比替代</a>
+    </div>
+  </aside>
+</section>
+
+<div class="hot-band">
+  <span class="lbl">HOT NOW</span>
+  <div class="scroll">
+    <span><b>01</b> Travis Kalanick 的 Atoms 进军机器人出租车</span>
+    <span><b>02</b> 西雅图时报起诉 OpenAI 与微软</span>
+    <span><b>03</b> OpenAI 承认德国维基事件</span>
+    <span><b>04</b> Cloudflare 扩展 AI 搜索</span>
+    <span><b>05</b> 会合体的机器人卖到 50 国</span>
+  </div>
+</div>
+
+<section class="main">
+  <div class="card-stack">
+    <article class="news-card violet">
+      <div class="row"><span class="src">The Verge AI</span><span class="heat">热度 13</span><span>2026.09.07</span></div>
+      <h3>西雅图时报与新闻日报起诉 OpenAI 和微软侵权</h3>
+      <p class="sum">两家老牌媒体在同一天对生成式 AI 训练数据来源发起法律挑战，案件走向可能影响整个内容出版行业的 AI 商业模型。</p>
+      <div class="foot">阅读约 8 分钟 · 含 3 个相关案例</div>
+    </article>
+    <article class="news-card">
+      <div class="row"><span class="src">TechCrunch AI</span><span class="heat">热度 15</span><span>2026.09.07</span></div>
+      <h3>Travis Kalanick 的 Atoms 可能进军机器人出租车</h3>
+      <p class="sum">前 Uber CEO 的新事业方向指向自动驾驶车队，AI 与机器人正在同一张地图上相遇——这是 AI 时代基础设施层最值得关注的故事。</p>
+      <div class="foot">阅读约 6 分钟</div>
+    </article>
+    <article class="news-card mag">
+      <div class="row"><span class="src">MIT Tech Review</span><span class="heat">热度 13</span><span>2026.09.07</span></div>
+      <h3>构建人工智能时代的内存与存储</h3>
+      <p class="sum">当模型参数突破千亿门槛，行业焦点从「更大」转向「更会记」。本期深入三类新型存储架构的实测对比。</p>
+      <div class="foot">阅读约 12 分钟 · 深度长文</div>
+    </article>
+  </div>
+
+  <aside class="side">
+    <div class="widget">
+      <h4>GitHub Trending</h4>
+      <ol>
+        <li><span class="n">01</span><span>tensorflow/tensorflow</span></li>
+        <li><span class="n">02</span><span>AutoGPT</span></li>
+        <li><span class="n">03</span><span>ollama</span></li>
+      </ol>
+    </div>
+    <div class="widget tools">
+      <h4>本周新晋</h4>
+      <ol>
+        <li><span class="n">01</span><span>Cursor</span><span class="tag">FEATURED</span></li>
+        <li><span class="n">02</span><span>Claude Code</span><span class="tag">NEW</span></li>
+        <li><span class="n">03</span><span>Codex CLI</span><span class="tag">NEW</span></li>
+      </ol>
+    </div>
+  </aside>
+</section>
+
+<section class="tools">
+  <div class="t-card"><div class="lab">编程 IDE</div><h5>Cursor</h5><p>AI-first 代码编辑器，基于 VS Code 深度集成。</p><div class="price">免费 + Pro $20/月</div></div>
+  <div class="t-card"><div class="lab">编程助手</div><h5>GitHub Copilot</h5><p>行业最早推出的 AI 补全助手，生态成熟。</p><div class="price">$10/月 个人</div></div>
+  <div class="t-card"><div class="lab">命令行</div><h5>Claude Code</h5><p>Anthropic 出品的 CLI Agent，长任务编排。</p><div class="price">按 API 使用量</div></div>
+  <div class="t-card"><div class="lab">开源助手</div><h5>Continue</h5><p>开源、可本地化的 AI 编程助手。</p><div class="price">开源免费</div></div>
+</section>
+
+<section class="models">
+  <h4>本周模型榜 · 36 款精选</h4>
+  <div class="models-list">
+    <div class="row"><div class="rank">01</div><div class="nm">GPT-6 Astra · OpenAI</div><div class="cat">顶级通用</div></div>
+    <div class="row"><div class="rank">02</div><div class="nm">Claude Opus 4.8 · Anthropic</div><div class="cat">顶级通用</div></div>
+    <div class="row"><div class="rank">03</div><div class="nm">GLM 5.2 · 智谱</div><div class="cat">顶级通用</div></div>
+    <div class="row"><div class="rank">04</div><div class="nm">DeepSeek V4 Pro 0813 · DeepSeek</div><div class="cat">顶级通用</div></div>
+  </div>
+</section>
+
+<footer class="foot">
+  <div>AI 热榜 · 每 6 小时自动更新</div>
+  <div>© 2026 — <span style="background:var(--yellow);padding:2px 6px;border:2px solid var(--ink)">HUASHU · NEO-BRUTAL · DIRECTION B</span></div>
+</footer>
+
+</body>
+</html>

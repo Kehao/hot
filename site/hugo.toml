@@ -30,41 +30,41 @@ enableRobotsTXT = true   # 用 layouts/robots.txt 模板输出(地址跟随 --ba
   home = ["HTML", "RSS", "JSON"]
 
 [[menu.main]]
-  name = "🔥 热榜"
+  name = "今日头版"
   url = "/"
   weight = 1
 
 [[menu.main]]
-  name = "🧠 模型"
-  url = "/models/"
+  name = "AI 工具"
+  url = "/tools/"
   weight = 2
 
 [[menu.main]]
-  name = "🛠️ 工具"
-  url = "/tools/"
+  name = "模型"
+  url = "/models/"
   weight = 3
 
 [[menu.main]]
-  name = "🤖 Agent"
+  name = "Agent"
   url = "/agents/"
   weight = 4
 
 [[menu.main]]
-  name = "📰 新闻"
+  name = "新闻"
   url = "/news/"
   weight = 5
 
 [[menu.main]]
-  name = "🏢 提供商"
+  name = "提供商"
   url = "/providers/"
   weight = 6
 
 [[menu.main]]
-  name = "🔍 搜索"
+  name = "搜索"
   url = "/search/"
   weight = 7
 
 [[menu.main]]
-  name = "⚔️ 对比"
+  name = "对比"
   url = "/compare/"
   weight = 8
