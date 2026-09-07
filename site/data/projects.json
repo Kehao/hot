@@ -10477,6 +10477,32 @@
     "collected_at": "2026-09-05T09:39:26.459331"
   },
   {
+    "id": "github-1354763699",
+    "name": "Saganaki22/obs-dlss5-nr",
+    "display_name": "obs-dlss5-nr",
+    "url": "https://github.com/Saganaki22/obs-dlss5-nr",
+    "description": "Unofficial DLSS 5 Neural Rendering filter for OBS Studio.  runs NVIDIA DLSS 5 NR (NGX feature 18) on any video source (Game Capture, Media Source, Webcam, …) with a Default / Natural / Cinematic style selector",
+    "stars": 8,
+    "forks": 2,
+    "language": "C++",
+    "topics": [
+      "artificial-intelligence",
+      "dlss",
+      "dlss5",
+      "nvidia",
+      "nvidia-cuda",
+      "nvidia-gpu",
+      "obs-plugin",
+      "obs-studio",
+      "obs-studio-plugin"
+    ],
+    "created_at": "2026-09-02T12:53:46Z",
+    "updated_at": "2026-09-07T07:46:16Z",
+    "license": "GPL-2.0",
+    "source": "github-search",
+    "collected_at": "2026-09-07T16:50:58.182223"
+  },
+  {
     "id": "github-1201368235",
     "name": "fs0ci5ty/Artificial-Intelligence-Learning-Resources-Collection",
     "display_name": "Artificial-Intelligence-Learning-Resources-Collection",

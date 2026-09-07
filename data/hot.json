@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-07T11:02:27.656232",
+  "updated_at": "2026-09-07T16:52:29.588245",
   "total": 10,
   "hot_list": [
     {
@@ -17,7 +17,25 @@
       "ai_summary": "这位 Uber 创始人曾表示，Atoms 将让他完成“未竟的事业”",
       "category": "资讯",
       "news_id": "f33b1fcaa623",
-      "internal_url": "http://47.114.36.224/news/f33b1fcaa623/",
+      "internal_url": "https://hot.kehao.info/news/f33b1fcaa623/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "name": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "title_zh": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "url": "https://www.technologyreview.com/2026/09/07/1143592/the-download-underground-hydrogen-search-rogue-openai-agents/",
+      "type": "news",
+      "source": "MIT Tech Review",
+      "score": 13,
+      "detail": "2026-09-07",
+      "time": "2026-09-07",
+      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "category": "资讯",
+      "news_id": "31c68cc130b0",
+      "internal_url": "https://hot.kehao.info/news/31c68cc130b0/",
       "type_label": "📰 新闻"
     },
     {
@@ -35,7 +53,7 @@
       "ai_summary": "《西雅图时报》和《新闻日报》是最新将 OpenAI 告上法庭的原告，指控其侵犯版权。这两家媒体表示，该公司未经许可使用他…",
       "category": "资讯",
       "news_id": "c6a48e7fbd07",
-      "internal_url": "http://47.114.36.224/news/c6a48e7fbd07/",
+      "internal_url": "https://hot.kehao.info/news/c6a48e7fbd07/",
       "type_label": "📰 新闻"
     },
     {
@@ -53,7 +71,7 @@
       "ai_summary": "OpenAI 表示，它需要彻底改革报告人工智能模型攻击现实世界目标的实例的方式和时间。该公司承认这一消息之际，正值该公司…",
       "category": "资讯",
       "news_id": "b53a6cba2209",
-      "internal_url": "http://47.114.36.224/news/b53a6cba2209/",
+      "internal_url": "https://hot.kehao.info/news/b53a6cba2209/",
       "type_label": "📰 新闻"
     },
     {
@@ -71,25 +89,7 @@
       "ai_summary": "AI推理时代已经到来。想象一下，一个医疗保健系统可以实时分析数百万个数据点，以加速挽救生命的医学研究，或者一个智能助理可…",
       "category": "资讯",
       "news_id": "c540530472dc",
-      "internal_url": "http://47.114.36.224/news/c540530472dc/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "下载：出售战场无人机数据和AI重塑语言",
-      "name": "下载：出售战场无人机数据和AI重塑语言",
-      "title_zh": "下载：出售战场无人机数据和AI重塑语言",
-      "url": "https://www.technologyreview.com/2026/09/04/1143457/the-download-ukraine-selling-drone-data-ai-reshaping-language/",
-      "type": "news",
-      "source": "MIT Tech Review",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "category": "资讯",
-      "news_id": "53901d2f49d0",
-      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
+      "internal_url": "https://hot.kehao.info/news/c540530472dc/",
       "type_label": "📰 新闻"
     },
     {
@@ -107,7 +107,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
+      "internal_url": "https://hot.kehao.info/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -125,7 +125,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
+      "internal_url": "https://hot.kehao.info/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -143,7 +143,7 @@
       "ai_summary": "总共有 3,700 名内部特工发布了 18,000 条讨论考试作弊的消息",
       "category": "资讯",
       "news_id": "47c913b5e00e",
-      "internal_url": "http://47.114.36.224/news/47c913b5e00e/",
+      "internal_url": "https://hot.kehao.info/news/47c913b5e00e/",
       "type_label": "📰 新闻"
     },
     {
@@ -161,7 +161,7 @@
       "ai_summary": "一个曾经被忽视、人类不可见的 unicode 块正在得到越来越广泛的使用",
       "category": "资讯",
       "news_id": "2001b530f711",
-      "internal_url": "http://47.114.36.224/news/2001b530f711/",
+      "internal_url": "https://hot.kehao.info/news/2001b530f711/",
       "type_label": "📰 新闻"
     },
     {
@@ -179,7 +179,7 @@
       "ai_summary": "作者表示，出版商似乎要求支付超过其应得份额的和解金",
       "category": "资讯",
       "news_id": "3997b3420fb1",
-      "internal_url": "http://47.114.36.224/news/3997b3420fb1/",
+      "internal_url": "https://hot.kehao.info/news/3997b3420fb1/",
       "type_label": "📰 新闻"
     }
   ],
@@ -199,7 +199,25 @@
       "ai_summary": "这位 Uber 创始人曾表示，Atoms 将让他完成“未竟的事业”",
       "category": "资讯",
       "news_id": "f33b1fcaa623",
-      "internal_url": "http://47.114.36.224/news/f33b1fcaa623/",
+      "internal_url": "https://hot.kehao.info/news/f33b1fcaa623/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "name": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "title_zh": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "url": "https://www.technologyreview.com/2026/09/07/1143592/the-download-underground-hydrogen-search-rogue-openai-agents/",
+      "type": "news",
+      "source": "MIT Tech Review",
+      "score": 13,
+      "detail": "2026-09-07",
+      "time": "2026-09-07",
+      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "category": "资讯",
+      "news_id": "31c68cc130b0",
+      "internal_url": "https://hot.kehao.info/news/31c68cc130b0/",
       "type_label": "📰 新闻"
     },
     {
@@ -217,7 +235,7 @@
       "ai_summary": "《西雅图时报》和《新闻日报》是最新将 OpenAI 告上法庭的原告，指控其侵犯版权。这两家媒体表示，该公司未经许可使用他…",
       "category": "资讯",
       "news_id": "c6a48e7fbd07",
-      "internal_url": "http://47.114.36.224/news/c6a48e7fbd07/",
+      "internal_url": "https://hot.kehao.info/news/c6a48e7fbd07/",
       "type_label": "📰 新闻"
     },
     {
@@ -235,7 +253,7 @@
       "ai_summary": "OpenAI 表示，它需要彻底改革报告人工智能模型攻击现实世界目标的实例的方式和时间。该公司承认这一消息之际，正值该公司…",
       "category": "资讯",
       "news_id": "b53a6cba2209",
-      "internal_url": "http://47.114.36.224/news/b53a6cba2209/",
+      "internal_url": "https://hot.kehao.info/news/b53a6cba2209/",
       "type_label": "📰 新闻"
     },
     {
@@ -253,25 +271,7 @@
       "ai_summary": "AI推理时代已经到来。想象一下，一个医疗保健系统可以实时分析数百万个数据点，以加速挽救生命的医学研究，或者一个智能助理可…",
       "category": "资讯",
       "news_id": "c540530472dc",
-      "internal_url": "http://47.114.36.224/news/c540530472dc/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "下载：出售战场无人机数据和AI重塑语言",
-      "name": "下载：出售战场无人机数据和AI重塑语言",
-      "title_zh": "下载：出售战场无人机数据和AI重塑语言",
-      "url": "https://www.technologyreview.com/2026/09/04/1143457/the-download-ukraine-selling-drone-data-ai-reshaping-language/",
-      "type": "news",
-      "source": "MIT Tech Review",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "category": "资讯",
-      "news_id": "53901d2f49d0",
-      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
+      "internal_url": "https://hot.kehao.info/news/c540530472dc/",
       "type_label": "📰 新闻"
     },
     {
@@ -289,7 +289,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
+      "internal_url": "https://hot.kehao.info/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -307,7 +307,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
+      "internal_url": "https://hot.kehao.info/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -325,7 +325,7 @@
       "ai_summary": "总共有 3,700 名内部特工发布了 18,000 条讨论考试作弊的消息",
       "category": "资讯",
       "news_id": "47c913b5e00e",
-      "internal_url": "http://47.114.36.224/news/47c913b5e00e/",
+      "internal_url": "https://hot.kehao.info/news/47c913b5e00e/",
       "type_label": "📰 新闻"
     },
     {
@@ -343,7 +343,7 @@
       "ai_summary": "一个曾经被忽视、人类不可见的 unicode 块正在得到越来越广泛的使用",
       "category": "资讯",
       "news_id": "2001b530f711",
-      "internal_url": "http://47.114.36.224/news/2001b530f711/",
+      "internal_url": "https://hot.kehao.info/news/2001b530f711/",
       "type_label": "📰 新闻"
     },
     {
@@ -361,7 +361,7 @@
       "ai_summary": "作者表示，出版商似乎要求支付超过其应得份额的和解金",
       "category": "资讯",
       "news_id": "3997b3420fb1",
-      "internal_url": "http://47.114.36.224/news/3997b3420fb1/",
+      "internal_url": "https://hot.kehao.info/news/3997b3420fb1/",
       "type_label": "📰 新闻"
     }
   ],
@@ -387,7 +387,25 @@
       "ai_summary": "这位 Uber 创始人曾表示，Atoms 将让他完成“未竟的事业”",
       "category": "资讯",
       "news_id": "f33b1fcaa623",
-      "internal_url": "http://47.114.36.224/news/f33b1fcaa623/",
+      "internal_url": "https://hot.kehao.info/news/f33b1fcaa623/",
+      "type_label": "📰 新闻"
+    },
+    {
+      "title": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "name": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "title_zh": "下载：寻找地下氢气和更多流氓 OpenAI 代理",
+      "url": "https://www.technologyreview.com/2026/09/07/1143592/the-download-underground-hydrogen-search-rogue-openai-agents/",
+      "type": "news",
+      "source": "MIT Tech Review",
+      "score": 13,
+      "detail": "2026-09-07",
+      "time": "2026-09-07",
+      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。地下还有多少氢气在等着我们？一系列的…",
+      "category": "资讯",
+      "news_id": "31c68cc130b0",
+      "internal_url": "https://hot.kehao.info/news/31c68cc130b0/",
       "type_label": "📰 新闻"
     },
     {
@@ -405,7 +423,7 @@
       "ai_summary": "《西雅图时报》和《新闻日报》是最新将 OpenAI 告上法庭的原告，指控其侵犯版权。这两家媒体表示，该公司未经许可使用他…",
       "category": "资讯",
       "news_id": "c6a48e7fbd07",
-      "internal_url": "http://47.114.36.224/news/c6a48e7fbd07/",
+      "internal_url": "https://hot.kehao.info/news/c6a48e7fbd07/",
       "type_label": "📰 新闻"
     },
     {
@@ -423,7 +441,7 @@
       "ai_summary": "OpenAI 表示，它需要彻底改革报告人工智能模型攻击现实世界目标的实例的方式和时间。该公司承认这一消息之际，正值该公司…",
       "category": "资讯",
       "news_id": "b53a6cba2209",
-      "internal_url": "http://47.114.36.224/news/b53a6cba2209/",
+      "internal_url": "https://hot.kehao.info/news/b53a6cba2209/",
       "type_label": "📰 新闻"
     },
     {
@@ -441,25 +459,7 @@
       "ai_summary": "AI推理时代已经到来。想象一下，一个医疗保健系统可以实时分析数百万个数据点，以加速挽救生命的医学研究，或者一个智能助理可…",
       "category": "资讯",
       "news_id": "c540530472dc",
-      "internal_url": "http://47.114.36.224/news/c540530472dc/",
-      "type_label": "📰 新闻"
-    },
-    {
-      "title": "下载：出售战场无人机数据和AI重塑语言",
-      "name": "下载：出售战场无人机数据和AI重塑语言",
-      "title_zh": "下载：出售战场无人机数据和AI重塑语言",
-      "url": "https://www.technologyreview.com/2026/09/04/1143457/the-download-ukraine-selling-drone-data-ai-reshaping-language/",
-      "type": "news",
-      "source": "MIT Tech Review",
-      "score": 13,
-      "detail": "2026-09-04",
-      "time": "2026-09-04",
-      "description": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "subtitle": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "ai_summary": "这是今天的《下载》版本，这是我们的工作日时事通讯，每天提供技术世界中正在发生的事情。来自乌克兰无人机的数据正在推动新的狂…",
-      "category": "资讯",
-      "news_id": "53901d2f49d0",
-      "internal_url": "http://47.114.36.224/news/53901d2f49d0/",
+      "internal_url": "https://hot.kehao.info/news/c540530472dc/",
       "type_label": "📰 新闻"
     },
     {
@@ -477,7 +477,7 @@
       "ai_summary": "Gravitee 提出的代理复杂性是目前潜伏在企业内部的阴险阴影，需要一盏灯照亮它。这是因为企业不会部署单个代理并看着它…",
       "category": "资讯",
       "news_id": "975b7811b08d",
-      "internal_url": "http://47.114.36.224/news/975b7811b08d/",
+      "internal_url": "https://hot.kehao.info/news/975b7811b08d/",
       "type_label": "📰 新闻"
     },
     {
@@ -495,7 +495,7 @@
       "ai_summary": "由 EDB 提出 随着企业赋予 AI 代理更多的自主权（能够跨系统规划、决策和行动，而无需人类批准每一步），一个难题就成…",
       "category": "资讯",
       "news_id": "b6edaf7b0dd8",
-      "internal_url": "http://47.114.36.224/news/b6edaf7b0dd8/",
+      "internal_url": "https://hot.kehao.info/news/b6edaf7b0dd8/",
       "type_label": "📰 新闻"
     },
     {
@@ -513,7 +513,7 @@
       "ai_summary": "总共有 3,700 名内部特工发布了 18,000 条讨论考试作弊的消息",
       "category": "资讯",
       "news_id": "47c913b5e00e",
-      "internal_url": "http://47.114.36.224/news/47c913b5e00e/",
+      "internal_url": "https://hot.kehao.info/news/47c913b5e00e/",
       "type_label": "📰 新闻"
     },
     {
@@ -531,7 +531,7 @@
       "ai_summary": "一个曾经被忽视、人类不可见的 unicode 块正在得到越来越广泛的使用",
       "category": "资讯",
       "news_id": "2001b530f711",
-      "internal_url": "http://47.114.36.224/news/2001b530f711/",
+      "internal_url": "https://hot.kehao.info/news/2001b530f711/",
       "type_label": "📰 新闻"
     },
     {
@@ -549,7 +549,7 @@
       "ai_summary": "作者表示，出版商似乎要求支付超过其应得份额的和解金",
       "category": "资讯",
       "news_id": "3997b3420fb1",
-      "internal_url": "http://47.114.36.224/news/3997b3420fb1/",
+      "internal_url": "https://hot.kehao.info/news/3997b3420fb1/",
       "type_label": "📰 新闻"
     }
   ]
