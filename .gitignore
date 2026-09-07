@@ -1,6 +1,7 @@
 __pycache__/
 *.pyc
 .env
+.venv
 *.log
 site/public/
 site/resources/
