@@ -8,54 +8,54 @@
 {{ $hotItems := slice }}{{ with $hot.items }}{{ $hotItems = . }}{{ else }}{{ with $hot.top_20 }}{{ $hotItems = . }}{{ end }}{{ end }}
 
 <!-- hero 大标题 (方向 C) -->
-<section class="hdr">
-    <div class="kicker">TODAY'S FRONTPAGE · {{ now.Format "2006.01.02" }}</div>
-    <h1 class="title"><span class="accent">此刻</span> 看见中文AI 世界</h1>
-    <p class="dek">每 6 小时自动聚合 AI 热点新闻、GitHub 趋势与工具模型动态。当前收录
-        <span class="num">{{ len $tools }}</span> 款工具 ·
-        <span class="num">{{ len $models }}</span> 个模型 ·
-        <span class="num">{{ len $news }}</span> 条新闻，
+<section class="hdr" data-page-node-id="8D4dEGBTXKVxsot45Qb1sn">
+    <div class="kicker" data-page-node-id="p53Bmh5ioKPoO32g0PPdTk">TODAY'S FRONTPAGE · {{ now.Format "2006.01.02" }}</div>
+    <h1 class="title" data-page-node-id="nhwDioPmBN0rg0AGSVg4D3"><span class="accent" data-page-node-id="rcyVwr30ykxpVbMH2oeCT8">此刻</span> 看见中文AI 世界</h1>
+    <p class="dek" data-page-node-id="PFkm1DKVpoll2kjD5VOoFP">每 6 小时自动聚合 AI 热点新闻、GitHub 趋势与工具模型动态。当前收录
+        <span class="num" data-page-node-id="Hpf174dBaqxUiixGquw63q">{{ len $tools }}</span> 款工具 ·
+        <span class="num" data-page-node-id="tbOR1camb6QjTe5iO9EtIg">{{ len $models }}</span> 个模型 ·
+        <span class="num" data-page-node-id="2Bprs0MCVQGgOBAYAnXHXx">{{ len $news }}</span> 条新闻，
         全部人工校验后收录。</p>
 </section>
 
 <!-- meta 数据带 (真实计数) -->
-<section class="meta-strip">
-    <div><div class="lbl">今日热点</div><div class="val">{{ len $hotItems }}<small>NEWS</small></div></div>
-    <div><div class="lbl">AI 工具</div><div class="val"><a href="{{ relURL "/tools/" }}">{{ len $tools }}<small>收录</small></a></div></div>
-    <div><div class="lbl">精选模型</div><div class="val"><a href="{{ relURL "/models/" }}">{{ len $models }}<small>收录</small></a></div></div>
-    <div><div class="lbl">AI 新闻</div><div class="val"><a href="{{ relURL "/news/" }}">{{ len $news }}<small>篇</small></a></div></div>
+<section class="meta-strip" data-page-node-id="wMqr3OITS85wkqmDQVNyxn">
+    <div data-page-node-id="drxyXhUTzTTUFGrqKRO5fx"><div class="lbl" data-page-node-id="CIz9VL9EJwD3fa28cg5hH3">今日热点</div><div class="val" data-page-node-id="4vD7kKiN5r6aGKPBCvA8Ne">{{ len $hotItems }}<small data-page-node-id="JhFSls1xnm4Z1PhkQ5PAFc">NEWS</small></div></div>
+    <div data-page-node-id="EVFmD2o6JEVIXOC9NVSEPE"><div class="lbl" data-page-node-id="gztEutqqPQViddepllYAV9">AI 工具</div><div class="val" data-page-node-id="AlFPbffPvNsYkgtZFryVFo"><a href="{{ relURL "/tools/" }}" data-page-node-id="3csoQdnsb2VXkmVISy5D5R">{{ len $tools }}<small data-page-node-id="DaHkdxfep5DkxgKOIUSsI1">收录</small></a></div></div>
+    <div data-page-node-id="elPgUvVPrp9XmQrGedFC00"><div class="lbl" data-page-node-id="FbWmouwu8wFFzoGUDn3kRV">精选模型</div><div class="val" data-page-node-id="wvL0CZy2xSi0ZtXX4ciSAR"><a href="{{ relURL "/models/" }}" data-page-node-id="wPS8lF5GWZKDFIo04LsUsN">{{ len $models }}<small data-page-node-id="qvQIu1FuvUFEQBStpL4xUM">收录</small></a></div></div>
+    <div data-page-node-id="uTg66ItcuscVoOtWHfHVup"><div class="lbl" data-page-node-id="CmKkCUFNmYg5GUXg91EXXC">AI 新闻</div><div class="val" data-page-node-id="TRWid9xlpvHot0T9QQ9P0W"><a href="{{ relURL "/news/" }}" data-page-node-id="UtSD6NgoNpILnUAuFfKNGF">{{ len $news }}<small data-page-node-id="OEAqhBGIMYt1ZHpJIxZi8B">篇</small></a></div></div>
 </section>
 
-<div class="grid">
-<div>
+<div class="grid" data-page-node-id="r1ViTOlxIP58fkr8LC0dFe">
+<div data-page-node-id="qjXfQQtRWc6ZqztuyimGrh">
     <!-- 搜索框 -->
-    <div style="margin-bottom:20px">
-        <input type="text" class="search-box" placeholder="搜索 AI 工具、模型、新闻…（Ctrl+K）" id="searchInput">
-        <div id="searchResults"></div>
+    <div style="margin-bottom:20px" data-page-node-id="O1zNynfwdOLLAAOYrLbWR1">
+        <input type="text" class="search-box" placeholder="搜索 AI 工具、模型、新闻…（Ctrl+K）" id="searchInput" data-page-node-id="pfSqSedQifPU91BPE3DIX4">
+        <div id="searchResults" data-page-node-id="qjICNCWBr3wyEwe9uv7oPZ"></div>
     </div>
 
     <!-- 新用户路径引导 -->
-    <div class="card" style="margin-bottom:24px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(99,102,241,0.06));border-color:rgba(255,107,53,0.25)">
-        <div class="card-title">先从哪看？</div>
-        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px">
-            <a href="{{ relURL "/tools/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
-                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我是新手，先找能直接用的工具</div>
-                <div style="font-size:13px;color:var(--text2)">从工具库开始，看热门、免费、国内可直接用的 AI 工具</div>
+    <div class="card" style="margin-bottom:24px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(99,102,241,0.06));border-color:rgba(255,107,53,0.25)" data-page-node-id="Kk5hmPWFFtcyGLGYW5Ginj">
+        <div class="card-title" data-page-node-id="EhAC2mHZ2DgYhLJ6tDmEFT">先从哪看？</div>
+        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px" data-page-node-id="j3mzcUcvqMicdQyLLbPmA5">
+            <a href="{{ relURL "/tools/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)" data-page-node-id="IdPamAd2UZNfqR1I5PLymH">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px" data-page-node-id="ScQpSCO9aymI5LzDCBllVQ">我是新手，先找能直接用的工具</div>
+                <div style="font-size:13px;color:var(--text2)" data-page-node-id="HWGcROBfc1UDqSMLkbVmT1">从工具库开始，看热门、免费、国内可直接用的 AI 工具</div>
             </a>
-            <a href="{{ relURL "/models/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
-                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我想看现在最强的大模型</div>
-                <div style="font-size:13px;color:var(--text2)">直接看模型精选榜，优先看顶级通用、编程最强、多模态主力</div>
+            <a href="{{ relURL "/models/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)" data-page-node-id="Gez7oSS1kXbOB2Bk6V51Bm">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px" data-page-node-id="0e4KXukdfUxXju8NFQBg4c">我想看现在最强的大模型</div>
+                <div style="font-size:13px;color:var(--text2)" data-page-node-id="RYpFr6DzLjmXJVHIoH1RX5">直接看模型精选榜，优先看顶级通用、编程最强、多模态主力</div>
             </a>
-            <a href="{{ relURL "/agents/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)">
-                <div style="font-weight:700;color:var(--text1);margin-bottom:6px">我想找 Agent / 自动化能力</div>
-                <div style="font-size:13px;color:var(--text2)">去 Agent 区看编程 Agent、浏览器 Agent、多 Agent 框架</div>
+            <a href="{{ relURL "/agents/" }}" style="text-decoration:none;color:inherit;padding:14px;border:1px solid var(--border);border-radius:10px;background:var(--bg2)" data-page-node-id="HveEC2pdg06hLecizjYspM">
+                <div style="font-weight:700;color:var(--text1);margin-bottom:6px" data-page-node-id="0ZVsHJ5dJBp5AfPDqXouti">我想找 Agent / 自动化能力</div>
+                <div style="font-size:13px;color:var(--text2)" data-page-node-id="BEsS8bfS9r36sMViILJQqb">去 Agent 区看编程 Agent、浏览器 Agent、多 Agent 框架</div>
             </a>
         </div>
     </div>
 
     <!-- 今日热点 -->
-    <div class="card" style="border-color:var(--accent)">
-        <div class="card-title">今日热点 <span class="hot-badge fire">每6h更新</span></div>
+    <div class="card" style="border-color:var(--accent)" data-page-node-id="PbOerDEGsvXS7psAMunsu6">
+        <div class="card-title" data-page-node-id="6T8eVw1NXbMDzVSedKL4B7">今日热点 <span class="hot-badge fire" data-page-node-id="6NwrwGsrykFGl3bumphcZc">每6h更新</span></div>
         {{ $hot := site.Data.hot }}
         {{ if $hot }}
             {{ $items := $hot.items }}
@@ -102,32 +102,32 @@
                 {{ $hotTarget = "_self" }}
                 {{ $hotRel = "" }}
             {{ end }}
-            <a href="{{ $hotHref }}"{{ if $hotTarget }} target="{{ $hotTarget }}"{{ end }}{{ if $hotRel }} rel="{{ $hotRel }}"{{ end }} class="hot-item" style="text-decoration:none;color:inherit">
-                <div class="hot-rank {{ if lt $index 3 }}top3{{ else }}normal{{ end }}">{{ add $index 1 }}</div>
-                <div class="hot-content">
-                    <div class="hot-title">{{ with $item.title_zh }}{{ . }}{{ else }}{{ $item.title }}{{ end }}</div>
+            <a href="{{ $hotHref }}"{{ if $hotTarget }} target="{{ $hotTarget }}"{{ end }}{{ if $hotRel }} rel="{{ $hotRel }}"{{ end }} class="hot-item" style="text-decoration:none;color:inherit" data-page-node-id="C1oSecnHbLEZUKM4P5bz4B">
+                <div class="hot-rank {{ if lt $index 3 }}top3{{ else }}normal{{ end }}" data-page-node-id="rr8FpQGBMm4WmitfrPXwXt">{{ add $index 1 }}</div>
+                <div class="hot-content" data-page-node-id="zNZuoL3G2H8su4GRBQC3Nb">
+                    <div class="hot-title" data-page-node-id="BgXDRFl2uH62PkDlOEvnBD">{{ with $item.title_zh }}{{ . }}{{ else }}{{ $item.title }}{{ end }}</div>
                     {{ if or $item.ai_summary (and $matchedNews.id (or $matchedNews.ai_summary $matchedNews.summary_zh $matchedNews.summary)) }}
-                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.6">{{ or $item.ai_summary $matchedNews.ai_summary $matchedNews.summary_zh $matchedNews.summary }}</div>
+                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.6" data-page-node-id="wGy1cNFGj2VXBgGp2MLRsp">{{ or $item.ai_summary $matchedNews.ai_summary $matchedNews.summary_zh $matchedNews.summary }}</div>
                     {{ else if $item.subtitle }}
-                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.5">{{ $item.subtitle }}</div>
+                    <div class="hot-meta" style="color:var(--text2);margin-top:4px;line-height:1.5" data-page-node-id="Hn5l9XgrSyBQLL6MTZXnEG">{{ $item.subtitle }}</div>
                     {{ end }}
-                    <div class="hot-meta" style="margin-top:6px">
-                        {{ with $item.source }}<span class="hot-badge">{{ . }}</span>{{ end }}
-                        {{ with $item.time }}<span style="color:var(--text3);margin-left:4px">{{ . }}</span>{{ end }}
-                        {{ if or $item.news_id $matchedNews.id }}<span class="hot-badge" style="border-color:var(--brand);color:var(--brand-2);margin-left:4px">站内文章</span>{{ end }}
-                        {{ range $item.tags }}<span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent);margin-left:4px">{{ . }}</span>{{ end }}
+                    <div class="hot-meta" style="margin-top:6px" data-page-node-id="T39sZB9PnyJF24bAVuEh2b">
+                        {{ with $item.source }}<span class="hot-badge" data-page-node-id="mjz8TuScaHgvFpLXiOOcFw">{{ . }}</span>{{ end }}
+                        {{ with $item.time }}<span style="color:var(--text3);margin-left:4px" data-page-node-id="FTZsPYFiov1LJdU1LHlo8I">{{ . }}</span>{{ end }}
+                        {{ if or $item.news_id $matchedNews.id }}<span class="hot-badge" style="border-color:var(--brand);color:var(--brand-2);margin-left:4px" data-page-node-id="kWdsjtRbRbfQNfSROIUsxJ">站内文章</span>{{ end }}
+                        {{ range $item.tags }}<span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent);margin-left:4px" data-page-node-id="d6GREnN83cmXsKPlJNnEgA">{{ . }}</span>{{ end }}
                     </div>
                 </div>
             </a>
             {{ end }}
         {{ else }}
-            <div class="hot-item"><div class="hot-content"><div class="hot-title" style="color:var(--text3)">数据采集中...</div></div></div>
+            <div class="hot-item" data-page-node-id="y7eobRKwFzo2nFnCmD7DEb"><div class="hot-content" data-page-node-id="sKyAFtdc2NbrFJbdNchTik"><div class="hot-title" style="color:var(--text3)" data-page-node-id="CKScHcwhgcAUtGqGiczVk3">数据采集中...</div></div></div>
         {{ end }}
     </div>
 
     <!-- 最新新闻 (穿插显示，不按来源堆积) -->
-    <div class="card">
-        <div class="card-title">AI 新闻</div>
+    <div class="card" data-page-node-id="aoIIt8IYGix7APUVVo4GBf">
+        <div class="card-title" data-page-node-id="ic1dA1A4U9mKzBBkqV2XWl">AI 新闻</div>
         {{ $news := site.Data.news }}
         {{ if $news }}
             {{ $count := 0 }}
@@ -137,23 +137,23 @@
                 {{ $mustReadSource := or (eq .source "机器之心") (eq .source "量子位") (eq .source "新智元") (eq .source "TechCrunch AI") (eq .source "The Verge AI") (eq .source "MIT Tech Review") (eq .source "VentureBeat AI") (eq .source "InfoQ AI") }}
                 {{ $noise := or (in $title "大会") (in $title "开幕") (in $title "峰会") (in $title "论坛") (in $title "学者") (in $title "实习生") (in $title "招聘") (in $title "品牌") (in $title "发布会") (in $summary "大会") (in $summary "峰会") (in $summary "论坛") (in $summary "学者") (in $summary "实习生") (in $summary "招聘") }}
                 {{ if and (lt $count 8) $mustReadSource (not $noise) }}
-                <div class="hot-item">
-                    <div class="hot-content">
-                        <div class="hot-title">
-                            <a href="{{ relURL "/news/" }}{{ .id }}/">{{ with .title_zh }}{{ . }}{{ else }}{{ .title }}{{ end }}</a>
+                <div class="hot-item" data-page-node-id="LqBCB1uQmuDoIDSbwZEvmQ">
+                    <div class="hot-content" data-page-node-id="n54tylfJ5ffyDJA97ao3GZ">
+                        <div class="hot-title" data-page-node-id="gQ7tDw63LeIxAn2vtmVpj0">
+                            <a href="{{ relURL "/news/" }}{{ .id }}/" data-page-node-id="12mRraAhzFYN6aGvrXe5tq">{{ with .title_zh }}{{ . }}{{ else }}{{ .title }}{{ end }}</a>
                         </div>
-                        <div class="hot-meta">
+                        <div class="hot-meta" data-page-node-id="G4nTjTuJhKW5NyCsjlPoQR">
                             {{ .source }}
                             {{ with .published }} · {{ replace . "T" " " | truncate 16 "" }}{{ end }}
                         </div>
                         {{ if .ai_summary }}
                             {{ if gt (len .ai_summary) 50 }}
-                            <div class="hot-meta" style="color:var(--accent);margin-top:2px">{{ .ai_summary }}</div>
+                            <div class="hot-meta" style="color:var(--accent);margin-top:2px" data-page-node-id="g9tByiVUoPzh2ON1oSglIF">{{ .ai_summary }}</div>
                             {{ else if .summary }}
-                            <div class="hot-meta" style="color:var(--text3)">{{ .summary | truncate 100 "..." }}</div>
+                            <div class="hot-meta" style="color:var(--text3)" data-page-node-id="o6O9qFA1PhRyUF9vNAnutO">{{ .summary | truncate 100 "..." }}</div>
                             {{ end }}
                         {{ else if .summary }}
-                        <div class="hot-meta" style="color:var(--text3)">{{ .summary | truncate 100 "..." }}</div>
+                        <div class="hot-meta" style="color:var(--text3)" data-page-node-id="5AzZiiSRoAqVO4ufPIlgJY">{{ .summary | truncate 100 "..." }}</div>
                         {{ end }}
                     </div>
                 </div>
@@ -161,23 +161,23 @@
                 {{ end }}
             {{ end }}
         {{ end }}
-        <div style="margin-top:12px"><a href="{{ relURL "/news/" }}" class="tag" style="text-decoration:none">查看更多 AI 新闻 →</a></div>
+        <div style="margin-top:12px" data-page-node-id="JVlgG8p0dendLuQr0mjvhu"><a href="{{ relURL "/news/" }}" class="tag" style="text-decoration:none" data-page-node-id="G3sn5O91pBKYPFv8nuFlia">查看更多 AI 新闻 →</a></div>
     </div>
 </div>
 
 <!-- 侧边栏 -->
-<div>
+<div data-page-node-id="Sr3fgS3hGFZRBCJQPHeHmE">
     <!-- 每日 AI 快报 -->
     {{ $briefing := site.Data.briefing }}
     {{ if $briefing }}
-    <div class="card" style="border-left:3px solid var(--accent);background:linear-gradient(180deg,rgba(255,107,53,.06),rgba(255,255,255,0))">
-        <div class="card-title">每日 AI 快报 <span class="hot-badge fire">AI 生成</span></div>
-        <div style="font-size:16px;line-height:1.95;color:var(--text1);font-weight:700;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03)">
+    <div class="card" style="border-left:3px solid var(--accent);background:linear-gradient(180deg,rgba(255,107,53,.06),rgba(255,255,255,0))" data-page-node-id="Ug05XMQToS39HvzKvUAK5u">
+        <div class="card-title" data-page-node-id="jAHFSUJafooCTXWeBM0jcQ">每日 AI 快报 <span class="hot-badge fire" data-page-node-id="CJx5vOO1GdD85Eb5twbDGG">AI 生成</span></div>
+        <div style="font-size:16px;line-height:1.95;color:var(--text1);font-weight:700;padding:14px 16px;border-radius:14px;background:rgba(255,255,255,.03)" data-page-node-id="wcvWNKXZiz7kn9bI45vFE0">
             {{ with $briefing.emoji }}{{ . }} {{ end }}{{ $briefing.content }}
         </div>
-        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:11px;color:var(--text3)">
-            <span>基于 {{ $briefing.news_count }} 条新闻 · {{ with $briefing.date }}{{ . }}{{ else }}{{ substr site.Data.meta.last_update 0 10 }}{{ end }}</span>
-            <a href="{{ relURL "/news/" }}" style="color:var(--accent);text-decoration:none">查看新闻 →</a>
+        <div style="display:flex;justify-content:space-between;align-items:center;gap:10px;margin-top:10px;font-size:11px;color:var(--text3)" data-page-node-id="ozhHKH1rE823ZG3pkdVyQ0">
+            <span data-page-node-id="Hxvcm8o3eM2ZVpUrsaG8h5">基于 {{ $briefing.news_count }} 条新闻 · {{ with $briefing.date }}{{ . }}{{ else }}{{ substr site.Data.meta.last_update 0 10 }}{{ end }}</span>
+            <a href="{{ relURL "/news/" }}" style="color:var(--accent);text-decoration:none" data-page-node-id="xcHp5kGOa5quvW9OXq9W7F">查看新闻 →</a>
         </div>
     </div>
     {{ end }}
@@ -185,149 +185,149 @@
     <!-- 每日精选 -->
     {{ $daily := site.Data.daily }}
     {{ if $daily }}
-    <div class="spotlight">
-        <div style="font-size:13px;color:var(--text2);margin-bottom:8px">今日精选 - {{ $daily.date }}</div>
-        <div class="spotlight-name">{{ $daily.spotlight.name }}</div>
-        <div class="spotlight-desc">{{ $daily.spotlight.description }}</div>
-        {{ if $daily.spotlight.pricing }}<div class="hot-meta" style="margin-top:6px">{{ $daily.spotlight.pricing }}</div>{{ end }}
+    <div class="spotlight" data-page-node-id="mO3wFbFAKZ2fo6bAjPx6Hn">
+        <div style="font-size:13px;color:var(--text2);margin-bottom:8px" data-page-node-id="uPL5rCZ5ZBTUMsSearoREt">今日精选 - {{ $daily.date }}</div>
+        <div class="spotlight-name" data-page-node-id="J9FFaStnljOFgV8Wlt8NAD">{{ $daily.spotlight.name }}</div>
+        <div class="spotlight-desc" data-page-node-id="fIiGfJtM3COIVmG0OwbJ2p">{{ $daily.spotlight.description }}</div>
+        {{ if $daily.spotlight.pricing }}<div class="hot-meta" style="margin-top:6px" data-page-node-id="EcP67rzU8A3qIdfFA4OP6o">{{ $daily.spotlight.pricing }}</div>{{ end }}
         {{ if $daily.spotlight.id }}
-        <a href="{{ relURL "/tools/" }}{{ $daily.spotlight.id }}/" class="spotlight-btn">立即体验 →</a>
+        <a href="{{ relURL "/tools/" }}{{ $daily.spotlight.id }}/" class="spotlight-btn" data-page-node-id="Z7AjXd6ZYbiHdTMjCZxK1V">立即体验 →</a>
         {{ else }}
-        <a href="{{ $daily.spotlight.url }}" class="spotlight-btn" target="_blank">立即体验 →</a>
+        <a href="{{ $daily.spotlight.url }}" class="spotlight-btn" target="_blank" data-page-node-id="f3LMMXXMTDkv4jimzFC4No">立即体验 →</a>
         {{ end }}
     </div>
     {{ end }}
 
     <!-- 热度飙升 -->
-    <div class="card">
+    <div class="card" data-page-node-id="fRULzt3BOsNFEPQCNXD79o">
         {{ $rising := site.Data.rising }}
-        <div class="card-title">热度飙升{{ with $rising.window_days }} <span class="hot-badge">近{{ . }}天</span>{{ end }}</div>
+        <div class="card-title" data-page-node-id="9eWy1GlifEUR44WkAxCKSe">热度飙升{{ with $rising.window_days }} <span class="hot-badge" data-page-node-id="maLa4agS4KrKdk8PDWwddQ">近{{ . }}天</span>{{ end }}</div>
         {{ if and $rising $rising.items }}
             {{ range $rising.items }}
             {{ $href := .url }}
             {{ if and (eq .type "tool") .id }}{{ $href = printf "/tools/%s/" .id | relURL }}{{ end }}
             {{ if and (eq .type "agent") .id }}{{ $href = printf "/agents/%s/" .id | relURL }}{{ end }}
-            <div class="trend-item" style="align-items:flex-start">
-                <div style="min-width:0;flex:1">
-                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap">
-                        <a href="{{ $href }}"{{ if not (or (eq .type "tool") (eq .type "agent")) }} target="_blank" rel="noopener"{{ end }}>{{ .name }}</a>
-                        <span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent)">{{ if eq .type "project" }}项目{{ else if eq .type "tool" }}工具{{ else if eq .type "agent" }}Agent{{ else }}模型{{ end }}</span>
+            <div class="trend-item" style="align-items:flex-start" data-page-node-id="BvmVwycKFIzIy4FPl1aaIv">
+                <div style="min-width:0;flex:1" data-page-node-id="3iIJD8KDFewnsGStGR7Z2e">
+                    <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap" data-page-node-id="SktpQ1EFtLaGPzwGMlz3gV">
+                        <a href="{{ $href }}"{{ if not (or (eq .type "tool") (eq .type "agent")) }} target="_blank" rel="noopener"{{ end }} data-page-node-id="uXDrGGUajKLkVfMn73UT6N">{{ .name }}</a>
+                        <span class="hot-badge" style="background:rgba(255,107,53,0.12);color:var(--accent)" data-page-node-id="9owrYnU1Pu0sCTipTL4QHx">{{ if eq .type "project" }}项目{{ else if eq .type "tool" }}工具{{ else if eq .type "agent" }}Agent{{ else }}模型{{ end }}</span>
                     </div>
-                    <div style="color:var(--text2);font-size:11px;margin-top:4px;line-height:1.6">{{ .reason }}</div>
+                    <div style="color:var(--text2);font-size:11px;margin-top:4px;line-height:1.6" data-page-node-id="RxU8oO0UXVZDhOiu89cF1s">{{ .reason }}</div>
                 </div>
-                <div class="trend-up">▲</div>
+                <div class="trend-up" data-page-node-id="AZ7SByQJA8tbLZtMQzqLqz">▲</div>
             </div>
             {{ end }}
         {{ else }}
-            <div class="trend-item">
-                <div style="color:var(--text3);font-size:13px">暂无热度飙升数据</div>
+            <div class="trend-item" data-page-node-id="bj0APmEVZhcsRlMeme92EP">
+                <div style="color:var(--text3);font-size:13px" data-page-node-id="Fws5cU7CxotJfWxGbDsRqu">暂无热度飙升数据</div>
             </div>
         {{ end }}
     </div>
 
     <!-- 分类入口（暂时隐藏，保留代码方便后续恢复） -->
-    <div class="card home-hidden-block" style="display:none">
-        <div class="card-title">分类导航</div>
-        <div style="display:flex;flex-wrap:wrap;gap:8px">
-            <a href="{{ relURL "/tools/" }}" class="tag">🛠️ AI工具 ({{ len site.Data.tools }})</a>
-            <a href="{{ relURL "/models/" }}" class="tag">🧠 AI模型 ({{ len site.Data.models }})</a>
-            <a href="{{ relURL "/agents/" }}" class="tag">AI Agent ({{ len site.Data.agents }})</a>
-            <a href="{{ relURL "/news/" }}" class="tag">📰 AI新闻 ({{ len site.Data.news }})</a>
-            <a href="{{ relURL "/providers/" }}" class="tag">🏢 提供商 ({{ len site.Data.providers }})</a>
+    <div class="card home-hidden-block" style="display:none" data-page-node-id="Ht2XIN0E20RQSAd4FQXYDb">
+        <div class="card-title" data-page-node-id="As8jfPSUtlmxqk7NbnzF6o">分类导航</div>
+        <div style="display:flex;flex-wrap:wrap;gap:8px" data-page-node-id="2pNcXM1jUjl21qBwto9LMU">
+            <a href="{{ relURL "/tools/" }}" class="tag" data-page-node-id="mamc89EX79yoqpLmGZvXFF">🛠️ AI工具 ({{ len site.Data.tools }})</a>
+            <a href="{{ relURL "/models/" }}" class="tag" data-page-node-id="cVhItvuKb5Ngel2YnubJHN">🧠 AI模型 ({{ len site.Data.models }})</a>
+            <a href="{{ relURL "/agents/" }}" class="tag" data-page-node-id="GIt2vcYTTwaXDjCUc2YifZ">AI Agent ({{ len site.Data.agents }})</a>
+            <a href="{{ relURL "/news/" }}" class="tag" data-page-node-id="8E4lbLo3nObCzyLtalOSOJ">📰 AI新闻 ({{ len site.Data.news }})</a>
+            <a href="{{ relURL "/providers/" }}" class="tag" data-page-node-id="nhZUndMXkif5aTMObYCUJf">🏢 提供商 ({{ len site.Data.providers }})</a>
         </div>
     </div>
 
     <!-- 随机发现（暂时隐藏，保留代码方便后续恢复） -->
-    <div class="card home-hidden-block" style="display:none">
-        <div class="card-title">随机发现</div>
-        <button class="random-btn" onclick="randomTool()">🎲 点我换个工具</button>
-        <div id="randomResult" style="margin-top:12px"></div>
+    <div class="card home-hidden-block" style="display:none" data-page-node-id="xLWZwj6m12ZQycKNPj645H">
+        <div class="card-title" data-page-node-id="ka3F1tE0UkZu34t25q2Guc">随机发现</div>
+        <button class="random-btn" onclick="randomTool()" data-page-node-id="6Wj8r80D34Pg0LADD6KFVW">🎲 点我换个工具</button>
+        <div id="randomResult" style="margin-top:12px" data-page-node-id="0E4dXyKzWfLdnUecCy9wDj"></div>
     </div>
 
     <!-- 每日签到（暂时隐藏，保留代码方便后续恢复） -->
-    <div class="card home-hidden-block" style="display:none;border-left:3px solid var(--green)">
-        <div class="card-title">每日签到</div>
-        <div id="checkinStatus" style="margin-bottom:12px">
-            <button id="checkinBtn" onclick="dailyCheckin()" style="width:100%;padding:12px;background:var(--accent);border:none;border-radius:8px;color:white;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s">
+    <div class="card home-hidden-block" style="display:none;border-left:3px solid var(--green)" data-page-node-id="ndhcHhPvGkzzLjjdfS4Xeh">
+        <div class="card-title" data-page-node-id="OgO2HXoMKqLbfJKOdh1DeQ">每日签到</div>
+        <div id="checkinStatus" style="margin-bottom:12px" data-page-node-id="w4kuPMr0loLvJtcF3xOLKs">
+            <button id="checkinBtn" onclick="dailyCheckin()" style="width:100%;padding:12px;background:var(--accent);border:none;border-radius:8px;color:white;font-size:14px;font-weight:600;cursor:pointer;transition:all 0.2s" data-page-node-id="dL0em6OuIzHOgjWDbbPBmz">
                 ✅ 点击签到
             </button>
         </div>
-        <div style="display:flex;gap:12px;font-size:12px;color:var(--text3)">
-            <div>🔥 连续签到: <span id="checkinStreak" style="color:var(--accent);font-weight:600">0</span> 天</div>
-            <div>📊 总签到: <span id="totalCheckins" style="color:var(--green);font-weight:600">0</span> 天</div>
+        <div style="display:flex;gap:12px;font-size:12px;color:var(--text3)" data-page-node-id="vevdCpJlyqX2AUahFTXcbI">
+            <div data-page-node-id="7JHoVzW76XMWRuGRb7V83y">🔥 连续签到: <span id="checkinStreak" style="color:var(--accent);font-weight:600" data-page-node-id="uYO1iE3qnghe79BrukipuX">0</span> 天</div>
+            <div data-page-node-id="VruUKSGZIddZtPDCfTXPmp">📊 总签到: <span id="totalCheckins" style="color:var(--green);font-weight:600" data-page-node-id="FsBFLLhf64XYEu8WdersWx">0</span> 天</div>
         </div>
-        <div id="checkinReward" style="margin-top:8px;font-size:12px;color:var(--green);display:none"></div>
+        <div id="checkinReward" style="margin-top:8px;font-size:12px;color:var(--green);display:none" data-page-node-id="xrmFdmOzrjs0qmg0BD7BLx"></div>
     </div>
 
     <!-- 分享功能 -->
-    <div class="card">
-        <div class="card-title">分享给朋友</div>
-        <div style="display:flex;gap:8px;flex-wrap:wrap">
-            <button onclick="shareToWeixin()" style="padding:8px 16px;background:#07C160;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">微信</button>
-            <button onclick="shareToWeibo()" style="padding:8px 16px;background:#E6162D;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">微博</button>
-            <button onclick="shareToTwitter()" style="padding:8px 16px;background:#1DA1F2;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer">Twitter</button>
-            <button onclick="copyLink()" style="padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text2);font-size:12px;cursor:pointer">复制链接</button>
+    <div class="card" data-page-node-id="gLr5hlcyl3KXpBtY3pr1E0">
+        <div class="card-title" data-page-node-id="4txjxLAiiVRcooKYG9CXL5">分享给朋友</div>
+        <div style="display:flex;gap:8px;flex-wrap:wrap" data-page-node-id="z4UY6bKZTZKmtOaNqdwlbH">
+            <button onclick="shareToWeixin()" style="padding:8px 16px;background:#07C160;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer" data-page-node-id="hXhf4t7RDyQYJQP50Q93Ea">微信</button>
+            <button onclick="shareToWeibo()" style="padding:8px 16px;background:#E6162D;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer" data-page-node-id="ZRH8LXw1XRfZCpedbB4f4z">微博</button>
+            <button onclick="shareToTwitter()" style="padding:8px 16px;background:#1DA1F2;border:none;border-radius:6px;color:white;font-size:12px;cursor:pointer" data-page-node-id="KgZfLhA7CDLI0o9ZEjJPMI">Twitter</button>
+            <button onclick="copyLink()" style="padding:8px 16px;background:var(--bg3);border:1px solid var(--border);border-radius:6px;color:var(--text2);font-size:12px;cursor:pointer" data-page-node-id="jtzgukcCVmvFfKFQrfBmVk">复制链接</button>
         </div>
     </div>
 
     <!-- 新收录 -->
-    <div class="card">
-        <div class="card-title">新收录</div>
+    <div class="card" data-page-node-id="vn1tBDpBaxo1nUK82aiXyG">
+        <div class="card-title" data-page-node-id="DLWs3DUpbeZFHIivXJHBO7">新收录</div>
         {{ $tools := site.Data.tools }}
         {{ if $tools }}
             {{ $totalTools := len $tools }}
             {{ range seq 1 5 }}
             {{ if le . $totalTools }}
             {{ $tool := index $tools (sub $totalTools .) }}
-            <div class="trend-item">
-                <div style="min-width:0;flex:1">
-                    <a href="{{ relURL "/tools/" }}{{ $tool.id }}/">{{ $tool.name }}</a>
-                    <div style="color:var(--text3);font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap">{{ $tool.description }}</div>
+            <div class="trend-item" data-page-node-id="6TlgPbr4zKaal0mCoPgBlf">
+                <div style="min-width:0;flex:1" data-page-node-id="iiUN4TMsvOsbZVqK0gcD1b">
+                    <a href="{{ relURL "/tools/" }}{{ $tool.id }}/" data-page-node-id="nY2F6rkBbdRBnB2yh3SoAw">{{ $tool.name }}</a>
+                    <div style="color:var(--text3);font-size:11px;margin-top:2px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap" data-page-node-id="Pho6DeGoqrBloSeWKBBcoA">{{ $tool.description }}</div>
                 </div>
-                <span class="hot-badge" style="background:rgba(63,185,80,0.15);color:var(--green)">NEW</span>
+                <span class="hot-badge" style="background:rgba(63,185,80,0.15);color:var(--green)" data-page-node-id="T3HkSvyBQ1bATFikULJwZP">NEW</span>
             </div>
             {{ end }}
             {{ end }}
         {{ else }}
-            <div style="color:var(--text3);font-size:13px;padding:12px 0">暂无新收录工具</div>
+            <div style="color:var(--text3);font-size:13px;padding:12px 0" data-page-node-id="BfGnM2Ah7Qr3e8M1uiNh8F">暂无新收录工具</div>
         {{ end }}
     </div>
 
     <!-- 本周变化 -->
-    <div class="card" id="weeklyDigest" style="display:none;border-left:3px solid var(--green)">
-        <div class="card-title">本周摘要</div>
-        <div id="weeklyContent" style="font-size:13px;color:var(--text2);line-height:1.8"></div>
+    <div class="card" id="weeklyDigest" style="display:none;border-left:3px solid var(--green)" data-page-node-id="dIFVc4X6X3FisagV7xGxhM">
+        <div class="card-title" data-page-node-id="HON8GAogfalKOseoFto9nd">本周摘要</div>
+        <div id="weeklyContent" style="font-size:13px;color:var(--text2);line-height:1.8" data-page-node-id="5x2YSkABVDlWvbGc2fvscG"></div>
     </div>
 
     <!-- 实时关键词 -->
-    <div class="card">
-        <div class="card-title">热搜关键词</div>
+    <div class="card" data-page-node-id="F7cPmzXmXFIVCtSZNwVP9F">
+        <div class="card-title" data-page-node-id="GdRtI65ouxlEJTUBgTXqrQ">热搜关键词</div>
         {{ $seo := site.Data.seo }}
         {{ if $seo }}
-            <div style="display:flex;flex-wrap:wrap;gap:6px">
+            <div style="display:flex;flex-wrap:wrap;gap:6px" data-page-node-id="YdKrrTQ3brAu3O50mBzZbO">
                 {{ range first 5 $seo.hot_keywords }}
-                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag" style="background:rgba(255,107,53,0.15);color:var(--accent)">{{ . }}</a>
+                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag" style="background:rgba(255,107,53,0.15);color:var(--accent)" data-page-node-id="IKP2ExeuAzTdGtTmxtaKdO">{{ . }}</a>
                 {{ end }}
                 {{ range first 4 $seo.homepage_keywords }}
-                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag">{{ . }}</a>
+                <a href="{{ relURL "/search/" }}?q={{ . | urlquery }}" class="tag" data-page-node-id="2mnYLUBm5a3TIPOTJ5BHse">{{ . }}</a>
                 {{ end }}
             </div>
-            <div style="font-size:12px;color:var(--text3);margin-top:10px">点击关键词可直达站内搜索结果</div>
+            <div style="font-size:12px;color:var(--text3);margin-top:10px" data-page-node-id="hadurYUtDSEmVWdP1DrUCJ">点击关键词可直达站内搜索结果</div>
         {{ end }}
     </div>
 
     <!-- 更新日志 -->
-    <div class="card">
-        <div class="card-title">更新状态</div>
+    <div class="card" data-page-node-id="sA5Rl41AvzKiCO6HFZ1K8E">
+        <div class="card-title" data-page-node-id="zA5o1ZZGh3FOUa1B98Z3W9">更新状态</div>
         {{ $meta := site.Data.meta }}
         {{ if $meta }}
-        <div style="font-size:13px;color:var(--text2)">
-            <p>🕐 最后更新：{{ $meta.last_update }}</p>
+        <div style="font-size:13px;color:var(--text2)" data-page-node-id="NhmkT3Un4b9390QNHsD4ZB">
+            <p data-page-node-id="x93O1ggyhsk9ee3D0mUsq0">🕐 最后更新：{{ $meta.last_update }}</p>
         </div>
         {{ end }}
-        <div style="font-size:12px;color:var(--text3);margin-top:8px">
-            <p>每6小时自动更新</p>
-            <p>08:00 / 14:00 / 20:00 / 02:00</p>
+        <div style="font-size:12px;color:var(--text3);margin-top:8px" data-page-node-id="TrFQb1V7mHlZFTbTbf8lQ9">
+            <p data-page-node-id="tH9sXrYOc46IuTPSY0DfmA">每6小时自动更新</p>
+            <p data-page-node-id="tHDYUcYHLvnPgVxUR4OaGV">08:00 / 14:00 / 20:00 / 02:00</p>
         </div>
     </div>
 </div>

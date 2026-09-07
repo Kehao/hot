@@ -16,7 +16,7 @@ pipeline 主链路是**串行**抓取（`aggregate.py` 无并发线程池），�
         └─ OOM killer 无差别开杀 → nginx/云助手被杀 → 站点假死
 修复方向:
   L1 swap 兜底      : 内存打满先落盘, 内核不轻易开杀
-  L2 并发/优先级限流 : hugo --concurrency=2、nice/ionice 让位
+  L2 并发/优先级限流 : HUGO_NUMWORKERMULTIPLIER 降渲染并行、nice/ionice 让位
   L3 OOM 护栏       : 要杀先杀 pipeline 自己, 不碰 nginx/ssh/云助手
   L4 调度错峰+防重入 : 避开整点、flock 锁防手动/cron 撞车
 ```
@@ -48,17 +48,18 @@ cat /proc/sys/vm/swappiness   # 10
 
 ## 三、L2 并发/优先级限流（改 /usr/local/bin/hot-deploy.sh）
 
-当前构建行 `hugo --minify -s site` 会按 CPU 数并行渲染，1.6G 内存下建议限并发：
+当前构建行 `hugo --minify -s site` 会按 CPU 数并行渲染，1.6G 内存下建议限并发。
+⚠️ **注意**：hugo CLI **没有** `--concurrency` 标志（2026-09-08 实测 v0.136 直接报 `unknown flag: --concurrency`，导致整轮构建失败）。限并发请用环境变量 `HUGO_NUMWORKERMULTIPLIER`（hugo 官方支持，乘 CPU 数决定渲染并行度，可设小数）：
 
 ```bash
-hugo --minify --concurrency 2 -s site     # 限制渲染并行度, 降内存尖峰
+HUGO_NUMWORKERMULTIPLIER=0.5 hugo --minify -s site   # 渲染并行度降为 CPU 的一半
 ```
 
 抓取与构建阶段让出 CPU / IO，避免与 web 服务抢资源：
 
 ```bash
 nice -n 10 ionice -c 3 .venv/bin/python scripts/aggregate.py
-nice -n 10 ionice -c 3 hugo --minify --concurrency 2 -s site
+nice -n 10 ionice -c 3 hugo --minify -s site
 ```
 
 > 若未来在代码里引入并发抓取，统一遵守：`requests.Session` + 连接池 `pool_maxsize=4` + 每请求 `time.sleep(0.5~1)` + 源级最低间隔，避免瞬时打爆内存与对方限流。
@@ -110,9 +111,9 @@ systemd-run --scope -p MemoryMax=1300M \
 
 ```bash
 # 当前(整点): 0 */6 * * * /usr/local/bin/hot-deploy.sh
-# 改为每 6 小时的第 25 分钟(00:25/06:25/12:25/18:25), 避开整点任务与流量高峰
+# 改为固定 4 个时刻(02:00/08:00/14:00/20:00), 避开整点任务与流量高峰, 也便于白天更新
 crontab -e
-25 */6 * * * /usr/local/bin/hot-deploy.sh >> /var/log/hot-cron.out 2>&1
+0 2,8,14,20 * * * /usr/local/bin/hot-deploy.sh >> /var/log/hot-cron.out 2>&1
 ```
 
 ### 防重入：flock 锁（防止手动触发与 cron 撞车跑两个实例）
@@ -120,7 +121,7 @@ crontab -e
 把 cron 行与手动执行统一走锁：
 
 ```bash
-25 */6 * * * flock -n /var/run/hot-deploy.lock -c '/usr/local/bin/hot-deploy.sh >> /var/log/hot-cron.out 2>&1'
+0 2,8,14,20 * * * flock -n /var/run/hot-deploy.lock -c '/usr/local/bin/hot-deploy.sh >> /var/log/hot-cron.out 2>&1'
 ```
 
 手动重跑用同样命令：`flock -n /var/run/hot-deploy.lock -c '/usr/local/bin/hot-deploy.sh'`
@@ -177,7 +178,10 @@ done
 | L2 hot-deploy.sh 限并发/让位 | ✅ | `bash -n` 通过，backup 在 /usr/local/bin/*.bak.* |
 | L3 pipeline oom_score_adj=500 | ✅ | 脚本第 12 行 |
 | L3 nginx OOMScoreAdjust=-800 | ✅ | `systemctl show nginx` 输出 -800 |
-| L4 cron 错峰 + flock | ✅ | `25 */6 * * * flock -n /var/run/hot-deploy.lock -c '...'` |
+| L4 cron 错峰 + flock | ✅ | `0 2,8,14,20 * * * flock -n /var/run/hot-deploy.lock -c '...'` |
+
+**踩坑记录二（重要）**：L2 初版给 hugo 误加了 `--concurrency 2`，但 **hugo CLI 无此标志**——01:49 验证轮整链构建失败
+（`Error: unknown flag: --concurrency`，已 `sed` 移除恢复 `hugo --minify -s site`）。若确需限渲染并行度，用环境变量 `HUGO_NUMWORKERMULTIPLIER=0.5`。
 
 **踩坑记录（重要）**：通过云助手（workbench exec）执行 `... | crontab -` 会装入**空** crontab——
 云助手环境下命令 stdin 不可用，`crontab -` 读到 EOF 直接装了空表，把旧条目清掉了。

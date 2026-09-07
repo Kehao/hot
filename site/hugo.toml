@@ -60,11 +60,6 @@ enableRobotsTXT = true   # 用 layouts/robots.txt 模板输出(地址跟随 --ba
   weight = 6
 
 [[menu.main]]
-  name = "搜索"
-  url = "/search/"
-  weight = 7
-
-[[menu.main]]
   name = "对比"
   url = "/compare/"
-  weight = 8
+  weight = 7
