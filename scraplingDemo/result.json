@@ -1,0 +1,112 @@
+[
+  {
+    "source": "36氪",
+    "url": "https://36kr.com/newsflashes/3925968796514432",
+    "expect": "DeepSeek",
+    "ok": true,
+    "level": "L2",
+    "body_chars": 5863,
+    "elapsed": 10.9,
+    "title": "报道：DeepSeek重启融资，投前估值5000亿元-36氪",
+    "markdown_head": "登录 搜索 * [36氪Auto](https://img.36krcdn.com/hsossms/20230605/v2_384be8e4c1e942a28cf13a2e427fe211@18900718_oswg78404oswg320oswg320_img_png) [数字时氪](https://img.36kr",
+    "baseline_chars": 107,
+    "attempts": [
+      {
+        "level": "L1",
+        "desc": "Fetcher · TLS 指纹伪装",
+        "status": 200,
+        "chars": 56,
+        "elapsed": 0.9,
+        "hit": false,
+        "error": ""
+      },
+      {
+        "level": "L2",
+        "desc": "StealthyFetcher · 隐身浏览器",
+        "status": 200,
+        "chars": 5863,
+        "elapsed": 10.0,
+        "hit": true,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "source": "机器之心",
+    "url": "https://www.jiqizhixin.com/articles/2026-09-07-3",
+    "expect": "AlphaBot",
+    "ok": true,
+    "level": "L2",
+    "body_chars": 4302,
+    "elapsed": 9.0,
+    "title": "中博会｜最高票数位居十大新品之首！智平方AlphaBot O1亮相国家级舞台，展现中国具身智能硬实力 ｜ 机器之心",
+    "markdown_head": "[ ](/) 登录 [ ](https://www.jiqizhixin.com/) [文章库](https://www.jiqizhixin.com/articles \"文章库\")[PRO通讯会员](https://pro.jiqizhixin.com/inbox \"PRO通讯会员\")[SOTA！模型](https:",
+    "baseline_chars": 0,
+    "attempts": [
+      {
+        "level": "L1",
+        "desc": "Fetcher · TLS 指纹伪装",
+        "status": 200,
+        "chars": 724,
+        "elapsed": 0.2,
+        "hit": false,
+        "error": ""
+      },
+      {
+        "level": "L2",
+        "desc": "StealthyFetcher · 隐身浏览器",
+        "status": 200,
+        "chars": 4302,
+        "elapsed": 8.8,
+        "hit": true,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "source": "LINUX DO",
+    "url": "https://linux.do/t/topic/2503616",
+    "expect": "中转站",
+    "ok": true,
+    "level": "L1",
+    "body_chars": 3508,
+    "elapsed": 1.1,
+    "title": "这要是拿来开中转站...",
+    "markdown_head": "[LINUX DO](/) [这要是拿来开中转站...](/t/topic/2503616) ================================ [前沿快讯](/c/news/34) [纯水](https://linux.do/tag/%E7%BA%AF%E6%B0%B4) [crb1025](https",
+    "baseline_chars": 0,
+    "attempts": [
+      {
+        "level": "L1",
+        "desc": "Fetcher · TLS 指纹伪装",
+        "status": 200,
+        "chars": 3508,
+        "elapsed": 1.1,
+        "hit": true,
+        "error": ""
+      }
+    ]
+  },
+  {
+    "source": "量子位（对照组，本来就能抓）",
+    "url": "https://www.qbitai.com/2026/09/485525.html",
+    "expect": "机器人",
+    "ok": true,
+    "level": "L1",
+    "body_chars": 4625,
+    "elapsed": 0.1,
+    "title": "3秒变身！会合体的机器人，卖到全球50国",
+    "markdown_head": "* [首页](http://www.qbitai.com/) * [资讯](https://www.qbitai.com/category/%e8%b5%84%e8%ae%af) * [智能车](https://www.qbitai.com/category/auto) * [智库](https://www.qbita",
+    "baseline_chars": 2815,
+    "attempts": [
+      {
+        "level": "L1",
+        "desc": "Fetcher · TLS 指纹伪装",
+        "status": 200,
+        "chars": 4625,
+        "elapsed": 0.1,
+        "hit": true,
+        "error": ""
+      }
+    ]
+  }
+]
